@@ -1,0 +1,36 @@
+{% extends "template/hflayout.html" %}
+
+
+{% block head %}
+	<title>Index Page</title>
+	
+{% endblock %}
+
+
+
+{% block content %}
+	<table>
+		<tbody style="text-align:center;">
+				<tr>
+					<th>姓名</th>
+					<th>性别</th>
+					
+				</tr>
+			{% for value in data %}
+				<tr>
+					<td><a href="{{ base_url }}Student/getStuInfoWithReview/id/{{ value['id'] }}">{{ value['name'] }}</a></td>
+					<td>{{ value['gender'] }}</td>
+					
+					
+				</tr>
+			{% endfor %}
+			
+		</tbody>
+	</table>
+	<a href="{{ base_url }}Department/choose/page/{{ prePage }}">上一页</a>
+		{% for item in 1..num %}
+		    <a href="{{ base_url }}Department/choose/page/{{ item }}">{{ item }}</a>
+		    &nbsp;
+		{% endfor %}
+	<a href="{{ base_url }}Department/choose/page/{{ nextPage }}">下一页</a>
+{% endblock %}

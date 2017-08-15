@@ -1,0 +1,46 @@
+{% extends "template/hflayout.html" %}
+
+
+{% block head %}
+	<title>Index Page</title>
+	<script src="{{ source_url }}js/jquery-validation-1.14.0/lib/jquery.js"></script>
+	<script src="{{ source_url }}js/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+{% endblock %}
+
+{% block content %}
+	<form action="{{ base_url }}Department/doRePassword" enctype="multipart/form-data" method="post" id="rePwd">
+		<label for="password">新密码</label>
+		<input type="password" name="password" id="password" />
+
+		<br/>
+		<label for="confirm_password">确认密码</label>
+		<input type="password" name="confirm_password"/>
+		<br/>
+		<input type="submit">
+	</form>
+	<script>
+		$.validator.setDefaults({
+		    submitHandler: function() {
+		      form.submit();
+		    }
+		});
+		$().ready(function() {
+		    $("#rePwd").validate({
+		    	rules: {
+		    		password: "required",
+		    		confirm_password: {
+				    	required: true,
+				    	equalTo: "#password"
+				    }
+		    	},
+		    	messages: {
+		    		name: "请输入新密码",
+		    		confirm_password: {
+				        required: "请重新输入密码",
+				        equalTo: "两次密码输入不一致"
+				    }
+		    	}
+		    });
+		});
+	</script>
+{% endblock %}

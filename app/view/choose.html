@@ -1,0 +1,51 @@
+{% extends "template/hflayout.html" %}
+
+
+{% block head %}
+	<title>Index Page</title>
+	
+{% endblock %}
+
+
+
+{% block content %}
+	<table>
+		<tbody style="text-align:center;">
+				<tr>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>评分</th>
+					<th>其他部门</th>
+				</tr>
+			{% for value in data %}
+				<tr>
+					<td><a href="{{ base_url }}Student/getStuInfoWithReview/id/{{ value['id'] }}">{{ value['name'] }}</a></td>
+					<td>{{ value['gender'] }}</td>
+					<td>{{ value['score'] }}</td>
+					<td>
+						{% if value['department0'] != name %}
+							{{ value['department0'] }}
+						{% endif %}
+						{% if value['department1'] != name and value['department0'] != value['department1'] %}
+							{{ value['department1'] }}
+						{% endif %}
+						{% if value['department2'] != name and value['department0'] != value['department2'] and value['department1'] != value['department2'] %}
+							{{ value['department2'] }}
+						{% endif %}
+						{% if value['department3'] != name and value['department0'] != value['department3'] and value['department1'] != value['department3'] and value['department2'] != value['department3'] %}
+							{{ value['department3'] }}
+						{% endif %}
+						
+					</td>
+				</tr>
+			{% endfor %}
+			
+		</tbody>
+	</table>
+	<a href="{{ base_url }}Department/choose/page/{{ prePage }}">上一页</a>
+		{% for item in 1..num %}
+		    <a href="{{ base_url }}Department/choose/page/{{ item }}">{{ item }}</a>
+		    &nbsp;
+		{% endfor %}
+	<a href="{{ base_url }}Department/choose/page/{{ nextPage }}">下一页</a>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'template/hflayout.html' %}
+
+{% block head %}
+    
+{% endblock %}
+
+{% block content %}
+    <table>
+    	<tbody>
+    		<tr>
+    			<td>姓名</td>
+    			<td>{{ data['name'] }}</td>
+    		</tr>
+    		<tr>
+    			<td>学号</td>
+    			<td>{{ data['gender'] }}</td>
+    		</tr>
+    		<tr>
+    			<td>性别</td>
+    			<td>{{ data['studentid'] }}</td>
+    		</tr>
+    		<tr>
+    			<td>专业班级</td>
+    			<td>{{ data['class'] }}</td>
+    		</tr>
+    		<tr>
+    			<td>手机</td>
+    			<td>{{ data['phonenum'] }}</td>
+    		</tr>
+    		<tr>
+    			<td>QQ</td>
+    			<td>{{ data['qqnum'] }}</td>
+    		</tr>
+    		<tr>
+    			<td>其他部门</td>
+    			<td>
+					{% if data['department0'] != name %}
+						{{ data['department0'] }}
+					{% endif %}
+					{% if data['department1'] != name and data['department0'] != data['department1'] %}
+						{{ data['department1'] }}
+					{% endif %}
+					{% if data['department2'] != name and data['department0'] != data['department2'] and data['department1'] != data['department2'] %}
+						{{ data['department2'] }}
+					{% endif %}
+					{% if data['department3'] != name and data['department0'] != data['department3'] and data['department1'] != data['department3'] and data['department2'] != data['department3'] %}
+						{{ data['department3'] }}
+					{% endif %}
+    			</td>
+    		</tr>
+    		<tr>
+    			<td>自我介绍</td>
+    			<td>{{ data['introduction'] }}</td>
+    		</tr>
+			<tr>
+				<td>面试官评价</td>
+				<td>{{ data['review'] }}</td>
+			</tr>
+			<tr>
+				<td>评分</td>
+				<td>{{ data['score'] }}</td>
+			</tr>
+    	</tbody>
+    </table>
+    <button onclick="location.href='{{ base_url }}Department/hiring/id/{{ data['id'] }}'">录取</button>
+    <button onclick="location.href='{{ base_url }}Department/unhiring/id/{{ data['id'] }}'">取消录取</button>
+{% endblock %}

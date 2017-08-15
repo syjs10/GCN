@@ -1,0 +1,181 @@
+{% extends "template/layout.html" %}
+
+
+{% block head %}
+	<title>招新页面</title>
+	<script src="{{ source_url }}js/jquery-validation-1.14.0/lib/jquery.js"></script>
+	<script src="{{ source_url }}js/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+{% endblock %}
+
+{% block content %}
+	<div >
+		<div >
+			<h1 align="center">工大网管，欢迎“家”入</h1>
+		</div>
+		<form action="{{ base_url }}Student/doSubmit" enctype="multipart/form-data" id="stuForm" method="post">
+			<table border="0">
+				<tr>
+					<td >姓名：</td>
+					<td >
+						<input class="input" type="text" name="name" maxlength="4" size="25">
+					</td>
+				</tr>
+				<tr>
+					<td >学号：</td>
+					<td >
+						<input class="input" type="text" name="studentid" maxlength="9" size="25">
+					</td>
+				</tr>
+				<tr>
+					<td >
+						性别：
+					</td>
+					<td >
+						<input style="margin-left: 0;" class="radio" type="radio" name="gender" value="男" style="margin-left:40px;">男</input>
+						<input class="radio" type="radio" name="gender" value="女" style="margin-left:40px;">女</input>
+						<input class="radio" type="radio" name="gender" value="女" style="margin-left:40px;">其他</input>
+					</td>
+				</tr>
+				<tr>
+					<td >专业班级：</td>
+					<td >
+						<input  type="text" name="class" maxlength="30" size="25">
+					</td>
+				</tr>
+				<tr>
+					<td >手机：</td>
+					<td >
+						<input  type="text" name="phonenum" maxlength="11" size="25">
+					</td>
+				</tr>
+				<tr>
+					<td >QQ:</td>
+					<td >
+						<input  type="text" name="qqnum" maxlength="15" size="25">
+					</td>
+				</tr>
+				<tr>
+					<td >部门:</td>
+					<td >
+						<select class="" name="department0">
+								<option >部门1</option>
+								<option value="技术部">技术部</option>
+								<option value="影音部">影音部</option>
+								<option value="宣传部">宣传部</option>
+								<option value="策划部">策划部</option>
+								<option value="采编部">采编部</option>
+								<option value="外事部">外事部</option>
+						</select>
+
+						<select class="" name="department1">
+								<option >部门2</option>
+								<option value="技术部">技术部</option>
+								<option value="影音部">影音部</option>
+								<option value="宣传部">宣传部</option>
+								<option value="策划部">策划部</option>
+								<option value="采编部">采编部</option>
+								<option value="外事部">外事部</option>
+						</select>
+						<select class="" name="department2">
+								<option >部门3</option>
+								<option value="技术部">技术部</option>
+								<option value="影音部">影音部</option>
+								<option value="宣传部">宣传部</option>
+								<option value="策划部">策划部</option>
+								<option value="采编部">采编部</option>
+								<option value="外事部">外事部</option>
+						</select>
+						<select class="" name="department3">
+								<option >部门4</option>
+								<option value="技术部">技术部</option>
+								<option value="影音部">影音部</option>
+								<option value="宣传部">宣传部</option>
+								<option value="策划部">策划部</option>
+								<option value="采编部">采编部</option>
+								<option value="外事部">外事部</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						自我介绍<br>（包括特长爱好）：
+					</td>
+					<td>
+						<textarea  name="introduction" rows="10" cols="15"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						验证码
+					</td>
+					<td>
+
+						<input type="text" name="verify" value="" style="width:50%; margin-bottom:17px;">
+
+						<img src="{{ base_url }}ShowVerify" alt="验证码" onclick="this.src='{{ base_url }}ShowVerify'"/>
+
+					</td>
+				</tr>
+			</table>
+			<input type="submit" value="提  交" class="submit">
+			<br><br>
+		</form>
+	</div>
+	<div class="bottom">
+		&copy; 2017 JS 
+	</div>
+
+	<script>
+		$.validator.setDefaults({
+		    submitHandler: function() {
+		      form.submit();
+		    }
+		});
+		$().ready(function() {
+		    $("#stuForm").validate({
+		    	rules: {
+		    		name: "required",
+		    		studentid: {
+				    	required: true,
+				    	number: true,
+				    	mixlength: 9
+				    },
+				    class:"required",
+				    phonenum:{
+				    	required: true,
+				    	number: true,
+				    	mixlength: 11
+				    },
+				    qqnum:{
+				    	required: true,
+				    	number: true
+				    },
+				    introduction: "required",
+				    verify: "required"
+
+		    	},
+		    	messages: {
+		    		name: "请输入姓名",
+		    		studentid: {
+				    	required: "请输入学号",
+				    	number: "请输入正确学号",
+				    	mixlength: "请输入正确学号"
+				    },
+				    class:"请输入专业班级",
+				    phonenum:{
+				    	required: "请输入电话",
+				    	number: "请输入正确电话",
+				    	mixlength: "请输入正确电话"
+				    },
+				    qqnum:{
+				    	required: "请输入QQ号",
+				    	number: "请输入正确QQ号"
+				    },
+				    introduction:"请填写自我介绍",
+				    verify: "请输入验证码"
+		    	}
+		    });
+		});
+		</script>
+{% endblock %}

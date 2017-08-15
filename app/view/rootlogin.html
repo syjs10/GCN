@@ -1,0 +1,23 @@
+{% extends "template/layout.html" %}
+
+
+{% block head %}
+	<title>登 录</title>
+	
+{% endblock %}
+
+{% block content %}
+	<form action="{{ base_url }}Root/doLogin" method="POST">
+		<label for="username">用户名</label>
+		<input type="text" name="username" />
+		
+		<label for="password">密 &nbsp;码</label>
+		<input type="password" name="password" />
+
+		<label for="verify">验证码</label>
+		<input type="text" name="verify" />
+		<img src="{{ base_url }}ShowVerify" alt="验证码" onclick="this.src='{{ base_url }}ShowVerify'">
+		<input type="submit" value="登录" />
+		
+	</form>
+{% endblock %}

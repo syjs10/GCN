@@ -1,0 +1,43 @@
+{% extends "template/layout.html" %}
+
+
+{% block head %}
+	<title>Index Page</title>
+	
+{% endblock %}
+
+
+
+{% block content %}
+	<table>
+		<tbody style="text-align:center;">
+				<tr>
+					<th>姓名</th>
+					<th>性别</th>
+					<th>评分</th>
+					<th>其他部门</th>
+				</tr>
+			{% for value in data %}
+				<tr>
+					<td>{{ value['name'] }}</td>
+					<td>{{ value['gender'] }}</td>
+					<td>{{ value['score'] }}</td>
+					<td>
+							<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department'] }}">{{ value['employ_department'] }}</a>
+							<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department1'] }}">{{ value['employ_department1'] }}</a>
+							<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department2'] }}">{{ value['employ_department2'] }}</a>
+							<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department3'] }}">{{ value['employ_department3'] }}</a>
+						
+					</td>
+				</tr>
+			{% endfor %}
+			
+		</tbody>
+	</table>
+	<a href="{{ base_url }}Department/choose/page/{{ prePage }}">上一页</a>
+		{% for item in 1..num %}
+		    <a href="{{ base_url }}Department/choose/page/{{ item }}">{{ item }}</a>
+		    &nbsp;
+		{% endfor %}
+	<a href="{{ base_url }}Department/choose/page/{{ nextPage }}">下一页</a>
+{% endblock %}
