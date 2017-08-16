@@ -114,8 +114,8 @@
 	    	exit();
 
 	    }
-	    function back(){
-	    	echo "<script>history.go(-1);</script>";
+	    function back($num=1){
+	    	echo "<script>history.go(-$num);</script>";
 
 	    }
 	    function jumps($page){

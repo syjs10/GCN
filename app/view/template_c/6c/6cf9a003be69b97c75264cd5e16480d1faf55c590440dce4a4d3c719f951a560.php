@@ -29,32 +29,33 @@ class __TwigTemplate_708b4c65e006cd27e7232f92f293a8b1c2b24b891b10fd4bd56fd0e2987
     public function block_head($context, array $blocks = array())
     {
         // line 5
-        echo "\t<title>Index Page</title>
+        echo "\t<title>已面试人员列表</title>
 \t
+\t<style></style>
 ";
     }
 
-    // line 11
+    // line 12
     public function block_content($context, array $blocks = array())
     {
-        // line 12
-        echo "\t<table>
-\t\t<tbody style=\"text-align:center;\">
+        // line 13
+        echo "\t<table class=\"table table-hover table-bordered\">
+\t\t<tbody  >
 \t\t\t\t<tr>
-\t\t\t\t\t<th>姓名</th>
-\t\t\t\t\t<th>性别</th>
-\t\t\t\t\t<th>评分</th>
-\t\t\t\t\t<th>其他部门</th>
+\t\t\t\t\t<th width=\"20%\">姓名</th>
+\t\t\t\t\t<th width=\"20%\">性别</th>
+\t\t\t\t\t<th width=\"20%\">评分</th>
+\t\t\t\t\t<th width=\"40%\">其他部门</th>
 \t\t\t\t</tr>
 \t\t\t";
-        // line 20
+        // line 21
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["data"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
-            // line 21
+            // line 22
             echo "\t\t\t\t<tr>
 \t\t\t\t\t<td><a href=\"";
-            // line 22
+            // line 23
             echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
             echo "Student/getStuInfoWithReview/id/";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "id", array(), "array"), "html", null, true);
@@ -62,51 +63,51 @@ class __TwigTemplate_708b4c65e006cd27e7232f92f293a8b1c2b24b891b10fd4bd56fd0e2987
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "name", array(), "array"), "html", null, true);
             echo "</a></td>
 \t\t\t\t\t<td>";
-            // line 23
+            // line 24
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "gender", array(), "array"), "html", null, true);
             echo "</td>
 \t\t\t\t\t<td>";
-            // line 24
+            // line 25
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "score", array(), "array"), "html", null, true);
             echo "</td>
 \t\t\t\t\t<td>
 \t\t\t\t\t\t";
-            // line 26
+            // line 27
             if ((twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department0", array(), "array") != ($context["name"] ?? null))) {
-                // line 27
+                // line 28
                 echo "\t\t\t\t\t\t\t";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department0", array(), "array"), "html", null, true);
                 echo "
 \t\t\t\t\t\t";
             }
-            // line 29
+            // line 30
             echo "\t\t\t\t\t\t";
             if (((twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department1", array(), "array") != ($context["name"] ?? null)) && (twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department0", array(), "array") != twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department1", array(), "array")))) {
-                // line 30
+                // line 31
                 echo "\t\t\t\t\t\t\t";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department1", array(), "array"), "html", null, true);
                 echo "
 \t\t\t\t\t\t";
             }
-            // line 32
+            // line 33
             echo "\t\t\t\t\t\t";
             if ((((twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department2", array(), "array") != ($context["name"] ?? null)) && (twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department0", array(), "array") != twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department2", array(), "array"))) && (twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department1", array(), "array") != twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department2", array(), "array")))) {
-                // line 33
+                // line 34
                 echo "\t\t\t\t\t\t\t";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department2", array(), "array"), "html", null, true);
                 echo "
 \t\t\t\t\t\t";
             }
-            // line 35
+            // line 36
             echo "\t\t\t\t\t\t";
             if (((((twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department3", array(), "array") != ($context["name"] ?? null)) && (twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department0", array(), "array") != twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department3", array(), "array"))) && (twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department1", array(), "array") != twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department3", array(), "array"))) && (twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department2", array(), "array") != twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department3", array(), "array")))) {
-                // line 36
+                // line 37
                 echo "\t\t\t\t\t\t\t";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "department3", array(), "array"), "html", null, true);
                 echo "
 \t\t\t\t\t\t";
             }
-            // line 38
+            // line 39
             echo "\t\t\t\t\t\t
 \t\t\t\t\t</td>
 \t\t\t\t</tr>
@@ -115,41 +116,53 @@ class __TwigTemplate_708b4c65e006cd27e7232f92f293a8b1c2b24b891b10fd4bd56fd0e2987
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 43
         echo "\t\t\t
 \t\t</tbody>
 \t</table>
-\t<a href=\"";
-        // line 45
+\t<nav aria-label=\"Page navigation\" class=\"page navbar-fixed-bottom\">
+\t\t<ul class=\"pagination\">
+\t    \t<li>
+\t\t    \t<a href=\"";
+        // line 49
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "Department/choose/page/";
         echo twig_escape_filter($this->env, ($context["prePage"] ?? null), "html", null, true);
-        echo "\">上一页</a>
-\t\t";
-        // line 46
+        echo "\" aria-label=\"Previous\">
+\t\t        \t<span aria-hidden=\"true\">上一页</span>
+\t\t    \t</a>
+\t    \t</li>
+\t    \t";
+        // line 53
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(range(1, ($context["num"] ?? null)));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 47
-            echo "\t\t    <a href=\"";
+            // line 54
+            echo "\t\t    \t<li><a href=\"";
             echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
             echo "Department/choose/page/";
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
-            echo "</a>
-\t\t    &nbsp;
-\t\t";
+            echo "</a></li>
+\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 50
-        echo "\t<a href=\"";
+        // line 56
+        echo "\t\t\t<li>
+\t\t    \t<a href=\"";
+        // line 57
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "Department/choose/page/";
         echo twig_escape_filter($this->env, ($context["nextPage"] ?? null), "html", null, true);
-        echo "\">下一页</a>
+        echo "\" aria-label=\"Next\">
+\t\t    \t\t<span aria-hidden=\"true\">下一页</span>
+\t\t    \t</a>
+\t\t\t</li>
+\t\t</ul>
+\t</nav>
 ";
     }
 
@@ -165,7 +178,7 @@ class __TwigTemplate_708b4c65e006cd27e7232f92f293a8b1c2b24b891b10fd4bd56fd0e2987
 
     public function getDebugInfo()
     {
-        return array (  148 => 50,  134 => 47,  130 => 46,  124 => 45,  119 => 42,  110 => 38,  104 => 36,  101 => 35,  95 => 33,  92 => 32,  86 => 30,  83 => 29,  77 => 27,  75 => 26,  70 => 24,  66 => 23,  58 => 22,  55 => 21,  51 => 20,  41 => 12,  38 => 11,  32 => 5,  29 => 4,  11 => 1,);
+        return array (  157 => 57,  154 => 56,  141 => 54,  137 => 53,  128 => 49,  120 => 43,  111 => 39,  105 => 37,  102 => 36,  96 => 34,  93 => 33,  87 => 31,  84 => 30,  78 => 28,  76 => 27,  71 => 25,  67 => 24,  59 => 23,  56 => 22,  52 => 21,  42 => 13,  39 => 12,  32 => 5,  29 => 4,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -174,20 +187,21 @@ class __TwigTemplate_708b4c65e006cd27e7232f92f293a8b1c2b24b891b10fd4bd56fd0e2987
 
 
 {% block head %}
-\t<title>Index Page</title>
+\t<title>已面试人员列表</title>
 \t
+\t<style></style>
 {% endblock %}
 
 
 
 {% block content %}
-\t<table>
-\t\t<tbody style=\"text-align:center;\">
+\t<table class=\"table table-hover table-bordered\">
+\t\t<tbody  >
 \t\t\t\t<tr>
-\t\t\t\t\t<th>姓名</th>
-\t\t\t\t\t<th>性别</th>
-\t\t\t\t\t<th>评分</th>
-\t\t\t\t\t<th>其他部门</th>
+\t\t\t\t\t<th width=\"20%\">姓名</th>
+\t\t\t\t\t<th width=\"20%\">性别</th>
+\t\t\t\t\t<th width=\"20%\">评分</th>
+\t\t\t\t\t<th width=\"40%\">其他部门</th>
 \t\t\t\t</tr>
 \t\t\t{% for value in data %}
 \t\t\t\t<tr>
@@ -214,12 +228,23 @@ class __TwigTemplate_708b4c65e006cd27e7232f92f293a8b1c2b24b891b10fd4bd56fd0e2987
 \t\t\t
 \t\t</tbody>
 \t</table>
-\t<a href=\"{{ base_url }}Department/choose/page/{{ prePage }}\">上一页</a>
-\t\t{% for item in 1..num %}
-\t\t    <a href=\"{{ base_url }}Department/choose/page/{{ item }}\">{{ item }}</a>
-\t\t    &nbsp;
-\t\t{% endfor %}
-\t<a href=\"{{ base_url }}Department/choose/page/{{ nextPage }}\">下一页</a>
+\t<nav aria-label=\"Page navigation\" class=\"page navbar-fixed-bottom\">
+\t\t<ul class=\"pagination\">
+\t    \t<li>
+\t\t    \t<a href=\"{{ base_url }}Department/choose/page/{{ prePage }}\" aria-label=\"Previous\">
+\t\t        \t<span aria-hidden=\"true\">上一页</span>
+\t\t    \t</a>
+\t    \t</li>
+\t    \t{% for item in 1..num %}
+\t\t    \t<li><a href=\"{{ base_url }}Department/choose/page/{{ item }}\">{{ item }}</a></li>
+\t\t\t{% endfor %}
+\t\t\t<li>
+\t\t    \t<a href=\"{{ base_url }}Department/choose/page/{{ nextPage }}\" aria-label=\"Next\">
+\t\t    \t\t<span aria-hidden=\"true\">下一页</span>
+\t\t    \t</a>
+\t\t\t</li>
+\t\t</ul>
+\t</nav>
 {% endblock %}", "choose.html", "/var/www/html/GCN/app/view/choose.html");
     }
 }

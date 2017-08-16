@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
 	{% block head %}
 	{% endblock %}
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+	<link rel="stylesheet" href="{{ source_url }}css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ source_url }}css/bootstrap/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{{ source_url }}css/main.css">
+    <script src="{{ source_url }}/js/bootstrap/bootstrap.min.js"></script>
 </head>
 <body>
 	{% block content %}

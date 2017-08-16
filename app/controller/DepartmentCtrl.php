@@ -60,6 +60,10 @@
 			}
 		}
 		public function rePassword() {
+			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
+				$this->jump(BASE_URL . 'Department/login');
+				exit();
+			}
 			$this->view->display('rePwd.html');
 		}
 		public function doRePassword() {
@@ -89,6 +93,10 @@
 			$this->view->display('interview.html');
 		}
 		public function findStuI(){
+			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
+				$this->jump(BASE_URL . 'Department/login');
+				exit();
+			}
 			$name = $this->Session->getSession('name');
 			$phoneNum = $this->Input->post('phoneNum');
 			$data = $this->StudentModel->getStuByNum($name,$phoneNum);
@@ -136,26 +144,26 @@
 							//update jump
 							$this->StudentModel->updateEmp($id, 'employ_department3', $name);
 							$this->alert('录取成功！');
-							$this->jumps(BASE_URL . 'Department/choose');
+							$this->back(2);
 						}
 					} else {
 						//update jump
 						$this->StudentModel->updateEmp($id, 'employ_department2', $name);
 						$this->alert('录取成功！');
-						$this->jumps(BASE_URL . 'Department/choose');
+						$this->back(2);
 					}
 				} else {
 					//update jump
 					$this->StudentModel->updateEmp($id, 'employ_department1', $name);
 					$this->alert('录取成功！');
-					$this->jumps(BASE_URL . 'Department/choose');
+					$this->back(2);
 					
 				}
 			} else {
 				//update jump
 				$this->StudentModel->updateEmp($id, 'employ_department', $name);
 				$this->alert('录取成功！');
-				$this->jumps(BASE_URL . 'Department/choose');
+				$this->back(2);
 			}
 		}
 		public function unhiring($id) {
@@ -164,32 +172,38 @@
 			if ($data['employ_department'] == $name) {
 				$this->StudentModel->updateEmp($id, 'employ_department', null);
 				$this->alert('取消录取！');
-				$this->jumps(BASE_URL . 'Department/choose');
+				$this->back(2);
 				exit();
 			}
 			if ($data['employ_department1'] == $name) {
 				$this->StudentModel->updateEmp($id, 'employ_department1', null);
 				$this->alert('取消录取！');
-				$this->jumps(BASE_URL . 'Department/choose');
+				$this->back(2);
 				exit();
 			}
 			if ($data['employ_department2'] == $name) {
 				$this->StudentModel->updateEmp($id, 'employ_department2', null);
 				$this->alert('取消录取！');
-				$this->jumps(BASE_URL . 'Department/choose');
+				$this->back(2);
 				exit();
 			}
 			if ($data['employ_department3'] == $name) {
 				$this->StudentModel->updateEmp($id, 'employ_department3', null);
 				$this->alert('取消录取！');
-				$this->jumps(BASE_URL . 'Department/choose');
+				$this->back(2);
 				exit();
 			}
 			$this->alert('未录取');
-			$this->jumps(BASE_URL . 'Department/choose');
+			$this->back(2);
 
 		}
-		public function getConflictStu(){
+		public function getConflictStu($page = 1){
+			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
+				$this->jump(BASE_URL . 'Department/login');
+				exit();
+			}
+	
+			
 			$name = $this->Session->getSession('name');
 			$data = $this->StudentModel->chooseStu($name);
 			$datas = array();
@@ -211,11 +225,22 @@
 					array_push($datas, $value);
 				}
 			}
+			$num = PAGE_NUM;
+			$pageNum = (int) ceil((count($datas) / $num));
+			$pageNum = $pageNum  == 0 ? 1 : $pageNum;
+			$this->view->assign('num', $pageNum);
+			$this->view->assign('nextPage', ($page+1) >= $pageNum ? $pageNum : $page + 1);
+			$this->view->assign('prePage', ($page-1) <= 0 ? 1 : $page - 1);
+			$data = array_slice($datas,($page - 1) * $num, $num);
 			$this->view->assign('name', $name);
-			$this->view->assign('data', $datas);
+			$this->view->assign('data', $data);
 			$this->view->display('conflictStu.html');
 		}
-		public function getHiredStu(){
+		public function getHiredStu($page = 1){
+			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
+				$this->jump(BASE_URL . 'Department/login');
+				exit();
+			}
 			$name = $this->Session->getSession('name');
 			$data = $this->StudentModel->chooseStu($name);
 			$datas = array();
@@ -237,8 +262,15 @@
 					array_push($datas, $value);
 				}
 			}
+			$num = PAGE_NUM;
+			$pageNum = (int) ceil((count($datas) / $num));
+			$pageNum = $pageNum  == 0 ? 1 : $pageNum;
+			$this->view->assign('num', $pageNum);
+			$this->view->assign('nextPage', ($page+1) >= $pageNum ? $pageNum : $page + 1);
+			$this->view->assign('prePage', ($page-1) <= 0 ? 1 : $page - 1);
+			$data = array_slice($datas,($page - 1) * $num, $num);
 			$this->view->assign('name', $name);
-			$this->view->assign('data', $datas);
+			$this->view->assign('data', $data);
 			$this->view->display('hiredStu.html');
 		}
 		public function getUnhiredStu($page = 1){
@@ -248,7 +280,7 @@
 			}
 			$num = PAGE_NUM;
 			$name = $this->Session->getSession('name');
-			$datas = $this->StudentModel->getStuByReview($page, $num, $name);
+			$datas = $this->StudentModel->getAllStuByReview($name);
 			$data = array();
 			foreach ($datas as $value) {
 				if ($value['employ_department'] != $name && 
@@ -258,9 +290,16 @@
 					array_push($data, $value);
 				}
 			}
-			
+			$pageNum = (int) ceil(count($data) / $num);
+			$pageNum = $pageNum == 0 ? 1 : $pageNum;
+			$this->view->assign('num', $pageNum);
+			$this->view->assign('nextPage', ($page+1) >= $pageNum ? $pageNum : $page + 1);
+			$this->view->assign('prePage', ($page-1) <= 0 ? 1 : $page - 1);
+			$data = array_slice($data, ($page - 1) * $num, $num);
+
 			$this->view->assign('name', $name);
 			$this->view->assign('data', $data);
 			$this->view->display('unhiredStu.html');
+			
 		}
 	}

@@ -21,17 +21,30 @@ class __TwigTemplate_db83f7b10926d73ed58bb65544d2881c6e58e49718785d13b19019397c6
         echo "<!DOCTYPE html>
 <html lang=\"en\">
 <head>
-\t<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">
+
 \t";
         // line 5
         $this->displayBlock('head', $context, $blocks);
         // line 7
-        echo "</head>
+        echo "\t<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">
+\t<link rel=\"stylesheet\" href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "css/bootstrap/bootstrap.min.css\">
+    <link rel=\"stylesheet\" href=\"";
+        // line 9
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "css/bootstrap/bootstrap-theme.min.css\">
+    <script src=\"";
+        // line 10
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "/js/bootstrap/bootstrap.min.js\"></script>
+</head>
 <body>
 \t";
-        // line 9
+        // line 13
         $this->displayBlock('content', $context, $blocks);
-        // line 11
+        // line 15
         echo "</body>
 </html>";
     }
@@ -43,10 +56,10 @@ class __TwigTemplate_db83f7b10926d73ed58bb65544d2881c6e58e49718785d13b19019397c6
         echo "\t";
     }
 
-    // line 9
+    // line 13
     public function block_content($context, array $blocks = array())
     {
-        // line 10
+        // line 14
         echo "\t";
     }
 
@@ -55,9 +68,14 @@ class __TwigTemplate_db83f7b10926d73ed58bb65544d2881c6e58e49718785d13b19019397c6
         return "template/layout.html";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  50 => 10,  47 => 9,  43 => 6,  40 => 5,  35 => 11,  33 => 9,  29 => 7,  27 => 5,  21 => 1,);
+        return array (  63 => 14,  60 => 13,  56 => 6,  53 => 5,  48 => 15,  46 => 13,  40 => 10,  36 => 9,  32 => 8,  29 => 7,  27 => 5,  21 => 1,);
     }
 
     public function getSourceContext()
@@ -65,9 +83,13 @@ class __TwigTemplate_db83f7b10926d73ed58bb65544d2881c6e58e49718785d13b19019397c6
         return new Twig_Source("<!DOCTYPE html>
 <html lang=\"en\">
 <head>
-\t<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">
+
 \t{% block head %}
 \t{% endblock %}
+\t<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">
+\t<link rel=\"stylesheet\" href=\"{{ source_url }}css/bootstrap/bootstrap.min.css\">
+    <link rel=\"stylesheet\" href=\"{{ source_url }}css/bootstrap/bootstrap-theme.min.css\">
+    <script src=\"{{ source_url }}/js/bootstrap/bootstrap.min.js\"></script>
 </head>
 <body>
 \t{% block content %}

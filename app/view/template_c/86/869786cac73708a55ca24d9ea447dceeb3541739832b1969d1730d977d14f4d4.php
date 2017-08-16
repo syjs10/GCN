@@ -37,7 +37,7 @@ class __TwigTemplate_78d8f45e11f0f51cc5fb616c27f779e9682b6104389c4c595aee0f75ffe
     public function block_content($context, array $blocks = array())
     {
         // line 8
-        echo "    <table>
+        echo "    <table class=\"table table-hover table-bordered\">
     \t<tbody>
     \t\t<tr>
     \t\t\t<td>姓名</td>
@@ -133,21 +133,21 @@ class __TwigTemplate_78d8f45e11f0f51cc5fb616c27f779e9682b6104389c4c595aee0f75ffe
     \t\t<form action=\"";
         // line 55
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "Department/putStuReview\" method=\"post\">
+        echo "Department/putStuReview\" method=\"post\" class=\"form\">
 \t\t\t\t<tr>
 \t\t\t\t\t<td>面试官评价</td>
-\t\t\t\t\t<td><textarea name=\"review\" cols=\"30\" rows=\"10\"></textarea></td>
+\t\t\t\t\t<td><textarea name=\"review\" cols=\"30\" rows=\"10\" style=\"width:100%\" class=\"form-control\"></textarea></td>
 \t\t\t\t</tr>
 \t\t\t\t<tr>
 \t\t\t\t\t<td>评分</td>
-\t\t\t\t\t<td><input type=\"text\" name=\"score\"></td>
+\t\t\t\t\t<td><input type=\"text\" name=\"score\" class=\"form-control\"></td>
 \t\t\t\t</tr>
 \t\t\t\t<tr>
 \t\t\t\t\t<td><input type=\"hidden\" name = \"id\" value=\"";
         // line 65
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "id", array(), "array"), "html", null, true);
         echo "\"></td>
-\t\t\t\t\t<td><input type=\"submit\" value=\"提交\"></td>
+\t\t\t\t\t<td><input type=\"submit\" value=\"提交\" class=\"btn btn-default\"></td>
 \t\t\t\t</tr>
 \t\t\t</form>
     \t</tbody>
@@ -179,7 +179,7 @@ class __TwigTemplate_78d8f45e11f0f51cc5fb616c27f779e9682b6104389c4c595aee0f75ffe
 {% endblock %}
 
 {% block content %}
-    <table>
+    <table class=\"table table-hover table-bordered\">
     \t<tbody>
     \t\t<tr>
     \t\t\t<td>姓名</td>
@@ -226,18 +226,18 @@ class __TwigTemplate_78d8f45e11f0f51cc5fb616c27f779e9682b6104389c4c595aee0f75ffe
     \t\t\t<td>自我介绍</td>
     \t\t\t<td>{{ data['introduction'] }}</td>
     \t\t</tr>
-    \t\t<form action=\"{{ base_url }}Department/putStuReview\" method=\"post\">
+    \t\t<form action=\"{{ base_url }}Department/putStuReview\" method=\"post\" class=\"form\">
 \t\t\t\t<tr>
 \t\t\t\t\t<td>面试官评价</td>
-\t\t\t\t\t<td><textarea name=\"review\" cols=\"30\" rows=\"10\"></textarea></td>
+\t\t\t\t\t<td><textarea name=\"review\" cols=\"30\" rows=\"10\" style=\"width:100%\" class=\"form-control\"></textarea></td>
 \t\t\t\t</tr>
 \t\t\t\t<tr>
 \t\t\t\t\t<td>评分</td>
-\t\t\t\t\t<td><input type=\"text\" name=\"score\"></td>
+\t\t\t\t\t<td><input type=\"text\" name=\"score\" class=\"form-control\"></td>
 \t\t\t\t</tr>
 \t\t\t\t<tr>
 \t\t\t\t\t<td><input type=\"hidden\" name = \"id\" value=\"{{ data['id'] }}\"></td>
-\t\t\t\t\t<td><input type=\"submit\" value=\"提交\"></td>
+\t\t\t\t\t<td><input type=\"submit\" value=\"提交\" class=\"btn btn-default\"></td>
 \t\t\t\t</tr>
 \t\t\t</form>
     \t</tbody>

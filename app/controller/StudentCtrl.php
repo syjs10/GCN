@@ -8,6 +8,7 @@
 			parent::__construct();
 			$this->Input = $this->library('Input');
 			$this->StudentModel = $this->loadModel('Student');
+			$this->Cookie = $this->library('Cookie');
 			$this->Session = $this->library('Session');
 		}
 		public function index() {
@@ -31,6 +32,10 @@
 			}
 		}
 		public function getStuInfo($id){
+			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
+				$this->jump(BASE_URL . 'Department/login');
+				exit();
+			}
 			$data = $this->StudentModel->getStuById($id)[0];
 			$this->view->assign('data', $data);
 			$this->Session = $this->library('Session');
@@ -39,7 +44,10 @@
 			$this->view->display('stuInfo.html');
 		}
 		public function getStuInfoWithReview($id){
-			
+			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
+				$this->jump(BASE_URL . 'Department/login');
+				exit();
+			}
 			$this->Session = $this->library('Session');
 			$name = $this->Session->getSession('name');
 			$data = $this->StudentModel->getStuWithReview($id, $name)[0];

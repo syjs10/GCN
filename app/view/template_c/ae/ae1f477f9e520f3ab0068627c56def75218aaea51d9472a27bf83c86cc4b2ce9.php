@@ -17,48 +17,68 @@ class __TwigTemplate_ec3880433968c56fe7768d3f1181bcaa0793f47e71136c0bd82a089c240
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
+        echo "
+";
+        // line 2
         $this->displayBlock('header', $context, $blocks);
     }
 
     public function block_header($context, array $blocks = array())
     {
-        // line 2
-        echo "\t<a href=\"";
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "Department/index\">首页</a>
-\t<a href=\"";
         // line 3
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "Department/interview\">面试阶段</a>
-\t<a href=\"";
-        // line 4
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "Department/choose\">选人阶段</a>
-\t<a href=\"";
-        // line 5
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "Department/getConflictStu\">冲突人员</a>
-\t<a href=\"";
-        // line 6
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "Department/getHiredStu\">已选人员</a>
-\t<a href=\"";
+        echo "<nav class=\"navbar navbar-default navbar-static-top\">
+  <div class=\"container\">
+\t  <div class=\"collapse navbar-collapse\">
+\t    <ul class=\"nav navbar-nav\">
+\t    \t<li><a href=\"";
         // line 7
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "Department/getUnhiredStu\">未选人员</a>
-\t<a href=\"";
-        // line 8
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "Department/rePassword\">修改密码</a>
-\t<a href=\"";
+        echo "Department/index\">首页</a></li>
+\t    \t<p class=\"navbar-text\" style=\"color:#ccc;\">面试阶段</p>
+\t    \t<li><a href=\"";
         // line 9
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "Department/logout\">退出登录</a>
-\t
-\t";
+        echo "Department/interview\">已报名人员</a></li>
+\t    \t<p class=\"navbar-text\" style=\"color:#ccc;\">选人阶段</p>
+\t    \t<li><a href=\"";
         // line 11
+        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo "Department/choose\">已面试人员</a></li>
+\t\t\t<li><a href=\"";
+        // line 12
+        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo "Department/getConflictStu\">冲突人员</a></li>
+\t\t\t<li><a href=\"";
+        // line 13
+        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo "Department/getHiredStu\">已选人员</a></li>
+\t\t\t<li><a href=\"";
+        // line 14
+        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo "Department/getUnhiredStu\">未选人员</a></li>
+\t    \t
+\t    </ul>
+\t    <ul class=\"nav navbar-nav navbar-right\">
+\t    \t<li class=\"dropdown \">
+\t\t    \t<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">";
+        // line 19
         echo twig_escape_filter($this->env, ($context["name"] ?? null), "html", null, true);
-        echo "
+        echo " <span class=\"caret\"></span></a>
+\t    \t\t<ul class=\"dropdown-menu\">
+\t    \t\t\t<li><a href=\"";
+        // line 21
+        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo "Department/rePassword\">修改密码</a></li>
+\t\t\t\t\t<li><a href=\"";
+        // line 22
+        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo "Department/logout\">退出登录</a></li>
+\t    \t\t</ul>
+\t    \t</li>
+\t    </ul>
+\t   </div>
+  </div>
+</nav>
 ";
     }
 
@@ -69,22 +89,39 @@ class __TwigTemplate_ec3880433968c56fe7768d3f1181bcaa0793f47e71136c0bd82a089c240
 
     public function getDebugInfo()
     {
-        return array (  60 => 11,  55 => 9,  51 => 8,  47 => 7,  43 => 6,  39 => 5,  35 => 4,  31 => 3,  26 => 2,  20 => 1,);
+        return array (  74 => 22,  70 => 21,  65 => 19,  57 => 14,  53 => 13,  49 => 12,  45 => 11,  40 => 9,  35 => 7,  29 => 3,  23 => 2,  20 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% block header %}
-\t<a href=\"{{ base_url }}Department/index\">首页</a>
-\t<a href=\"{{ base_url }}Department/interview\">面试阶段</a>
-\t<a href=\"{{ base_url }}Department/choose\">选人阶段</a>
-\t<a href=\"{{ base_url }}Department/getConflictStu\">冲突人员</a>
-\t<a href=\"{{ base_url }}Department/getHiredStu\">已选人员</a>
-\t<a href=\"{{ base_url }}Department/getUnhiredStu\">未选人员</a>
-\t<a href=\"{{ base_url }}Department/rePassword\">修改密码</a>
-\t<a href=\"{{ base_url }}Department/logout\">退出登录</a>
-\t
-\t{{ name }}
+        return new Twig_Source("
+{% block header %}
+<nav class=\"navbar navbar-default navbar-static-top\">
+  <div class=\"container\">
+\t  <div class=\"collapse navbar-collapse\">
+\t    <ul class=\"nav navbar-nav\">
+\t    \t<li><a href=\"{{ base_url }}Department/index\">首页</a></li>
+\t    \t<p class=\"navbar-text\" style=\"color:#ccc;\">面试阶段</p>
+\t    \t<li><a href=\"{{ base_url }}Department/interview\">已报名人员</a></li>
+\t    \t<p class=\"navbar-text\" style=\"color:#ccc;\">选人阶段</p>
+\t    \t<li><a href=\"{{ base_url }}Department/choose\">已面试人员</a></li>
+\t\t\t<li><a href=\"{{ base_url }}Department/getConflictStu\">冲突人员</a></li>
+\t\t\t<li><a href=\"{{ base_url }}Department/getHiredStu\">已选人员</a></li>
+\t\t\t<li><a href=\"{{ base_url }}Department/getUnhiredStu\">未选人员</a></li>
+\t    \t
+\t    </ul>
+\t    <ul class=\"nav navbar-nav navbar-right\">
+\t    \t<li class=\"dropdown \">
+\t\t    \t<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{ name }} <span class=\"caret\"></span></a>
+\t    \t\t<ul class=\"dropdown-menu\">
+\t    \t\t\t<li><a href=\"{{ base_url }}Department/rePassword\">修改密码</a></li>
+\t\t\t\t\t<li><a href=\"{{ base_url }}Department/logout\">退出登录</a></li>
+\t    \t\t</ul>
+\t    \t</li>
+\t    </ul>
+\t   </div>
+  </div>
+</nav>
 {% endblock %}", "template/header.html", "/var/www/html/GCN/app/view/template/header.html");
     }
 }

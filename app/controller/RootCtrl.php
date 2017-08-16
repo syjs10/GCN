@@ -85,8 +85,15 @@
 					array_push($datas, $value);
 				}
 			}
+			$num = PAGE_NUM;
+			$pageNum = (int) ceil((count($datas) / $num));
+			$pageNum = $pageNum  == 0 ? 1 : $pageNum;
+			$this->view->assign('num', $pageNum);
+			$this->view->assign('nextPage', ($page+1) >= $pageNum ? $pageNum : $page + 1);
+			$this->view->assign('prePage', ($page-1) <= 0 ? 1 : $page - 1);
+			$data = array_slice($datas,($page - 1) * $num, $num);
 			$this->view->assign('name', $name);
-			$this->view->assign('data', $datas);
+			$this->view->assign('data', $data);
 			$this->view->display('rootConflictStu.html');
 		}
 		public function setDep($id, $depName) {

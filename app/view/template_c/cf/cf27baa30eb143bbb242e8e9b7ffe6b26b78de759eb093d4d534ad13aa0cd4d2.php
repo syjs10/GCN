@@ -38,7 +38,7 @@ class __TwigTemplate_3b8502219488441c1566ee103ff08442c8487de82edacd7ebdd5160b087
     public function block_content($context, array $blocks = array())
     {
         // line 12
-        echo "\t<table>
+        echo "\t<table class=\"table table-hover table-bordered\">
 \t\t<tbody style=\"text-align:center;\">
 \t\t\t\t<tr>
 \t\t\t\t\t<th>姓名</th>
@@ -76,37 +76,49 @@ class __TwigTemplate_3b8502219488441c1566ee103ff08442c8487de82edacd7ebdd5160b087
         echo "\t\t\t
 \t\t</tbody>
 \t</table>
-\t<a href=\"";
-        // line 30
+\t<nav aria-label=\"Page navigation\" class=\"page navbar-fixed-bottom\">
+\t\t<ul class=\"pagination\">
+\t    \t<li>
+\t\t    \t<a href=\"";
+        // line 33
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "Department/choose/page/";
+        echo "Department/getHiredStu/page/";
         echo twig_escape_filter($this->env, ($context["prePage"] ?? null), "html", null, true);
-        echo "\">上一页</a>
-\t\t";
-        // line 31
+        echo "\" aria-label=\"Previous\">
+\t\t        \t<span aria-hidden=\"true\">上一页</span>
+\t\t    \t</a>
+\t    \t</li>
+\t    \t";
+        // line 37
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(range(1, ($context["num"] ?? null)));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 32
-            echo "\t\t    <a href=\"";
+            // line 38
+            echo "\t\t    \t<li><a href=\"";
             echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-            echo "Department/choose/page/";
+            echo "Department/getHiredStu/page/";
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $context["item"], "html", null, true);
-            echo "</a>
-\t\t    &nbsp;
-\t\t";
+            echo "</a></li>
+\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
-        echo "\t<a href=\"";
+        // line 40
+        echo "\t\t\t<li>
+\t\t    \t<a href=\"";
+        // line 41
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "Department/choose/page/";
+        echo "Department/getHiredStu/page/";
         echo twig_escape_filter($this->env, ($context["nextPage"] ?? null), "html", null, true);
-        echo "\">下一页</a>
+        echo "\" aria-label=\"Next\">
+\t\t    \t\t<span aria-hidden=\"true\">下一页</span>
+\t\t    \t</a>
+\t\t\t</li>
+\t\t</ul>
+\t</nav>
 ";
     }
 
@@ -122,7 +134,7 @@ class __TwigTemplate_3b8502219488441c1566ee103ff08442c8487de82edacd7ebdd5160b087
 
     public function getDebugInfo()
     {
-        return array (  105 => 35,  91 => 32,  87 => 31,  81 => 30,  76 => 27,  65 => 22,  57 => 21,  54 => 20,  50 => 19,  41 => 12,  38 => 11,  32 => 5,  29 => 4,  11 => 1,);
+        return array (  113 => 41,  110 => 40,  97 => 38,  93 => 37,  84 => 33,  76 => 27,  65 => 22,  57 => 21,  54 => 20,  50 => 19,  41 => 12,  38 => 11,  32 => 5,  29 => 4,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -138,7 +150,7 @@ class __TwigTemplate_3b8502219488441c1566ee103ff08442c8487de82edacd7ebdd5160b087
 
 
 {% block content %}
-\t<table>
+\t<table class=\"table table-hover table-bordered\">
 \t\t<tbody style=\"text-align:center;\">
 \t\t\t\t<tr>
 \t\t\t\t\t<th>姓名</th>
@@ -156,12 +168,23 @@ class __TwigTemplate_3b8502219488441c1566ee103ff08442c8487de82edacd7ebdd5160b087
 \t\t\t
 \t\t</tbody>
 \t</table>
-\t<a href=\"{{ base_url }}Department/choose/page/{{ prePage }}\">上一页</a>
-\t\t{% for item in 1..num %}
-\t\t    <a href=\"{{ base_url }}Department/choose/page/{{ item }}\">{{ item }}</a>
-\t\t    &nbsp;
-\t\t{% endfor %}
-\t<a href=\"{{ base_url }}Department/choose/page/{{ nextPage }}\">下一页</a>
+\t<nav aria-label=\"Page navigation\" class=\"page navbar-fixed-bottom\">
+\t\t<ul class=\"pagination\">
+\t    \t<li>
+\t\t    \t<a href=\"{{ base_url }}Department/getHiredStu/page/{{ prePage }}\" aria-label=\"Previous\">
+\t\t        \t<span aria-hidden=\"true\">上一页</span>
+\t\t    \t</a>
+\t    \t</li>
+\t    \t{% for item in 1..num %}
+\t\t    \t<li><a href=\"{{ base_url }}Department/getHiredStu/page/{{ item }}\">{{ item }}</a></li>
+\t\t\t{% endfor %}
+\t\t\t<li>
+\t\t    \t<a href=\"{{ base_url }}Department/getHiredStu/page/{{ nextPage }}\" aria-label=\"Next\">
+\t\t    \t\t<span aria-hidden=\"true\">下一页</span>
+\t\t    \t</a>
+\t\t\t</li>
+\t\t</ul>
+\t</nav>
 {% endblock %}", "hiredStu.html", "/var/www/html/GCN/app/view/hiredStu.html");
     }
 }

@@ -37,7 +37,7 @@ class __TwigTemplate_c30f24088f5ba28d1811575541ccc0f0a419105dc1f5717a85964902e38
     public function block_content($context, array $blocks = array())
     {
         // line 8
-        echo "    <table>
+        echo "    <table class=\"table table-hover table-bordered\">
     \t<tbody>
     \t\t<tr>
     \t\t\t<td>姓名</td>
@@ -185,7 +185,7 @@ class __TwigTemplate_c30f24088f5ba28d1811575541ccc0f0a419105dc1f5717a85964902e38
 {% endblock %}
 
 {% block content %}
-    <table>
+    <table class=\"table table-hover table-bordered\">
     \t<tbody>
     \t\t<tr>
     \t\t\t<td>姓名</td>

@@ -22,38 +22,70 @@ class __TwigTemplate_f1a11b877953b4c22c3c1793a9a1ccb5ce441744cc469432624e74946a3
 <html lang=\"en\">
 <head>
 \t<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">
-\t";
-        // line 5
-        $this->displayBlock('head', $context, $blocks);
+\t<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">
+\t<link rel=\"stylesheet\" href=\"";
+        // line 6
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "css/bootstrap/bootstrap.min.css\">
+    <link rel=\"stylesheet\" href=\"";
         // line 7
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "css/bootstrap/bootstrap-theme.min.css\">
+    <link rel=\"stylesheet\" href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "css/main.css\">
+    <script src=\"";
+        // line 9
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "/js/jquery.min.js\"></script>
+    <script src=\"";
+        // line 10
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "/js/bootstrap/bootstrap.min.js\"></script>
+\t";
+        // line 11
+        $this->displayBlock('head', $context, $blocks);
+        // line 13
         echo "</head>
 <body>
 \t";
-        // line 9
-        $this->loadTemplate("template/header.html", "template/hflayout.html", 9)->display($context);
-        // line 10
-        echo "\t";
+        // line 15
+        $this->loadTemplate("template/header.html", "template/hflayout.html", 15)->display($context);
+        // line 16
+        echo "\t<div class=\"container-fluid\">
+\t  <div class=\"row\">
+\t    <div class=\"col-md-2 col-xs-1\"></div>
+\t    <div class=\"col-md-8 col-xs-10\">
+\t    \t";
+        // line 20
         $this->displayBlock('content', $context, $blocks);
-        // line 12
-        echo "\t";
-        $this->loadTemplate("template/footer.html", "template/hflayout.html", 12)->display($context);
-        // line 13
+        // line 22
+        echo "\t    </div>
+\t    <div class=\"col-md-2 col-xs-1\"></div>
+\t  </div>
+\t</div>
+\t
+\t";
+        // line 27
+        $this->loadTemplate("template/footer.html", "template/hflayout.html", 27)->display($context);
+        // line 28
         echo "</body>
 </html>";
     }
 
-    // line 5
+    // line 11
     public function block_head($context, array $blocks = array())
     {
-        // line 6
+        // line 12
         echo "\t";
     }
 
-    // line 10
+    // line 20
     public function block_content($context, array $blocks = array())
     {
-        // line 11
-        echo "\t";
+        // line 21
+        echo "\t\t\t";
     }
 
     public function getTemplateName()
@@ -68,7 +100,7 @@ class __TwigTemplate_f1a11b877953b4c22c3c1793a9a1ccb5ce441744cc469432624e74946a3
 
     public function getDebugInfo()
     {
-        return array (  56 => 11,  53 => 10,  49 => 6,  46 => 5,  41 => 13,  38 => 12,  35 => 10,  33 => 9,  29 => 7,  27 => 5,  21 => 1,);
+        return array (  88 => 21,  85 => 20,  81 => 12,  78 => 11,  73 => 28,  71 => 27,  64 => 22,  62 => 20,  56 => 16,  54 => 15,  50 => 13,  48 => 11,  44 => 10,  40 => 9,  36 => 8,  32 => 7,  28 => 6,  21 => 1,);
     }
 
     public function getSourceContext()
@@ -77,13 +109,28 @@ class __TwigTemplate_f1a11b877953b4c22c3c1793a9a1ccb5ce441744cc469432624e74946a3
 <html lang=\"en\">
 <head>
 \t<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">
+\t<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">
+\t<link rel=\"stylesheet\" href=\"{{ source_url }}css/bootstrap/bootstrap.min.css\">
+    <link rel=\"stylesheet\" href=\"{{ source_url }}css/bootstrap/bootstrap-theme.min.css\">
+    <link rel=\"stylesheet\" href=\"{{ source_url }}css/main.css\">
+    <script src=\"{{ source_url }}/js/jquery.min.js\"></script>
+    <script src=\"{{ source_url }}/js/bootstrap/bootstrap.min.js\"></script>
 \t{% block head %}
 \t{% endblock %}
 </head>
 <body>
 \t{% include \"template/header.html\" %}
-\t{% block content %}
-\t{% endblock %}
+\t<div class=\"container-fluid\">
+\t  <div class=\"row\">
+\t    <div class=\"col-md-2 col-xs-1\"></div>
+\t    <div class=\"col-md-8 col-xs-10\">
+\t    \t{% block content %}
+\t\t\t{% endblock %}
+\t    </div>
+\t    <div class=\"col-md-2 col-xs-1\"></div>
+\t  </div>
+\t</div>
+\t
 \t{% include \"template/footer.html\" %}
 </body>
 </html>", "template/hflayout.html", "/var/www/html/GCN/app/view/template/hflayout.html");

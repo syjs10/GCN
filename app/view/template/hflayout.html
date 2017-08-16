@@ -2,13 +2,28 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+	<link rel="stylesheet" href="{{ source_url }}css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ source_url }}css/bootstrap/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{{ source_url }}css/main.css">
+    <script src="{{ source_url }}/js/jquery.min.js"></script>
+    <script src="{{ source_url }}/js/bootstrap/bootstrap.min.js"></script>
 	{% block head %}
 	{% endblock %}
 </head>
 <body>
 	{% include "template/header.html" %}
-	{% block content %}
-	{% endblock %}
+	<div class="container-fluid">
+	  <div class="row">
+	    <div class="col-md-2 col-xs-1"></div>
+	    <div class="col-md-8 col-xs-10">
+	    	{% block content %}
+			{% endblock %}
+	    </div>
+	    <div class="col-md-2 col-xs-1"></div>
+	  </div>
+	</div>
+	
 	{% include "template/footer.html" %}
 </body>
 </html>

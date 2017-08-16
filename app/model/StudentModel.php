@@ -22,7 +22,7 @@
 			]);
 		}
 		public function getCount($where = NULL) {
-			return $this->count($this->table, $where);
+			return $this->count($this->table, '*', $where);
 		}
 		public function getPage($num) {
 			return ceil(self::getCount() / $num);
@@ -75,17 +75,26 @@
 					"LIMIT" => [($page - 1) * $num, $num]
 				]);
 		}
-		public function getConutByReview($depName){
-			return $this->count($this->table, [
+		public function getAllStuByReview($depName) {
+			return $this->select($this->table, [
 					"[>]review"=>["id"=>"id"]
 				], 
 				'*', 
 				[
-					"review.department" => $depName,
+					"review.department" => $depName
+				]);
+		}
+		public function getCountByReview($depName){
+			return $this->count($this->table, [
+					"[>]review"=>["id"=>"id"]
+				], 
+				'*',
+				[
+					"review.department" => $depName
 				]);			
 		}
 		public function getPageByReview($num, $depName) {
-			return ceil(self::getConutByReview($depName) / $num);
+			return ceil(self::getCountByReview($depName) / $num);
 		}
 		public function getStuWithReview($id, $depName) {
 			return $this->select($this->table, [
