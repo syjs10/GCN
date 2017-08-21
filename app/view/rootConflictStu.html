@@ -9,46 +9,72 @@
 
 
 {% block content %}
-	<table>
-		<tbody class="table table-hover table-bordered">
-				<tr>
-					<th>姓名</th>
-					<th>性别</th>
-					<th>评分</th>
-					<th>其他部门</th>
-				</tr>
-			{% for value in data %}
-				<tr>
-					<td>{{ value['name'] }}</td>
-					<td>{{ value['gender'] }}</td>
-					<td>{{ value['score'] }}</td>
-					<td>
-							<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department'] }}">{{ value['employ_department'] }}</a>
-							<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department1'] }}">{{ value['employ_department1'] }}</a>
-							<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department2'] }}">{{ value['employ_department2'] }}</a>
-							<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department3'] }}">{{ value['employ_department3'] }}</a>
-						
-					</td>
-				</tr>
-			{% endfor %}
-			
-		</tbody>
-	</table>
-	<nav aria-label="Page navigation" class="page navbar-fixed-bottom">
-		<ul class="pagination">
-	    	<li>
-		    	<a href="{{ base_url }}Department/getUnhiredStu/page/{{ prePage }}" aria-label="Previous">
-		        	<span aria-hidden="true">上一页</span>
-		    	</a>
-	    	</li>
-	    	{% for item in 1..num %}
-		    	<li><a href="{{ base_url }}Department/getUnhiredStu/page/{{ item }}">{{ item }}</a></li>
-			{% endfor %}
-			<li>
-		    	<a href="{{ base_url }}Department/getUnhiredStu/page/{{ nextPage }}" aria-label="Next">
-		    		<span aria-hidden="true">下一页</span>
-		    	</a>
-			</li>
-		</ul>
+
+	<nav class="navbar navbar-default navbar-static-top">
+	  <div class="container">
+		  <div class="collapse navbar-collapse">
+		    <ul class="nav navbar-nav">
+		    	<li><a href="{{ base_url }}Root/index">首页</a></li>
+		    	<li><a href="{{ base_url }}Root/conflictStu">冲突人员</a></li>
+		    </ul>
+		    <ul class="nav navbar-nav navbar-right">
+		    	<li class="dropdown ">
+			    	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ name }} <span class="caret"></span></a>
+		    		<ul class="dropdown-menu">
+						<li><a href="{{ base_url }}Root/logout">退出登录</a></li>
+		    		</ul>
+		    	</li>
+		    </ul>
+		   </div>
+	  </div>
 	</nav>
+	<div class="container-fluid">
+	  <div class="row">
+	    <div class="col-md-2 col-xs-1"></div>
+	    <div class="col-md-8 col-xs-10">
+	    	
+			<table class="table table-hover table-bordered">
+				<tbody >
+						<tr>
+							<th>姓名</th>
+							<th>性别</th>
+							<th>其他部门</th>
+						</tr>
+					{% for value in data %}
+						<tr>
+							<td>{{ value['name'] }}</td>
+							<td>{{ value['gender'] }}</td>
+							<td>
+									<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department'] }}">{{ value['employ_department'] }}</a>
+									<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department1'] }}">{{ value['employ_department1'] }}</a>
+									<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department2'] }}">{{ value['employ_department2'] }}</a>
+									<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department3'] }}">{{ value['employ_department3'] }}</a>
+								
+							</td>
+						</tr>
+					{% endfor %}
+					
+				</tbody>
+			</table>
+			<nav aria-label="Page navigation" class="page navbar-fixed-bottom">
+				<ul class="pagination">
+			    	<li>
+				    	<a href="{{ base_url }}Root/conflictStu/page/{{ prePage }}" aria-label="Previous">
+				        	<span aria-hidden="true">上一页</span>
+				    	</a>
+			    	</li>
+			    	{% for item in 1..num %}
+				    	<li><a href="{{ base_url }}Root/conflictStu/page/{{ item }}">{{ item }}</a></li>
+					{% endfor %}
+					<li>
+				    	<a href="{{ base_url }}Root/conflictStu/page/{{ nextPage }}" aria-label="Next">
+				    		<span aria-hidden="true">下一页</span>
+				    	</a>
+					</li>
+				</ul>
+			</nav>
+	    </div>
+	    <div class="col-md-2 col-xs-1"></div>
+	  </div>
+	</div>
 {% endblock %}

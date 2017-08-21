@@ -56,14 +56,14 @@
 			}
 		}
 		public function logout(){
-			if (NULL == $this->Session->getSession('rootName') && NULL == $this->Cookie->getCookie('rootLogin')) {
+			if (NULL != $this->Session->getSession('rootName') || NULL != $this->Cookie->getCookie('rootLogin')) {
 				$this->Session->delSession();
-				$this->Cookie->delCookie('Login', 3600*24);
+				$this->Cookie->delCookie('rootLogin', 3600*24);
 				$this->jump(BASE_URL . 'Root/login');
 				exit();
 			}
 		}
-		public function conflictStu() {
+		public function conflictStu($page = 1) {
 			$name = $this->Session->getSession('rootName');
 			$data = $this->StudentModel->rootChooseStu();
 			$datas = array();

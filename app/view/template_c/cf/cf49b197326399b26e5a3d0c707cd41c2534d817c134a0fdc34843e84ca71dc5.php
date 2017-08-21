@@ -35,16 +35,24 @@ class __TwigTemplate_db83f7b10926d73ed58bb65544d2881c6e58e49718785d13b19019397c6
         // line 9
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "css/bootstrap/bootstrap-theme.min.css\">
-    <script src=\"";
+    <link rel=\"stylesheet\" href=\"";
         // line 10
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "css/main.css\">
+    <script src=\"";
+        // line 11
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "/js/jquery.min.js\"></script>
+    <script src=\"";
+        // line 12
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "/js/bootstrap/bootstrap.min.js\"></script>
 </head>
 <body>
 \t";
-        // line 13
-        $this->displayBlock('content', $context, $blocks);
         // line 15
+        $this->displayBlock('content', $context, $blocks);
+        // line 17
         echo "</body>
 </html>";
     }
@@ -56,10 +64,10 @@ class __TwigTemplate_db83f7b10926d73ed58bb65544d2881c6e58e49718785d13b19019397c6
         echo "\t";
     }
 
-    // line 13
+    // line 15
     public function block_content($context, array $blocks = array())
     {
-        // line 14
+        // line 16
         echo "\t";
     }
 
@@ -75,7 +83,7 @@ class __TwigTemplate_db83f7b10926d73ed58bb65544d2881c6e58e49718785d13b19019397c6
 
     public function getDebugInfo()
     {
-        return array (  63 => 14,  60 => 13,  56 => 6,  53 => 5,  48 => 15,  46 => 13,  40 => 10,  36 => 9,  32 => 8,  29 => 7,  27 => 5,  21 => 1,);
+        return array (  71 => 16,  68 => 15,  64 => 6,  61 => 5,  56 => 17,  54 => 15,  48 => 12,  44 => 11,  40 => 10,  36 => 9,  32 => 8,  29 => 7,  27 => 5,  21 => 1,);
     }
 
     public function getSourceContext()
@@ -89,6 +97,8 @@ class __TwigTemplate_db83f7b10926d73ed58bb65544d2881c6e58e49718785d13b19019397c6
 \t<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">
 \t<link rel=\"stylesheet\" href=\"{{ source_url }}css/bootstrap/bootstrap.min.css\">
     <link rel=\"stylesheet\" href=\"{{ source_url }}css/bootstrap/bootstrap-theme.min.css\">
+    <link rel=\"stylesheet\" href=\"{{ source_url }}css/main.css\">
+    <script src=\"{{ source_url }}/js/jquery.min.js\"></script>
     <script src=\"{{ source_url }}/js/bootstrap/bootstrap.min.js\"></script>
 </head>
 <body>
