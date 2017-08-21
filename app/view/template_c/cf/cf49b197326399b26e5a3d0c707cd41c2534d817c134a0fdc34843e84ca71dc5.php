@@ -39,20 +39,13 @@ class __TwigTemplate_db83f7b10926d73ed58bb65544d2881c6e58e49718785d13b19019397c6
         // line 10
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "css/main.css\">
-    <!-- <script src=\"";
-        // line 11
-        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
-        echo "js/jquery.min.js\"></script> -->
-    <script src=\"";
-        // line 12
-        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
-        echo "js/bootstrap/bootstrap.min.js\"></script>
+    
 </head>
 <body>
 \t";
-        // line 15
+        // line 14
         $this->displayBlock('content', $context, $blocks);
-        // line 17
+        // line 16
         echo "</body>
 </html>";
     }
@@ -64,10 +57,10 @@ class __TwigTemplate_db83f7b10926d73ed58bb65544d2881c6e58e49718785d13b19019397c6
         echo "\t";
     }
 
-    // line 15
+    // line 14
     public function block_content($context, array $blocks = array())
     {
-        // line 16
+        // line 15
         echo "\t";
     }
 
@@ -83,7 +76,7 @@ class __TwigTemplate_db83f7b10926d73ed58bb65544d2881c6e58e49718785d13b19019397c6
 
     public function getDebugInfo()
     {
-        return array (  71 => 16,  68 => 15,  64 => 6,  61 => 5,  56 => 17,  54 => 15,  48 => 12,  44 => 11,  40 => 10,  36 => 9,  32 => 8,  29 => 7,  27 => 5,  21 => 1,);
+        return array (  64 => 15,  61 => 14,  57 => 6,  54 => 5,  49 => 16,  47 => 14,  40 => 10,  36 => 9,  32 => 8,  29 => 7,  27 => 5,  21 => 1,);
     }
 
     public function getSourceContext()
@@ -98,8 +91,7 @@ class __TwigTemplate_db83f7b10926d73ed58bb65544d2881c6e58e49718785d13b19019397c6
 \t<link rel=\"stylesheet\" href=\"{{ source_url }}css/bootstrap/bootstrap.min.css\">
     <link rel=\"stylesheet\" href=\"{{ source_url }}css/bootstrap/bootstrap-theme.min.css\">
     <link rel=\"stylesheet\" href=\"{{ source_url }}css/main.css\">
-    <!-- <script src=\"{{ source_url }}js/jquery.min.js\"></script> -->
-    <script src=\"{{ source_url }}js/bootstrap/bootstrap.min.js\"></script>
+    
 </head>
 <body>
 \t{% block content %}

@@ -6,3 +6,6 @@ table > tbody,tr,td,th{
 	
 	
 }
+.navbar-fixed-bottom {
+	position: absolute !important;
+}

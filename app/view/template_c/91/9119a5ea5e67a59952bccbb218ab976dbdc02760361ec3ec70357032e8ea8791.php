@@ -29,7 +29,7 @@ class __TwigTemplate_3ecf65cafc986d3b886dafa6d2008fc3fd7f03a015f0d838d28e81b539f
     public function block_head($context, array $blocks = array())
     {
         // line 5
-        echo "\t<title>Index Page</title>
+        echo "\t<title>首页</title>
 \t
 ";
     }
@@ -75,7 +75,7 @@ class __TwigTemplate_3ecf65cafc986d3b886dafa6d2008fc3fd7f03a015f0d838d28e81b539f
 
 
 {% block head %}
-\t<title>Index Page</title>
+\t<title>首页</title>
 \t
 {% endblock %}
 
