@@ -33,24 +33,29 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t<script src=\"";
         // line 6
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
-        echo "js/jquery-validation-1.14.0/lib/jquery.js\"></script>
+        echo "js/jquery-validation-1.14.0/lib/jquery.js\"  type=\"text/javascript\"></script>
 \t<script src=\"";
         // line 7
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "js/jquery-validation-1.14.0/dist/jquery.validate.min.js\"></script>
+\t<script src=\"";
+        // line 8
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "js/jquery-validation-1.14.0/dist/localization/messages_zh.js\"></script>
+\t
 ";
     }
 
-    // line 10
+    // line 12
     public function block_content($context, array $blocks = array())
     {
-        // line 11
+        // line 13
         echo "\t<div >
 \t\t<div >
 \t\t\t<h1 align=\"center\">工大网管，欢迎“家”入</h1>
 \t\t</div>
 \t\t<form action=\"";
-        // line 15
+        // line 17
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "Student/doSubmit\" enctype=\"multipart/form-data\" id=\"stuForm\" method=\"post\">
 \t\t\t<table border=\"0\">
@@ -154,7 +159,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t\t\t\t\t<input type=\"text\" name=\"verify\" value=\"\" style=\"width:50%; margin-bottom:17px;\">
 
 \t\t\t\t\t\t<img src=\"";
-        // line 116
+        // line 118
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "ShowVerify\" alt=\"验证码\" onclick=\"this.src='";
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
@@ -172,9 +177,10 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t</div>
 
 \t<script>
+\t\t
 \t\t\$.validator.setDefaults({
 \t\t    submitHandler: function() {
-\t\t      form.submit();
+\t\t      alert(\"提交事件!\");
 \t\t    }
 \t\t});
 \t\t\$().ready(function() {
@@ -222,6 +228,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t    \t}
 \t\t    });
 \t\t});
+\t\t
 \t\t</script>
 ";
     }
@@ -238,7 +245,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 
     public function getDebugInfo()
     {
-        return array (  158 => 116,  54 => 15,  48 => 11,  45 => 10,  39 => 7,  35 => 6,  32 => 5,  29 => 4,  11 => 1,);
+        return array (  163 => 118,  59 => 17,  53 => 13,  50 => 12,  43 => 8,  39 => 7,  35 => 6,  32 => 5,  29 => 4,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -248,8 +255,10 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 
 {% block head %}
 \t<title>招新页面</title>
-\t<script src=\"{{ source_url }}js/jquery-validation-1.14.0/lib/jquery.js\"></script>
+\t<script src=\"{{ source_url }}js/jquery-validation-1.14.0/lib/jquery.js\"  type=\"text/javascript\"></script>
 \t<script src=\"{{ source_url }}js/jquery-validation-1.14.0/dist/jquery.validate.min.js\"></script>
+\t<script src=\"{{ source_url }}js/jquery-validation-1.14.0/dist/localization/messages_zh.js\"></script>
+\t
 {% endblock %}
 
 {% block content %}
@@ -372,9 +381,10 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t</div>
 
 \t<script>
+\t\t
 \t\t\$.validator.setDefaults({
 \t\t    submitHandler: function() {
-\t\t      form.submit();
+\t\t      alert(\"提交事件!\");
 \t\t    }
 \t\t});
 \t\t\$().ready(function() {
@@ -422,6 +432,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t    \t}
 \t\t    });
 \t\t});
+\t\t
 \t\t</script>
 {% endblock %}", "stuSubmit.html", "/var/www/html/GCN/app/view/stuSubmit.html");
     }

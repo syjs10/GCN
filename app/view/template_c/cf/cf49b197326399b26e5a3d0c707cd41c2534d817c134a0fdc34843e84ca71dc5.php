@@ -39,14 +39,14 @@ class __TwigTemplate_db83f7b10926d73ed58bb65544d2881c6e58e49718785d13b19019397c6
         // line 10
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "css/main.css\">
-    <script src=\"";
+    <!-- <script src=\"";
         // line 11
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
-        echo "/js/jquery.min.js\"></script>
+        echo "js/jquery.min.js\"></script> -->
     <script src=\"";
         // line 12
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
-        echo "/js/bootstrap/bootstrap.min.js\"></script>
+        echo "js/bootstrap/bootstrap.min.js\"></script>
 </head>
 <body>
 \t";
@@ -98,8 +98,8 @@ class __TwigTemplate_db83f7b10926d73ed58bb65544d2881c6e58e49718785d13b19019397c6
 \t<link rel=\"stylesheet\" href=\"{{ source_url }}css/bootstrap/bootstrap.min.css\">
     <link rel=\"stylesheet\" href=\"{{ source_url }}css/bootstrap/bootstrap-theme.min.css\">
     <link rel=\"stylesheet\" href=\"{{ source_url }}css/main.css\">
-    <script src=\"{{ source_url }}/js/jquery.min.js\"></script>
-    <script src=\"{{ source_url }}/js/bootstrap/bootstrap.min.js\"></script>
+    <!-- <script src=\"{{ source_url }}js/jquery.min.js\"></script> -->
+    <script src=\"{{ source_url }}js/bootstrap/bootstrap.min.js\"></script>
 </head>
 <body>
 \t{% block content %}

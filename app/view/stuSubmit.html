@@ -3,8 +3,10 @@
 
 {% block head %}
 	<title>招新页面</title>
-	<script src="{{ source_url }}js/jquery-validation-1.14.0/lib/jquery.js"></script>
+	<script src="{{ source_url }}js/jquery-validation-1.14.0/lib/jquery.js"  type="text/javascript"></script>
 	<script src="{{ source_url }}js/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+	<script src="{{ source_url }}js/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+	
 {% endblock %}
 
 {% block content %}
@@ -127,9 +129,10 @@
 	</div>
 
 	<script>
+		
 		$.validator.setDefaults({
 		    submitHandler: function() {
-		      form.submit();
+		      alert("提交事件!");
 		    }
 		});
 		$().ready(function() {
@@ -177,5 +180,6 @@
 		    	}
 		    });
 		});
+		
 		</script>
 {% endblock %}
