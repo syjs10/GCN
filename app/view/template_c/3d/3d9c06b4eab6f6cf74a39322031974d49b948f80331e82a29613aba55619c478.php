@@ -8,7 +8,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("template/layout.html", "stuSubmit.html", 1);
+        $this->parent = $this->loadTemplate("template/stulayout.html", "stuSubmit.html", 1);
         $this->blocks = array(
             'head' => array($this, 'block_head'),
             'content' => array($this, 'block_content'),
@@ -17,7 +17,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 
     protected function doGetParent(array $context)
     {
-        return "template/layout.html";
+        return "template/stulayout.html";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -160,6 +160,11 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
 \t                    </select>
 \t                </div>
+\t            </div>
+\t        </div>
+\t\t\t<div class=\"ui-form-item ui-border-b\">
+\t            <label></label>
+\t            <div class=\"ui-select-group\">
 \t                <div class=\"ui-select\">
 \t                    <select name=\"department2\">
 \t                        <option selected>意向部门3</option>
@@ -184,7 +189,6 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t                </div>
 \t            </div>
 \t        </div>
-
 \t\t    <div class=\"ui-form-item ui-form-item-textarea ui-border-b\">
 \t            <label>
 \t                自我介绍
@@ -195,7 +199,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t\t<div class=\"ui-form-item ui-form-item-l ui-border-b\">
 \t\t        <label class=\"ui-border-r\">
 \t\t        \t<img src=\"";
-        // line 151
+        // line 155
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "ShowVerify\" alt=\"验证码\" onclick=\"this.src='";
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
@@ -236,11 +240,11 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t</div>
 \t
 \t<script type=\"text/javascript\" src=\"";
-        // line 187
+        // line 191
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "dist/lib/zepto.min.js\"></script>
 \t<script type=\"text/javascript\" src=\"";
-        // line 188
+        // line 192
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "dist/js/frozen.js\"></script>
 
@@ -322,12 +326,12 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 
     public function getDebugInfo()
     {
-        return array (  244 => 188,  240 => 187,  199 => 151,  63 => 18,  57 => 14,  54 => 13,  47 => 9,  43 => 8,  39 => 7,  35 => 6,  32 => 5,  29 => 4,  11 => 1,);
+        return array (  248 => 192,  244 => 191,  203 => 155,  63 => 18,  57 => 14,  54 => 13,  47 => 9,  43 => 8,  39 => 7,  35 => 6,  32 => 5,  29 => 4,  11 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% extends \"template/layout.html\" %}
+        return new Twig_Source("{% extends \"template/stulayout.html\" %}
 
 
 {% block head %}
@@ -443,6 +447,11 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
 \t                    </select>
 \t                </div>
+\t            </div>
+\t        </div>
+\t\t\t<div class=\"ui-form-item ui-border-b\">
+\t            <label></label>
+\t            <div class=\"ui-select-group\">
 \t                <div class=\"ui-select\">
 \t                    <select name=\"department2\">
 \t                        <option selected>意向部门3</option>
@@ -467,7 +476,6 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t                </div>
 \t            </div>
 \t        </div>
-
 \t\t    <div class=\"ui-form-item ui-form-item-textarea ui-border-b\">
 \t            <label>
 \t                自我介绍
