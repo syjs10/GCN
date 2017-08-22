@@ -42,139 +42,216 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
         // line 8
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "js/jquery-validation-1.14.0/dist/localization/messages_zh.js\"></script>
+    <link rel=\"stylesheet\" href=\"";
+        // line 9
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "dist/css/frozen.css\">
 \t
 ";
     }
 
-    // line 12
+    // line 13
     public function block_content($context, array $blocks = array())
     {
-        // line 13
-        echo "\t<div >
-\t\t<div >
-\t\t\t<h1 align=\"center\">工大网管，欢迎“家”入</h1>
-\t\t</div>
-\t\t<form action=\"";
-        // line 17
-        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "Student/doSubmit\" enctype=\"multipart/form-data\" id=\"stuForm\" method=\"post\">
-\t\t\t<table border=\"0\">
-\t\t\t\t<tr>
-\t\t\t\t\t<td >姓名：</td>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t<input class=\"input\" type=\"text\" name=\"name\" maxlength=\"4\" size=\"25\">
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t\t<tr>
-\t\t\t\t\t<td >学号：</td>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t<input class=\"input\" type=\"text\" name=\"studentid\" maxlength=\"9\" size=\"25\">
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t\t<tr>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t性别：
-\t\t\t\t\t</td>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t<input style=\"margin-left: 0;\" class=\"radio\" type=\"radio\" name=\"gender\" value=\"男\" style=\"margin-left:40px;\">男</input>
-\t\t\t\t\t\t<input class=\"radio\" type=\"radio\" name=\"gender\" value=\"女\" style=\"margin-left:40px;\">女</input>
-\t\t\t\t\t\t<input class=\"radio\" type=\"radio\" name=\"gender\" value=\"女\" style=\"margin-left:40px;\">其他</input>
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t\t<tr>
-\t\t\t\t\t<td >专业班级：</td>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t<input  type=\"text\" name=\"class\" maxlength=\"30\" size=\"25\">
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t\t<tr>
-\t\t\t\t\t<td >手机：</td>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t<input  type=\"text\" name=\"phonenum\" maxlength=\"11\" size=\"25\">
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t\t<tr>
-\t\t\t\t\t<td >QQ:</td>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t<input  type=\"text\" name=\"qqnum\" maxlength=\"15\" size=\"25\">
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t\t<tr>
-\t\t\t\t\t<td >部门:</td>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t<select class=\"\" name=\"department0\">
-\t\t\t\t\t\t\t\t<option >部门1</option>
-\t\t\t\t\t\t\t\t<option value=\"技术部\">技术部</option>
-\t\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
-\t\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
-\t\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
-\t\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
-\t\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
-\t\t\t\t\t\t</select>
-
-\t\t\t\t\t\t<select class=\"\" name=\"department1\">
-\t\t\t\t\t\t\t\t<option >部门2</option>
-\t\t\t\t\t\t\t\t<option value=\"技术部\">技术部</option>
-\t\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
-\t\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
-\t\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
-\t\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
-\t\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
-\t\t\t\t\t\t</select>
-\t\t\t\t\t\t<select class=\"\" name=\"department2\">
-\t\t\t\t\t\t\t\t<option >部门3</option>
-\t\t\t\t\t\t\t\t<option value=\"技术部\">技术部</option>
-\t\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
-\t\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
-\t\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
-\t\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
-\t\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
-\t\t\t\t\t\t</select>
-\t\t\t\t\t\t<select class=\"\" name=\"department3\">
-\t\t\t\t\t\t\t\t<option >部门4</option>
-\t\t\t\t\t\t\t\t<option value=\"技术部\">技术部</option>
-\t\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
-\t\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
-\t\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
-\t\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
-\t\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
-\t\t\t\t\t\t</select>
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
+        // line 14
+        echo "\t
+\t<div class=\"ui-form ui-border-t\">
+\t\t<div class=\"title\">
+\t\t\t<div class=\"ui-flex ui-flex-pack-center\">
+\t\t\t\t<div class=\"ui-avatar-one\"><span class=\"ui-flex ui-flex-pack-center\" style=\"background-image:url(";
+        // line 18
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "img/band.JPG)\"></span></div>
 \t\t\t\t
-\t\t\t\t<tr>
-\t\t\t\t\t<td>
-\t\t\t\t\t\t自我介绍<br>（包括特长爱好）：
-\t\t\t\t\t</td>
-\t\t\t\t\t<td>
-\t\t\t\t\t\t<textarea  name=\"introduction\" rows=\"10\" cols=\"15\"></textarea>
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t\t<tr>
-\t\t\t\t\t<td>
-\t\t\t\t\t\t验证码
-\t\t\t\t\t</td>
-\t\t\t\t\t<td>
+\t\t\t</div>
+\t\t\t<h5 align=\"center\">工大网管，欢迎“家”入</h5>
+\t\t</div>
+\t\t<form action=\"doSubmit\" enctype=\"multipart/form-data\" method=\"post\" id=\"stuForm\">
 
-\t\t\t\t\t\t<input type=\"text\" name=\"verify\" value=\"\" style=\"width:50%; margin-bottom:17px;\">
+\t\t\t<div class=\"ui-form-item ui-border-b\">
+\t            <label>
+\t                姓名
+\t            </label>
+\t            <input type=\"text\" name=\"name\" placeholder=\"姓名\">
+\t            <a href=\"#\" class=\"ui-icon-close\">
+\t            </a>
+        \t</div>
 
-\t\t\t\t\t\t<img src=\"";
-        // line 118
+\t\t\t<div class=\"ui-form-item ui-border-b\">
+\t            <label>
+\t                学号
+\t            </label>
+\t            <input type=\"text\" name=\"studentid\" placeholder=\"9位学号\">
+\t            <a href=\"#\" class=\"ui-icon-close\">
+\t            </a>
+        \t</div>
+\t\t\t
+\t\t\t<ul class=\"ui-form-item ui-border-b ui-grid-trisect\">
+\t\t\t\t<li>
+\t\t\t\t\t<label>
+\t\t                性别
+\t\t            </label>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<div class=\"ui-form-item ui-form-item-radio ui-border-b\">
+\t\t\t            
+\t\t\t            <label class=\"ui-radio\" for=\"radio\">
+\t\t\t                <input type=\"radio\" name=\"gender\" value=\"男\">
+\t\t\t            </label>
+\t\t\t            <p>男</p>
+\t\t\t        </div>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<div class=\"ui-form-item ui-form-item-radio ui-border-b\">
+\t\t\t            
+\t\t\t            <label class=\"ui-radio\" for=\"radio\">
+\t\t\t                <input type=\"radio\" name=\"gender\" value=\"女\">
+\t\t\t            </label>
+\t\t\t            <p>女</p>
+\t\t\t        </div>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t\t
+\t\t\t<div class=\"ui-form-item ui-border-b\">
+\t            <label>
+\t                专业班级
+\t            </label>
+\t            <input type=\"text\" name=\"class\" placeholder=\"例：计算机1701\">
+        \t</div>
+
+\t\t    <div class=\"ui-form-item ui-form-item-l ui-border-b\">
+\t\t        <label class=\"ui-border-r\">
+\t\t            中国 +86
+\t\t        </label>
+\t\t        <input type=\"text\" name=\"phonenum\" placeholder=\"请输入手机号码\">
+\t\t        <a href=\"#\" class=\"ui-icon-close\">
+\t\t        </a>
+\t\t    </div>
+
+        \t<div class=\"ui-form-item ui-border-b\">
+\t            <label>
+\t                QQ
+\t            </label>
+\t            <input type=\"text\" name=\"qqnum\" placeholder=\"QQ号码\">
+        \t</div>
+
+\t        <div class=\"ui-form-item ui-border-b\">
+\t            <label>报名部门</label>
+\t            <div class=\"ui-select-group\">
+\t                <div class=\"ui-select\">
+\t                    <select name=\"department0\">
+\t                        <option selected>意向部门1</option>
+\t                        <option value=\"技术部\">技术部</option>
+\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
+\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
+\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
+\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
+\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
+\t                    </select>
+\t                </div>
+\t                <div class=\"ui-select\">
+\t                    <select name=\"department1\">
+\t                        <option selected>意向部门2</option>
+\t                        <option value=\"技术部\">技术部</option>
+\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
+\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
+\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
+\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
+\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
+\t                    </select>
+\t                </div>
+\t                <div class=\"ui-select\">
+\t                    <select name=\"department2\">
+\t                        <option selected>意向部门3</option>
+\t                        <option value=\"技术部\">技术部</option>
+\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
+\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
+\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
+\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
+\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
+\t                    </select>
+\t                </div>
+\t                <div class=\"ui-select\">
+\t                    <select name=\"departmen3\">
+\t                        <option selected>意向部门4</option>
+\t                        <option value=\"技术部\">技术部</option>
+\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
+\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
+\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
+\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
+\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
+\t                    </select>
+\t                </div>
+\t            </div>
+\t        </div>
+
+\t\t    <div class=\"ui-form-item ui-form-item-textarea ui-border-b\">
+\t            <label>
+\t                自我介绍
+\t            </label>
+\t            <textarea placeholder=\"爱好特长等\" name=\"introduction\"></textarea>
+\t        </div>
+\t\t\t
+\t\t\t<div class=\"ui-form-item ui-form-item-l ui-border-b\">
+\t\t        <label class=\"ui-border-r\">
+\t\t        \t<img src=\"";
+        // line 151
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "ShowVerify\" alt=\"验证码\" onclick=\"this.src='";
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "ShowVerify'\"/>
+\t\t        </label>
+\t\t        <input type=\"text\" name=\"phonenum\" placeholder=\"请输入验证码\">
+\t\t        <a href=\"#\" class=\"ui-icon-close\">
+\t\t        </a>
+\t\t    </div>
 
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t</table>
-\t\t\t<input type=\"submit\" value=\"提  交\" class=\"submit\">
+        \t<!--  -->
+        \t<!--  -->
+\t\t\t<div class=\"ui-btn-wrap\">
+\t\t\t    <input type=\"submit\" class=\"ui-btn-lg ui-btn-primary\" id=\"btn1\" value=\"提  交\">
+\t\t\t        
+\t\t\t    
+\t\t\t</div>
+\t\t\t<div class=\"ui-dialog\">
+\t\t\t    <div class=\"ui-dialog-cnt\">
+\t\t\t        <div class=\"ui-dialog-bd\">
+\t\t\t            <div>
+\t\t\t\t            <!-- <h4>标题</h4> -->
+\t\t\t\t            <div>提交成功</div>
+\t\t\t            </div>
+\t\t\t        </div>
+\t\t\t        <div class=\"ui-dialog-ft ui-btn-group\">
+\t\t\t            <button type=\"button\" data-role=\"button\"  class=\"select\" id=\"dialogButton<%=i%>\">关闭</button> 
+\t\t\t        </div>
+\t\t\t    </div>        
+\t\t\t</div>
+
+\t\t\t<!-- <input type=\"submit\" value=\"提  交\" class=\"submit\"> -->
 \t\t\t<br><br>
 \t\t</form>
 \t</div>
-\t<div class=\"bottom\">
-\t\t&copy; 2017 JS 
+\t<div class=\"ui-flex ui-flex-pack-center\">
+\t    <div>&copy; 2017 JS </div>
 \t</div>
+\t
+\t<script type=\"text/javascript\" src=\"";
+        // line 187
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "dist/lib/zepto.min.js\"></script>
+\t<script type=\"text/javascript\" src=\"";
+        // line 188
+        echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
+        echo "dist/js/frozen.js\"></script>
+
+\t<script type=\"text/javascript\">
+\t\t// \$(\"#btn1\").tap(function(){
+\t\t//     var dia2=\$(\".ui-dialog\").dialog(\"show\");
+\t\t//     dia2.on(\"dialog:action\",function(e){
+\t\t//         console.log(e.index)
+\t\t//     });
+\t\t// })
+\t</script>
 
 \t<script>
 \t\t
@@ -245,7 +322,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 
     public function getDebugInfo()
     {
-        return array (  163 => 118,  59 => 17,  53 => 13,  50 => 12,  43 => 8,  39 => 7,  35 => 6,  32 => 5,  29 => 4,  11 => 1,);
+        return array (  244 => 188,  240 => 187,  199 => 151,  63 => 18,  57 => 14,  54 => 13,  47 => 9,  43 => 8,  39 => 7,  35 => 6,  32 => 5,  29 => 4,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -258,127 +335,195 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t<script src=\"{{ source_url }}js/jquery-validation-1.14.0/lib/jquery.js\"  type=\"text/javascript\"></script>
 \t<script src=\"{{ source_url }}js/jquery-validation-1.14.0/dist/jquery.validate.min.js\"></script>
 \t<script src=\"{{ source_url }}js/jquery-validation-1.14.0/dist/localization/messages_zh.js\"></script>
+    <link rel=\"stylesheet\" href=\"{{ source_url }}dist/css/frozen.css\">
 \t
 {% endblock %}
 
 {% block content %}
-\t<div >
-\t\t<div >
-\t\t\t<h1 align=\"center\">工大网管，欢迎“家”入</h1>
-\t\t</div>
-\t\t<form action=\"{{ base_url }}Student/doSubmit\" enctype=\"multipart/form-data\" id=\"stuForm\" method=\"post\">
-\t\t\t<table border=\"0\">
-\t\t\t\t<tr>
-\t\t\t\t\t<td >姓名：</td>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t<input class=\"input\" type=\"text\" name=\"name\" maxlength=\"4\" size=\"25\">
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t\t<tr>
-\t\t\t\t\t<td >学号：</td>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t<input class=\"input\" type=\"text\" name=\"studentid\" maxlength=\"9\" size=\"25\">
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t\t<tr>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t性别：
-\t\t\t\t\t</td>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t<input style=\"margin-left: 0;\" class=\"radio\" type=\"radio\" name=\"gender\" value=\"男\" style=\"margin-left:40px;\">男</input>
-\t\t\t\t\t\t<input class=\"radio\" type=\"radio\" name=\"gender\" value=\"女\" style=\"margin-left:40px;\">女</input>
-\t\t\t\t\t\t<input class=\"radio\" type=\"radio\" name=\"gender\" value=\"女\" style=\"margin-left:40px;\">其他</input>
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t\t<tr>
-\t\t\t\t\t<td >专业班级：</td>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t<input  type=\"text\" name=\"class\" maxlength=\"30\" size=\"25\">
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t\t<tr>
-\t\t\t\t\t<td >手机：</td>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t<input  type=\"text\" name=\"phonenum\" maxlength=\"11\" size=\"25\">
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t\t<tr>
-\t\t\t\t\t<td >QQ:</td>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t<input  type=\"text\" name=\"qqnum\" maxlength=\"15\" size=\"25\">
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t\t<tr>
-\t\t\t\t\t<td >部门:</td>
-\t\t\t\t\t<td >
-\t\t\t\t\t\t<select class=\"\" name=\"department0\">
-\t\t\t\t\t\t\t\t<option >部门1</option>
-\t\t\t\t\t\t\t\t<option value=\"技术部\">技术部</option>
-\t\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
-\t\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
-\t\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
-\t\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
-\t\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
-\t\t\t\t\t\t</select>
-
-\t\t\t\t\t\t<select class=\"\" name=\"department1\">
-\t\t\t\t\t\t\t\t<option >部门2</option>
-\t\t\t\t\t\t\t\t<option value=\"技术部\">技术部</option>
-\t\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
-\t\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
-\t\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
-\t\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
-\t\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
-\t\t\t\t\t\t</select>
-\t\t\t\t\t\t<select class=\"\" name=\"department2\">
-\t\t\t\t\t\t\t\t<option >部门3</option>
-\t\t\t\t\t\t\t\t<option value=\"技术部\">技术部</option>
-\t\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
-\t\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
-\t\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
-\t\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
-\t\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
-\t\t\t\t\t\t</select>
-\t\t\t\t\t\t<select class=\"\" name=\"department3\">
-\t\t\t\t\t\t\t\t<option >部门4</option>
-\t\t\t\t\t\t\t\t<option value=\"技术部\">技术部</option>
-\t\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
-\t\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
-\t\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
-\t\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
-\t\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
-\t\t\t\t\t\t</select>
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
+\t
+\t<div class=\"ui-form ui-border-t\">
+\t\t<div class=\"title\">
+\t\t\t<div class=\"ui-flex ui-flex-pack-center\">
+\t\t\t\t<div class=\"ui-avatar-one\"><span class=\"ui-flex ui-flex-pack-center\" style=\"background-image:url({{ source_url }}img/band.JPG)\"></span></div>
 \t\t\t\t
-\t\t\t\t<tr>
-\t\t\t\t\t<td>
-\t\t\t\t\t\t自我介绍<br>（包括特长爱好）：
-\t\t\t\t\t</td>
-\t\t\t\t\t<td>
-\t\t\t\t\t\t<textarea  name=\"introduction\" rows=\"10\" cols=\"15\"></textarea>
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t\t<tr>
-\t\t\t\t\t<td>
-\t\t\t\t\t\t验证码
-\t\t\t\t\t</td>
-\t\t\t\t\t<td>
+\t\t\t</div>
+\t\t\t<h5 align=\"center\">工大网管，欢迎“家”入</h5>
+\t\t</div>
+\t\t<form action=\"doSubmit\" enctype=\"multipart/form-data\" method=\"post\" id=\"stuForm\">
 
-\t\t\t\t\t\t<input type=\"text\" name=\"verify\" value=\"\" style=\"width:50%; margin-bottom:17px;\">
+\t\t\t<div class=\"ui-form-item ui-border-b\">
+\t            <label>
+\t                姓名
+\t            </label>
+\t            <input type=\"text\" name=\"name\" placeholder=\"姓名\">
+\t            <a href=\"#\" class=\"ui-icon-close\">
+\t            </a>
+        \t</div>
 
-\t\t\t\t\t\t<img src=\"{{ base_url }}ShowVerify\" alt=\"验证码\" onclick=\"this.src='{{ base_url }}ShowVerify'\"/>
+\t\t\t<div class=\"ui-form-item ui-border-b\">
+\t            <label>
+\t                学号
+\t            </label>
+\t            <input type=\"text\" name=\"studentid\" placeholder=\"9位学号\">
+\t            <a href=\"#\" class=\"ui-icon-close\">
+\t            </a>
+        \t</div>
+\t\t\t
+\t\t\t<ul class=\"ui-form-item ui-border-b ui-grid-trisect\">
+\t\t\t\t<li>
+\t\t\t\t\t<label>
+\t\t                性别
+\t\t            </label>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<div class=\"ui-form-item ui-form-item-radio ui-border-b\">
+\t\t\t            
+\t\t\t            <label class=\"ui-radio\" for=\"radio\">
+\t\t\t                <input type=\"radio\" name=\"gender\" value=\"男\">
+\t\t\t            </label>
+\t\t\t            <p>男</p>
+\t\t\t        </div>
+\t\t\t\t</li>
+\t\t\t\t<li>
+\t\t\t\t\t<div class=\"ui-form-item ui-form-item-radio ui-border-b\">
+\t\t\t            
+\t\t\t            <label class=\"ui-radio\" for=\"radio\">
+\t\t\t                <input type=\"radio\" name=\"gender\" value=\"女\">
+\t\t\t            </label>
+\t\t\t            <p>女</p>
+\t\t\t        </div>
+\t\t\t\t</li>
+\t\t\t</ul>
+\t\t\t
+\t\t\t<div class=\"ui-form-item ui-border-b\">
+\t            <label>
+\t                专业班级
+\t            </label>
+\t            <input type=\"text\" name=\"class\" placeholder=\"例：计算机1701\">
+        \t</div>
 
-\t\t\t\t\t</td>
-\t\t\t\t</tr>
-\t\t\t</table>
-\t\t\t<input type=\"submit\" value=\"提  交\" class=\"submit\">
+\t\t    <div class=\"ui-form-item ui-form-item-l ui-border-b\">
+\t\t        <label class=\"ui-border-r\">
+\t\t            中国 +86
+\t\t        </label>
+\t\t        <input type=\"text\" name=\"phonenum\" placeholder=\"请输入手机号码\">
+\t\t        <a href=\"#\" class=\"ui-icon-close\">
+\t\t        </a>
+\t\t    </div>
+
+        \t<div class=\"ui-form-item ui-border-b\">
+\t            <label>
+\t                QQ
+\t            </label>
+\t            <input type=\"text\" name=\"qqnum\" placeholder=\"QQ号码\">
+        \t</div>
+
+\t        <div class=\"ui-form-item ui-border-b\">
+\t            <label>报名部门</label>
+\t            <div class=\"ui-select-group\">
+\t                <div class=\"ui-select\">
+\t                    <select name=\"department0\">
+\t                        <option selected>意向部门1</option>
+\t                        <option value=\"技术部\">技术部</option>
+\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
+\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
+\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
+\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
+\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
+\t                    </select>
+\t                </div>
+\t                <div class=\"ui-select\">
+\t                    <select name=\"department1\">
+\t                        <option selected>意向部门2</option>
+\t                        <option value=\"技术部\">技术部</option>
+\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
+\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
+\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
+\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
+\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
+\t                    </select>
+\t                </div>
+\t                <div class=\"ui-select\">
+\t                    <select name=\"department2\">
+\t                        <option selected>意向部门3</option>
+\t                        <option value=\"技术部\">技术部</option>
+\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
+\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
+\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
+\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
+\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
+\t                    </select>
+\t                </div>
+\t                <div class=\"ui-select\">
+\t                    <select name=\"departmen3\">
+\t                        <option selected>意向部门4</option>
+\t                        <option value=\"技术部\">技术部</option>
+\t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
+\t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
+\t\t\t\t\t\t\t<option value=\"策划部\">策划部</option>
+\t\t\t\t\t\t\t<option value=\"采编部\">采编部</option>
+\t\t\t\t\t\t\t<option value=\"外事部\">外事部</option>
+\t                    </select>
+\t                </div>
+\t            </div>
+\t        </div>
+
+\t\t    <div class=\"ui-form-item ui-form-item-textarea ui-border-b\">
+\t            <label>
+\t                自我介绍
+\t            </label>
+\t            <textarea placeholder=\"爱好特长等\" name=\"introduction\"></textarea>
+\t        </div>
+\t\t\t
+\t\t\t<div class=\"ui-form-item ui-form-item-l ui-border-b\">
+\t\t        <label class=\"ui-border-r\">
+\t\t        \t<img src=\"{{ base_url }}ShowVerify\" alt=\"验证码\" onclick=\"this.src='{{ base_url }}ShowVerify'\"/>
+\t\t        </label>
+\t\t        <input type=\"text\" name=\"phonenum\" placeholder=\"请输入验证码\">
+\t\t        <a href=\"#\" class=\"ui-icon-close\">
+\t\t        </a>
+\t\t    </div>
+
+        \t<!--  -->
+        \t<!--  -->
+\t\t\t<div class=\"ui-btn-wrap\">
+\t\t\t    <input type=\"submit\" class=\"ui-btn-lg ui-btn-primary\" id=\"btn1\" value=\"提  交\">
+\t\t\t        
+\t\t\t    
+\t\t\t</div>
+\t\t\t<div class=\"ui-dialog\">
+\t\t\t    <div class=\"ui-dialog-cnt\">
+\t\t\t        <div class=\"ui-dialog-bd\">
+\t\t\t            <div>
+\t\t\t\t            <!-- <h4>标题</h4> -->
+\t\t\t\t            <div>提交成功</div>
+\t\t\t            </div>
+\t\t\t        </div>
+\t\t\t        <div class=\"ui-dialog-ft ui-btn-group\">
+\t\t\t            <button type=\"button\" data-role=\"button\"  class=\"select\" id=\"dialogButton<%=i%>\">关闭</button> 
+\t\t\t        </div>
+\t\t\t    </div>        
+\t\t\t</div>
+
+\t\t\t<!-- <input type=\"submit\" value=\"提  交\" class=\"submit\"> -->
 \t\t\t<br><br>
 \t\t</form>
 \t</div>
-\t<div class=\"bottom\">
-\t\t&copy; 2017 JS 
+\t<div class=\"ui-flex ui-flex-pack-center\">
+\t    <div>&copy; 2017 JS </div>
 \t</div>
+\t
+\t<script type=\"text/javascript\" src=\"{{ source_url }}dist/lib/zepto.min.js\"></script>
+\t<script type=\"text/javascript\" src=\"{{ source_url }}dist/js/frozen.js\"></script>
+
+\t<script type=\"text/javascript\">
+\t\t// \$(\"#btn1\").tap(function(){
+\t\t//     var dia2=\$(\".ui-dialog\").dialog(\"show\");
+\t\t//     dia2.on(\"dialog:action\",function(e){
+\t\t//         console.log(e.index)
+\t\t//     });
+\t\t// })
+\t</script>
 
 \t<script>
 \t\t

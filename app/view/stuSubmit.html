@@ -6,127 +6,195 @@
 	<script src="{{ source_url }}js/jquery-validation-1.14.0/lib/jquery.js"  type="text/javascript"></script>
 	<script src="{{ source_url }}js/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
 	<script src="{{ source_url }}js/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+    <link rel="stylesheet" href="{{ source_url }}dist/css/frozen.css">
 	
 {% endblock %}
 
 {% block content %}
-	<div >
-		<div >
-			<h1 align="center">工大网管，欢迎“家”入</h1>
-		</div>
-		<form action="{{ base_url }}Student/doSubmit" enctype="multipart/form-data" id="stuForm" method="post">
-			<table border="0">
-				<tr>
-					<td >姓名：</td>
-					<td >
-						<input class="input" type="text" name="name" maxlength="4" size="25">
-					</td>
-				</tr>
-				<tr>
-					<td >学号：</td>
-					<td >
-						<input class="input" type="text" name="studentid" maxlength="9" size="25">
-					</td>
-				</tr>
-				<tr>
-					<td >
-						性别：
-					</td>
-					<td >
-						<input style="margin-left: 0;" class="radio" type="radio" name="gender" value="男" style="margin-left:40px;">男</input>
-						<input class="radio" type="radio" name="gender" value="女" style="margin-left:40px;">女</input>
-						<input class="radio" type="radio" name="gender" value="女" style="margin-left:40px;">其他</input>
-					</td>
-				</tr>
-				<tr>
-					<td >专业班级：</td>
-					<td >
-						<input  type="text" name="class" maxlength="30" size="25">
-					</td>
-				</tr>
-				<tr>
-					<td >手机：</td>
-					<td >
-						<input  type="text" name="phonenum" maxlength="11" size="25">
-					</td>
-				</tr>
-				<tr>
-					<td >QQ:</td>
-					<td >
-						<input  type="text" name="qqnum" maxlength="15" size="25">
-					</td>
-				</tr>
-				<tr>
-					<td >部门:</td>
-					<td >
-						<select class="" name="department0">
-								<option >部门1</option>
-								<option value="技术部">技术部</option>
-								<option value="影音部">影音部</option>
-								<option value="宣传部">宣传部</option>
-								<option value="策划部">策划部</option>
-								<option value="采编部">采编部</option>
-								<option value="外事部">外事部</option>
-						</select>
-
-						<select class="" name="department1">
-								<option >部门2</option>
-								<option value="技术部">技术部</option>
-								<option value="影音部">影音部</option>
-								<option value="宣传部">宣传部</option>
-								<option value="策划部">策划部</option>
-								<option value="采编部">采编部</option>
-								<option value="外事部">外事部</option>
-						</select>
-						<select class="" name="department2">
-								<option >部门3</option>
-								<option value="技术部">技术部</option>
-								<option value="影音部">影音部</option>
-								<option value="宣传部">宣传部</option>
-								<option value="策划部">策划部</option>
-								<option value="采编部">采编部</option>
-								<option value="外事部">外事部</option>
-						</select>
-						<select class="" name="department3">
-								<option >部门4</option>
-								<option value="技术部">技术部</option>
-								<option value="影音部">影音部</option>
-								<option value="宣传部">宣传部</option>
-								<option value="策划部">策划部</option>
-								<option value="采编部">采编部</option>
-								<option value="外事部">外事部</option>
-						</select>
-					</td>
-				</tr>
+	
+	<div class="ui-form ui-border-t">
+		<div class="title">
+			<div class="ui-flex ui-flex-pack-center">
+				<div class="ui-avatar-one"><span class="ui-flex ui-flex-pack-center" style="background-image:url({{ source_url }}img/band.JPG)"></span></div>
 				
-				<tr>
-					<td>
-						自我介绍<br>（包括特长爱好）：
-					</td>
-					<td>
-						<textarea  name="introduction" rows="10" cols="15"></textarea>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						验证码
-					</td>
-					<td>
+			</div>
+			<h5 align="center">工大网管，欢迎“家”入</h5>
+		</div>
+		<form action="doSubmit" enctype="multipart/form-data" method="post" id="stuForm">
 
-						<input type="text" name="verify" value="" style="width:50%; margin-bottom:17px;">
+			<div class="ui-form-item ui-border-b">
+	            <label>
+	                姓名
+	            </label>
+	            <input type="text" name="name" placeholder="姓名">
+	            <a href="#" class="ui-icon-close">
+	            </a>
+        	</div>
 
-						<img src="{{ base_url }}ShowVerify" alt="验证码" onclick="this.src='{{ base_url }}ShowVerify'"/>
+			<div class="ui-form-item ui-border-b">
+	            <label>
+	                学号
+	            </label>
+	            <input type="text" name="studentid" placeholder="9位学号">
+	            <a href="#" class="ui-icon-close">
+	            </a>
+        	</div>
+			
+			<ul class="ui-form-item ui-border-b ui-grid-trisect">
+				<li>
+					<label>
+		                性别
+		            </label>
+				</li>
+				<li>
+					<div class="ui-form-item ui-form-item-radio ui-border-b">
+			            
+			            <label class="ui-radio" for="radio">
+			                <input type="radio" name="gender" value="男">
+			            </label>
+			            <p>男</p>
+			        </div>
+				</li>
+				<li>
+					<div class="ui-form-item ui-form-item-radio ui-border-b">
+			            
+			            <label class="ui-radio" for="radio">
+			                <input type="radio" name="gender" value="女">
+			            </label>
+			            <p>女</p>
+			        </div>
+				</li>
+			</ul>
+			
+			<div class="ui-form-item ui-border-b">
+	            <label>
+	                专业班级
+	            </label>
+	            <input type="text" name="class" placeholder="例：计算机1701">
+        	</div>
 
-					</td>
-				</tr>
-			</table>
-			<input type="submit" value="提  交" class="submit">
+		    <div class="ui-form-item ui-form-item-l ui-border-b">
+		        <label class="ui-border-r">
+		            中国 +86
+		        </label>
+		        <input type="text" name="phonenum" placeholder="请输入手机号码">
+		        <a href="#" class="ui-icon-close">
+		        </a>
+		    </div>
+
+        	<div class="ui-form-item ui-border-b">
+	            <label>
+	                QQ
+	            </label>
+	            <input type="text" name="qqnum" placeholder="QQ号码">
+        	</div>
+
+	        <div class="ui-form-item ui-border-b">
+	            <label>报名部门</label>
+	            <div class="ui-select-group">
+	                <div class="ui-select">
+	                    <select name="department0">
+	                        <option selected>意向部门1</option>
+	                        <option value="技术部">技术部</option>
+							<option value="影音部">影音部</option>
+							<option value="宣传部">宣传部</option>
+							<option value="策划部">策划部</option>
+							<option value="采编部">采编部</option>
+							<option value="外事部">外事部</option>
+	                    </select>
+	                </div>
+	                <div class="ui-select">
+	                    <select name="department1">
+	                        <option selected>意向部门2</option>
+	                        <option value="技术部">技术部</option>
+							<option value="影音部">影音部</option>
+							<option value="宣传部">宣传部</option>
+							<option value="策划部">策划部</option>
+							<option value="采编部">采编部</option>
+							<option value="外事部">外事部</option>
+	                    </select>
+	                </div>
+	                <div class="ui-select">
+	                    <select name="department2">
+	                        <option selected>意向部门3</option>
+	                        <option value="技术部">技术部</option>
+							<option value="影音部">影音部</option>
+							<option value="宣传部">宣传部</option>
+							<option value="策划部">策划部</option>
+							<option value="采编部">采编部</option>
+							<option value="外事部">外事部</option>
+	                    </select>
+	                </div>
+	                <div class="ui-select">
+	                    <select name="departmen3">
+	                        <option selected>意向部门4</option>
+	                        <option value="技术部">技术部</option>
+							<option value="影音部">影音部</option>
+							<option value="宣传部">宣传部</option>
+							<option value="策划部">策划部</option>
+							<option value="采编部">采编部</option>
+							<option value="外事部">外事部</option>
+	                    </select>
+	                </div>
+	            </div>
+	        </div>
+
+		    <div class="ui-form-item ui-form-item-textarea ui-border-b">
+	            <label>
+	                自我介绍
+	            </label>
+	            <textarea placeholder="爱好特长等" name="introduction"></textarea>
+	        </div>
+			
+			<div class="ui-form-item ui-form-item-l ui-border-b">
+		        <label class="ui-border-r">
+		        	<img src="{{ base_url }}ShowVerify" alt="验证码" onclick="this.src='{{ base_url }}ShowVerify'"/>
+		        </label>
+		        <input type="text" name="phonenum" placeholder="请输入验证码">
+		        <a href="#" class="ui-icon-close">
+		        </a>
+		    </div>
+
+        	<!--  -->
+        	<!--  -->
+			<div class="ui-btn-wrap">
+			    <input type="submit" class="ui-btn-lg ui-btn-primary" id="btn1" value="提  交">
+			        
+			    
+			</div>
+			<div class="ui-dialog">
+			    <div class="ui-dialog-cnt">
+			        <div class="ui-dialog-bd">
+			            <div>
+				            <!-- <h4>标题</h4> -->
+				            <div>提交成功</div>
+			            </div>
+			        </div>
+			        <div class="ui-dialog-ft ui-btn-group">
+			            <button type="button" data-role="button"  class="select" id="dialogButton<%=i%>">关闭</button> 
+			        </div>
+			    </div>        
+			</div>
+
+			<!-- <input type="submit" value="提  交" class="submit"> -->
 			<br><br>
 		</form>
 	</div>
-	<div class="bottom">
-		&copy; 2017 JS 
+	<div class="ui-flex ui-flex-pack-center">
+	    <div>&copy; 2017 JS </div>
 	</div>
+	
+	<script type="text/javascript" src="{{ source_url }}dist/lib/zepto.min.js"></script>
+	<script type="text/javascript" src="{{ source_url }}dist/js/frozen.js"></script>
+
+	<script type="text/javascript">
+		// $("#btn1").tap(function(){
+		//     var dia2=$(".ui-dialog").dialog("show");
+		//     dia2.on("dialog:action",function(e){
+		//         console.log(e.index)
+		//     });
+		// })
+	</script>
 
 	<script>
 		
