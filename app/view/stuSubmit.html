@@ -3,9 +3,7 @@
 
 {% block head %}
 	<title>招新页面</title>
-	<script src="{{ source_url }}js/jquery-validation-1.14.0/lib/jquery.js"  type="text/javascript"></script>
-	<script src="{{ source_url }}js/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
-	<script src="{{ source_url }}js/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ source_url }}dist/validate.css">
     <link rel="stylesheet" href="{{ source_url }}dist/css/frozen.css">
 	
 {% endblock %}
@@ -26,7 +24,7 @@
 	            <label>
 	                姓名
 	            </label>
-	            <input type="text" name="name" placeholder="姓名">
+	            <input type="text" name="name" placeholder="姓名" data-required="true" data-pattern="[\u4e00-\u9fa5]" data-descriptions="name">
 	            <a href="#" class="ui-icon-close">
 	            </a>
         	</div>
@@ -35,7 +33,7 @@
 	            <label>
 	                学号
 	            </label>
-	            <input type="text" name="studentid" placeholder="9位学号">
+	            <input type="text" name="studentid" placeholder="9位学号" data-required="true" data-pattern="\d{9}" data-descriptions="studentid">
 	            <a href="#" class="ui-icon-close">
 	            </a>
         	</div>
@@ -70,14 +68,14 @@
 	            <label>
 	                专业班级
 	            </label>
-	            <input type="text" name="class" placeholder="例：计算机1701">
+	            <input type="text" name="class" placeholder="例：计算机1701" data-required="true" data-descriptions="klass">
         	</div>
 
 		    <div class="ui-form-item ui-form-item-l ui-border-b">
 		        <label class="ui-border-r">
 		            中国 +86
 		        </label>
-		        <input type="text" name="phonenum" placeholder="请输入手机号码">
+		        <input type="text" name="phonenum" placeholder="请输入手机号码" data-required="true" data-pattern="^0?1[3|4|5|8][0-9]\d{8}$"  data-descriptions="phonenum">
 		        <a href="#" class="ui-icon-close">
 		        </a>
 		    </div>
@@ -86,7 +84,7 @@
 	            <label>
 	                QQ
 	            </label>
-	            <input type="text" name="qqnum" placeholder="QQ号码">
+	            <input type="text" name="qqnum" placeholder="QQ号码" data-required="true" data-pattern="[1-9]([0-9]{5,11})" data-descriptions="qqnum">
         	</div>
 
 	        <div class="ui-form-item ui-border-b">
@@ -116,8 +114,7 @@
 	                </div>
 	            </div>
 	        </div>
-			<div class="ui-form-item ui-border-b">
-	            <label></label>
+	        <div class="ui-form-item ui-border-b">
 	            <div class="ui-select-group">
 	                <div class="ui-select">
 	                    <select name="department2">
@@ -131,7 +128,7 @@
 	                    </select>
 	                </div>
 	                <div class="ui-select">
-	                    <select name="departmen3">
+	                    <select name="department3">
 	                        <option selected>意向部门4</option>
 	                        <option value="技术部">技术部</option>
 							<option value="影音部">影音部</option>
@@ -162,9 +159,9 @@
         	<!--  -->
         	<!--  -->
 			<div class="ui-btn-wrap">
-			    <input type="submit" class="ui-btn-lg ui-btn-primary" id="btn1" value="提  交">
-			        
-			    
+			    <button type="submit" class="ui-btn-lg ui-btn-primary" id="btn1">
+			        提  交
+			    </button>
 			</div>
 			<div class="ui-dialog">
 			    <div class="ui-dialog-cnt">
@@ -185,12 +182,13 @@
 		</form>
 	</div>
 	<div class="ui-flex ui-flex-pack-center">
-	    <div>&copy; 2017 JS </div>
+	    <div>&copy; 2017 JS&ZQD </div>
 	</div>
 	
 	<script type="text/javascript" src="{{ source_url }}dist/lib/zepto.min.js"></script>
 	<script type="text/javascript" src="{{ source_url }}dist/js/frozen.js"></script>
-
+	<script type="text/javascript" src="{{ source_url }}dist/zepto-mvalidate.js"></script>
+	
 	<script type="text/javascript">
 		// $("#btn1").tap(function(){
 		//     var dia2=$(".ui-dialog").dialog("show");
@@ -202,56 +200,89 @@
 
 	<script>
 		
-		$.validator.setDefaults({
-		    submitHandler: function() {
-		      alert("提交事件!");
-		    }
-		});
-		$().ready(function() {
-		    $("#stuForm").validate({
-		    	rules: {
-		    		name: "required",
-		    		studentid: {
-				    	required: true,
-				    	number: true,
-				    	mixlength: 9
-				    },
-				    class:"required",
-				    phonenum:{
-				    	required: true,
-				    	number: true,
-				    	mixlength: 11
-				    },
-				    qqnum:{
-				    	required: true,
-				    	number: true
-				    },
-				    introduction: "required",
-				    verify: "required"
+		// $.validator.setDefaults({
+		//     submitHandler: function() {
+		//       alert("提交事件!");
+		//     }
+		// });
+		// $().ready(function() {
+		//     $("#stuForm").validate({
+		//     	rules: {
+		//     		name: "required",
+		//     		studentid: {
+		// 		    	required: true,
+		// 		    	number: true,
+		// 		    	mixlength: 9
+		// 		    },
+		// 		    class:"required",
+		// 		    phonenum:{
+		// 		    	required: true,
+		// 		    	number: true,
+		// 		    	mixlength: 11
+		// 		    },
+		// 		    qqnum:{
+		// 		    	required: true,
+		// 		    	number: true
+		// 		    },
+		// 		    introduction: "required",
+		// 		    verify: "required"
 
-		    	},
-		    	messages: {
-		    		name: "请输入姓名",
-		    		studentid: {
-				    	required: "请输入学号",
-				    	number: "请输入正确学号",
-				    	mixlength: "请输入正确学号"
-				    },
-				    class:"请输入专业班级",
-				    phonenum:{
-				    	required: "请输入电话",
-				    	number: "请输入正确电话",
-				    	mixlength: "请输入正确电话"
-				    },
-				    qqnum:{
-				    	required: "请输入QQ号",
-				    	number: "请输入正确QQ号"
-				    },
-				    introduction:"请填写自我介绍",
-				    verify: "请输入验证码"
-		    	}
-		    });
-		});
+		//     	},
+		//     	messages: {
+		//     		name: "请输入姓名",
+		//     		studentid: {
+		// 		    	required: "请输入学号",
+		// 		    	number: "请输入正确学号",
+		// 		    	mixlength: "请输入正确学号"
+		// 		    },
+		// 		    class:"请输入专业班级",
+		// 		    phonenum:{
+		// 		    	required: "请输入电话",
+		// 		    	number: "请输入正确电话",
+		// 		    	mixlength: "请输入正确电话"
+		// 		    },
+		// 		    qqnum:{
+		// 		    	required: "请输入QQ号",
+		// 		    	number: "请输入正确QQ号"
+		// 		    },
+		// 		    introduction:"请填写自我介绍",
+		// 		    verify: "请输入验证码"
+		//     	}
+		//     });
+		// });
 		
 		</script>
+		<script type="text/javascript">
+		$("#stuForm").mvalidate({
+		    type:1,
+		    // validateInSubmit:true,
+		    valid: function (event, options){
+		    	var dia2=$(".ui-dialog").dialog("show");
+		    	dia2.on("dialog:action",function(e){
+		        	console.log(e.index)
+		    	});
+		    },
+		    descriptions: {
+		    	name: {
+		    		required: '请输入姓名',
+		    		pattern: '你输入的姓名格式不正确'
+		    	},
+		    	studentid: {
+		    		required: '请输入学号',
+		    		pattern: '你输入的学号格式不正确'
+		    	},
+		    	klass: {
+		    		required: '请输入班级'
+		    	},
+		    	phonenum: {
+		    		required: '请输入手机号码',
+		    		pattern: '你输入的手机格式不正确'
+		    	},
+		    	qqnum: {
+		    		required: '请输入QQ号码',
+		    		pattern: '你输入的QQ格式不正确'
+		    	}
+		    }
+		})
+	</script>
 {% endblock %}
