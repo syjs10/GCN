@@ -3,9 +3,27 @@
 
 {% block head %}
 	<title>信息提示</title>
-	
+	<link rel="stylesheet" href="{{ source_url }}css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ source_url }}css/bootstrap/bootstrap-theme.min.css">
 {% endblock %}
 
 {% block content %}
-	<p>{{ message }}</p>
+	
+	<div class="container-fluid" style="margin-top:30%">
+	  <div class="row">
+	    <div class="col-md-2 col-xs-1"></div>
+	    <div class="col-md-8 col-xs-10">
+		    <div class="jumbotron">
+			    <div class="container">
+		    
+					<h1>报名成功</h1>
+					<p>{{ message }}</p>
+					<p>把编号告诉面试官</p>
+					<p><a class="btn btn-primary btn-lg" href="{{ base_url }}Message/close" role="button">知道了</a></p>
+				</div>
+	  		</div>
+	    </div>
+	    <div class="col-md-2 col-xs-1"></div>
+	  </div>
+	</div>
 {% endblock %}

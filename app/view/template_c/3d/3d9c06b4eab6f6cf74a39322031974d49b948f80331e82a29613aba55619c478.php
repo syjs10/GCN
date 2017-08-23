@@ -73,7 +73,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t            <label>
 \t                学号
 \t            </label>
-\t            <input type=\"text\" name=\"studentid\" placeholder=\"9位学号\" data-required=\"true\" data-pattern=\"\\d{9}\" data-descriptions=\"studentid\">
+\t            <input type=\"text\" name=\"studentid\" placeholder=\"9位学号\" data-required=\"true\" data-pattern=\"\\d{9}\" data-descriptions=\"studentid\" maxlength=\"9\">
 \t            <a href=\"#\" class=\"ui-icon-close\">
 \t            </a>
         \t</div>
@@ -115,7 +115,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t        <label class=\"ui-border-r\">
 \t\t            中国 +86
 \t\t        </label>
-\t\t        <input type=\"text\" name=\"phonenum\" placeholder=\"请输入手机号码\" data-required=\"true\" data-pattern=\"^0?1[3|4|5|8][0-9]\\d{8}\$\"  data-descriptions=\"phonenum\">
+\t\t        <input type=\"text\" name=\"phonenum\" placeholder=\"请输入手机号码\" data-required=\"true\" data-pattern=\"^0?1[3|4|5|8][0-9]\\d{8}\$\"  data-descriptions=\"phonenum\" maxlength=\"11\">
 \t\t        <a href=\"#\" class=\"ui-icon-close\">
 \t\t        </a>
 \t\t    </div>
@@ -196,7 +196,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "ShowVerify'\"/>
 \t\t        </label>
-\t\t        <input type=\"text\" name=\"phonenum\" placeholder=\"请输入验证码\">
+\t\t        <input type=\"text\" name=\"verify\" placeholder=\"请输入验证码\" maxlength=\"4\">
 \t\t        <a href=\"#\" class=\"ui-icon-close\">
 \t\t        </a>
 \t\t    </div>
@@ -204,9 +204,8 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
         \t<!--  -->
         \t<!--  -->
 \t\t\t<div class=\"ui-btn-wrap\">
-\t\t\t    <button type=\"submit\" class=\"ui-btn-lg ui-btn-primary\" id=\"btn1\">
-\t\t\t        提  交
-\t\t\t    </button>
+\t\t\t    <input type=\"submit\" class=\"ui-btn-lg ui-btn-primary\" id=\"btn1\" value=\"提  交\">
+\t\t\t        
 \t\t\t</div>
 \t\t\t<div class=\"ui-dialog\">
 \t\t\t    <div class=\"ui-dialog-cnt\">
@@ -231,15 +230,15 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t</div>
 \t
 \t<script type=\"text/javascript\" src=\"";
-        // line 188
+        // line 187
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "dist/lib/zepto.min.js\"></script>
 \t<script type=\"text/javascript\" src=\"";
-        // line 189
+        // line 188
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "dist/js/frozen.js\"></script>
 \t<script type=\"text/javascript\" src=\"";
-        // line 190
+        // line 189
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "dist/zepto-mvalidate.js\"></script>
 \t
@@ -315,6 +314,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t    \tdia2.on(\"dialog:action\",function(e){
 \t\t        \tconsole.log(e.index)
 \t\t    \t});
+\t\t        \$(\"#stuForm\").submit();
 \t\t    },
 \t\t    descriptions: {
 \t\t    \tname: {
@@ -354,7 +354,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 
     public function getDebugInfo()
     {
-        return array (  243 => 190,  239 => 189,  235 => 188,  194 => 152,  55 => 16,  49 => 12,  46 => 11,  39 => 7,  35 => 6,  32 => 5,  29 => 4,  11 => 1,);
+        return array (  242 => 189,  238 => 188,  234 => 187,  194 => 152,  55 => 16,  49 => 12,  46 => 11,  39 => 7,  35 => 6,  32 => 5,  29 => 4,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -394,7 +394,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t            <label>
 \t                学号
 \t            </label>
-\t            <input type=\"text\" name=\"studentid\" placeholder=\"9位学号\" data-required=\"true\" data-pattern=\"\\d{9}\" data-descriptions=\"studentid\">
+\t            <input type=\"text\" name=\"studentid\" placeholder=\"9位学号\" data-required=\"true\" data-pattern=\"\\d{9}\" data-descriptions=\"studentid\" maxlength=\"9\">
 \t            <a href=\"#\" class=\"ui-icon-close\">
 \t            </a>
         \t</div>
@@ -436,7 +436,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t        <label class=\"ui-border-r\">
 \t\t            中国 +86
 \t\t        </label>
-\t\t        <input type=\"text\" name=\"phonenum\" placeholder=\"请输入手机号码\" data-required=\"true\" data-pattern=\"^0?1[3|4|5|8][0-9]\\d{8}\$\"  data-descriptions=\"phonenum\">
+\t\t        <input type=\"text\" name=\"phonenum\" placeholder=\"请输入手机号码\" data-required=\"true\" data-pattern=\"^0?1[3|4|5|8][0-9]\\d{8}\$\"  data-descriptions=\"phonenum\" maxlength=\"11\">
 \t\t        <a href=\"#\" class=\"ui-icon-close\">
 \t\t        </a>
 \t\t    </div>
@@ -512,7 +512,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t        <label class=\"ui-border-r\">
 \t\t        \t<img src=\"{{ base_url }}ShowVerify\" alt=\"验证码\" onclick=\"this.src='{{ base_url }}ShowVerify'\"/>
 \t\t        </label>
-\t\t        <input type=\"text\" name=\"phonenum\" placeholder=\"请输入验证码\">
+\t\t        <input type=\"text\" name=\"verify\" placeholder=\"请输入验证码\" maxlength=\"4\">
 \t\t        <a href=\"#\" class=\"ui-icon-close\">
 \t\t        </a>
 \t\t    </div>
@@ -520,9 +520,8 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
         \t<!--  -->
         \t<!--  -->
 \t\t\t<div class=\"ui-btn-wrap\">
-\t\t\t    <button type=\"submit\" class=\"ui-btn-lg ui-btn-primary\" id=\"btn1\">
-\t\t\t        提  交
-\t\t\t    </button>
+\t\t\t    <input type=\"submit\" class=\"ui-btn-lg ui-btn-primary\" id=\"btn1\" value=\"提  交\">
+\t\t\t        
 \t\t\t</div>
 \t\t\t<div class=\"ui-dialog\">
 \t\t\t    <div class=\"ui-dialog-cnt\">
@@ -622,6 +621,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t    \tdia2.on(\"dialog:action\",function(e){
 \t\t        \tconsole.log(e.index)
 \t\t    \t});
+\t\t        \$(\"#stuForm\").submit();
 \t\t    },
 \t\t    descriptions: {
 \t\t    \tname: {

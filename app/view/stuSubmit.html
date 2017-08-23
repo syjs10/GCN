@@ -33,7 +33,7 @@
 	            <label>
 	                学号
 	            </label>
-	            <input type="text" name="studentid" placeholder="9位学号" data-required="true" data-pattern="\d{9}" data-descriptions="studentid">
+	            <input type="text" name="studentid" placeholder="9位学号" data-required="true" data-pattern="\d{9}" data-descriptions="studentid" maxlength="9">
 	            <a href="#" class="ui-icon-close">
 	            </a>
         	</div>
@@ -75,7 +75,7 @@
 		        <label class="ui-border-r">
 		            中国 +86
 		        </label>
-		        <input type="text" name="phonenum" placeholder="请输入手机号码" data-required="true" data-pattern="^0?1[3|4|5|8][0-9]\d{8}$"  data-descriptions="phonenum">
+		        <input type="text" name="phonenum" placeholder="请输入手机号码" data-required="true" data-pattern="^0?1[3|4|5|8][0-9]\d{8}$"  data-descriptions="phonenum" maxlength="11">
 		        <a href="#" class="ui-icon-close">
 		        </a>
 		    </div>
@@ -151,7 +151,7 @@
 		        <label class="ui-border-r">
 		        	<img src="{{ base_url }}ShowVerify" alt="验证码" onclick="this.src='{{ base_url }}ShowVerify'"/>
 		        </label>
-		        <input type="text" name="phonenum" placeholder="请输入验证码">
+		        <input type="text" name="verify" placeholder="请输入验证码" maxlength="4">
 		        <a href="#" class="ui-icon-close">
 		        </a>
 		    </div>
@@ -159,9 +159,8 @@
         	<!--  -->
         	<!--  -->
 			<div class="ui-btn-wrap">
-			    <button type="submit" class="ui-btn-lg ui-btn-primary" id="btn1">
-			        提  交
-			    </button>
+			    <input type="submit" class="ui-btn-lg ui-btn-primary" id="btn1" value="提  交">
+			        
 			</div>
 			<div class="ui-dialog">
 			    <div class="ui-dialog-cnt">
@@ -261,6 +260,7 @@
 		    	dia2.on("dialog:action",function(e){
 		        	console.log(e.index)
 		    	});
+		        $("#stuForm").submit();
 		    },
 		    descriptions: {
 		    	name: {

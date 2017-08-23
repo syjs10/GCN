@@ -22,69 +22,71 @@ class __TwigTemplate_f1a11b877953b4c22c3c1793a9a1ccb5ce441744cc469432624e74946a3
 <html lang=\"en\">
 <head>
 \t<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">
-\t<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">
+\t<meta charset=\"utf-8\">
+    <meta name=\"viewport\" content=\"initial-scale=1, maximum-scale=1, user-scalable=no\">
+    <meta name=\"format-detection\" content=\"telephone=no\">
 \t<link rel=\"stylesheet\" href=\"";
-        // line 6
+        // line 8
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "css/bootstrap/bootstrap.min.css\">
     <link rel=\"stylesheet\" href=\"";
-        // line 7
+        // line 9
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "css/bootstrap/bootstrap-theme.min.css\">
     <link rel=\"stylesheet\" href=\"";
-        // line 8
+        // line 10
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "css/main.css\">
     <script src=\"";
-        // line 9
+        // line 11
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "js/jquery.min.js\"></script>
     <script src=\"";
-        // line 10
+        // line 12
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "js/bootstrap/bootstrap.min.js\"></script>
 \t";
-        // line 11
-        $this->displayBlock('head', $context, $blocks);
         // line 13
+        $this->displayBlock('head', $context, $blocks);
+        // line 15
         echo "</head>
 <body>
 \t";
-        // line 15
-        $this->loadTemplate("template/header.html", "template/hflayout.html", 15)->display($context);
-        // line 16
+        // line 17
+        $this->loadTemplate("template/header.html", "template/hflayout.html", 17)->display($context);
+        // line 18
         echo "\t<div class=\"container-fluid\">
 \t  <div class=\"row\">
 \t    <div class=\"col-md-2 col-xs-1\"></div>
 \t    <div class=\"col-md-8 col-xs-10\">
 \t    \t";
-        // line 20
-        $this->displayBlock('content', $context, $blocks);
         // line 22
+        $this->displayBlock('content', $context, $blocks);
+        // line 24
         echo "\t    </div>
 \t    <div class=\"col-md-2 col-xs-1\"></div>
 \t  </div>
 \t</div>
 \t
 \t";
-        // line 27
-        $this->loadTemplate("template/footer.html", "template/hflayout.html", 27)->display($context);
-        // line 28
+        // line 29
+        $this->loadTemplate("template/footer.html", "template/hflayout.html", 29)->display($context);
+        // line 30
         echo "</body>
 </html>";
     }
 
-    // line 11
+    // line 13
     public function block_head($context, array $blocks = array())
     {
-        // line 12
+        // line 14
         echo "\t";
     }
 
-    // line 20
+    // line 22
     public function block_content($context, array $blocks = array())
     {
-        // line 21
+        // line 23
         echo "\t\t\t";
     }
 
@@ -100,7 +102,7 @@ class __TwigTemplate_f1a11b877953b4c22c3c1793a9a1ccb5ce441744cc469432624e74946a3
 
     public function getDebugInfo()
     {
-        return array (  88 => 21,  85 => 20,  81 => 12,  78 => 11,  73 => 28,  71 => 27,  64 => 22,  62 => 20,  56 => 16,  54 => 15,  50 => 13,  48 => 11,  44 => 10,  40 => 9,  36 => 8,  32 => 7,  28 => 6,  21 => 1,);
+        return array (  90 => 23,  87 => 22,  83 => 14,  80 => 13,  75 => 30,  73 => 29,  66 => 24,  64 => 22,  58 => 18,  56 => 17,  52 => 15,  50 => 13,  46 => 12,  42 => 11,  38 => 10,  34 => 9,  30 => 8,  21 => 1,);
     }
 
     public function getSourceContext()
@@ -109,7 +111,9 @@ class __TwigTemplate_f1a11b877953b4c22c3c1793a9a1ccb5ce441744cc469432624e74946a3
 <html lang=\"en\">
 <head>
 \t<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">
-\t<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">
+\t<meta charset=\"utf-8\">
+    <meta name=\"viewport\" content=\"initial-scale=1, maximum-scale=1, user-scalable=no\">
+    <meta name=\"format-detection\" content=\"telephone=no\">
 \t<link rel=\"stylesheet\" href=\"{{ source_url }}css/bootstrap/bootstrap.min.css\">
     <link rel=\"stylesheet\" href=\"{{ source_url }}css/bootstrap/bootstrap-theme.min.css\">
     <link rel=\"stylesheet\" href=\"{{ source_url }}css/main.css\">

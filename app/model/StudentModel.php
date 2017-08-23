@@ -35,6 +35,7 @@
 					"department2" => $depName,
 					"department3" => $depName
 				],
+				"ORDER" => ["id" => "DESC"],
 				"LIMIT" => [($page - 1) * $num, $num]
 			]);			
 		}
@@ -49,6 +50,11 @@
 					],
 					"phonenum" => $phoneNum
 				]
+			]);			
+		}
+		public function StuNum($phoneNum){
+			return $this->select($this->table, '*', [
+					"phonenum" => $phoneNum
 			]);			
 		}
 		public function getConutByDep($depName){

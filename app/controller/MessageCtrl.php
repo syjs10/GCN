@@ -10,4 +10,7 @@
 		public function index() {
 			$this->view->display('message.html');
 		}
+		public function close() {
+			echo "<html><script>window.close();</script></html>";
+		}
 	}

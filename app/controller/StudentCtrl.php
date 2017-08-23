@@ -20,7 +20,9 @@
 				unset($_POST['verify']);
 				$res = $this->StudentModel->insertAll($this->Input->post());
 				if ($res == true) {
-					$this->view->assign('message', "提交成功");
+					$data = $this->StudentModel->StuNum($this->Input->post('phonenum'));
+					$datas = $data[0]['id'];
+					$this->view->assign('message', "提交成功, 编号$datas");
 					$this->view->display('message.html');
 				} else {
 					$this->view->assign('message', "提交失败");
@@ -29,6 +31,7 @@
 			} else {
 				$this->alert('验证码错误');
 				$this->back();
+				
 			}
 		}
 		public function getStuInfo($id){

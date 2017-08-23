@@ -7,5 +7,6 @@ table > tbody,tr,td,th{
 	
 }
 .navbar-fixed-bottom {
-	position: absolute !important;
+	/*position: absolute !important;
+	bottom: 10px !important;*/
 }
