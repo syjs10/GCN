@@ -65,7 +65,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t                姓名
 \t            </label>
 \t            <input type=\"text\" name=\"name\" placeholder=\"姓名\" data-required=\"true\" data-pattern=\"[\\u4e00-\\u9fa5]\" data-descriptions=\"name\">
-\t            <a href=\"#\" class=\"ui-icon-close\">
+\t            <a href=\"javascript:void(0);\" onclick=\"delValue(this)\" class=\"ui-icon-close\">
 \t            </a>
         \t</div>
 
@@ -74,7 +74,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t                学号
 \t            </label>
 \t            <input type=\"text\" name=\"studentid\" placeholder=\"9位学号\" data-required=\"true\" data-pattern=\"\\d{9}\" data-descriptions=\"studentid\" maxlength=\"9\">
-\t            <a href=\"#\" class=\"ui-icon-close\">
+\t            <a href=\"javascript:void(0);\" onclick=\"delValue(this)\" class=\"ui-icon-close\">
 \t            </a>
         \t</div>
 \t\t\t
@@ -109,6 +109,8 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t                专业班级
 \t            </label>
 \t            <input type=\"text\" name=\"class\" placeholder=\"例：计算机1701\" data-required=\"true\" data-descriptions=\"klass\">
+\t            <a href=\"javascript:void(0);\" onclick=\"delValue(this)\" class=\"ui-icon-close\">
+\t            </a>
         \t</div>
 
 \t\t    <div class=\"ui-form-item ui-form-item-l ui-border-b\">
@@ -116,8 +118,8 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t            中国 +86
 \t\t        </label>
 \t\t        <input type=\"text\" name=\"phonenum\" placeholder=\"请输入手机号码\" data-required=\"true\" data-pattern=\"^0?1[3|4|5|8][0-9]\\d{8}\$\"  data-descriptions=\"phonenum\" maxlength=\"11\">
-\t\t        <a href=\"#\" class=\"ui-icon-close\">
-\t\t        </a>
+\t\t        <a href=\"javascript:void(0);\" onclick=\"delValue(this)\" class=\"ui-icon-close\">
+\t            </a>
 \t\t    </div>
 
         \t<div class=\"ui-form-item ui-border-b\">
@@ -125,6 +127,8 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t                QQ
 \t            </label>
 \t            <input type=\"text\" name=\"qqnum\" placeholder=\"QQ号码\" data-required=\"true\" data-pattern=\"[1-9]([0-9]{5,11})\" data-descriptions=\"qqnum\">
+\t            <a href=\"javascript:void(0);\" onclick=\"delValue(this)\" class=\"ui-icon-close\">
+\t            </a>
         \t</div>
 
 \t        <div class=\"ui-form-item ui-border-b\">
@@ -184,73 +188,58 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t            <label>
 \t                自我介绍
 \t            </label>
-\t            <textarea placeholder=\"爱好特长等\" name=\"introduction\"></textarea>
+\t            <textarea placeholder=\"爱好特长等\" name=\"introduction\" data-required=\"true\" data-descriptions=\"introduction\"></textarea>
 \t        </div>
 \t\t\t
 \t\t\t<div class=\"ui-form-item ui-form-item-l ui-border-b\">
 \t\t        <label class=\"ui-border-r\">
 \t\t        \t<img src=\"";
-        // line 152
+        // line 156
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "ShowVerify\" alt=\"验证码\" onclick=\"this.src='";
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "ShowVerify'\"/>
 \t\t        </label>
 \t\t        <input type=\"text\" name=\"verify\" placeholder=\"请输入验证码\" maxlength=\"4\">
-\t\t        <a href=\"#\" class=\"ui-icon-close\">
-\t\t        </a>
+\t\t        <a href=\"javascript:void(0);\" onclick=\"delValue(this)\" class=\"ui-icon-close\">
+\t            </a>
 \t\t    </div>
 
         \t<!--  -->
         \t<!--  -->
 \t\t\t<div class=\"ui-btn-wrap\">
-\t\t\t    <input type=\"submit\" class=\"ui-btn-lg ui-btn-primary\" id=\"btn1\" value=\"提  交\">
-\t\t\t        
-\t\t\t</div>
-\t\t\t<div class=\"ui-dialog\">
-\t\t\t    <div class=\"ui-dialog-cnt\">
-\t\t\t        <div class=\"ui-dialog-bd\">
-\t\t\t            <div>
-\t\t\t\t            <!-- <h4>标题</h4> -->
-\t\t\t\t            <div>提交成功</div>
-\t\t\t            </div>
-\t\t\t        </div>
-\t\t\t        <div class=\"ui-dialog-ft ui-btn-group\">
-\t\t\t            <button type=\"button\" data-role=\"button\"  class=\"select\" id=\"dialogButton<%=i%>\">关闭</button> 
-\t\t\t        </div>
-\t\t\t    </div>        
+\t\t\t    <button type=\"submit\" class=\"ui-btn-lg ui-btn-primary\" id=\"btn1\">
+\t\t\t        提  交
+\t\t\t    </button>
 \t\t\t</div>
 
-\t\t\t<!-- <input type=\"submit\" value=\"提  交\" class=\"submit\"> -->
 \t\t\t<br><br>
 \t\t</form>
 \t</div>
 \t<div class=\"ui-flex ui-flex-pack-center\">
-\t    <div>&copy; 2017 JS&ZQD </div>
+\t    <div>&copy; 2017 JS </div>
 \t</div>
 \t
 \t<script type=\"text/javascript\" src=\"";
-        // line 187
+        // line 178
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "dist/lib/zepto.min.js\"></script>
 \t<script type=\"text/javascript\" src=\"";
-        // line 188
+        // line 179
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "dist/js/frozen.js\"></script>
 \t<script type=\"text/javascript\" src=\"";
-        // line 189
+        // line 180
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
         echo "dist/zepto-mvalidate.js\"></script>
 \t
 \t<script type=\"text/javascript\">
-\t\t// \$(\"#btn1\").tap(function(){
-\t\t//     var dia2=\$(\".ui-dialog\").dialog(\"show\");
-\t\t//     dia2.on(\"dialog:action\",function(e){
-\t\t//         console.log(e.index)
-\t\t//     });
-\t\t// })
+\t\tfunction delValue(obj){
+\t\t\t// console.log(obj);
+\t\t\t\$(obj).parent().children('input').val('');
+\t\t}
 \t</script>
-
+\t
 \t<script>
 \t\t
 \t\t// \$.validator.setDefaults({
@@ -354,7 +343,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 
     public function getDebugInfo()
     {
-        return array (  242 => 189,  238 => 188,  234 => 187,  194 => 152,  55 => 16,  49 => 12,  46 => 11,  39 => 7,  35 => 6,  32 => 5,  29 => 4,  11 => 1,);
+        return array (  233 => 180,  229 => 179,  225 => 178,  198 => 156,  55 => 16,  49 => 12,  46 => 11,  39 => 7,  35 => 6,  32 => 5,  29 => 4,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -386,7 +375,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t                姓名
 \t            </label>
 \t            <input type=\"text\" name=\"name\" placeholder=\"姓名\" data-required=\"true\" data-pattern=\"[\\u4e00-\\u9fa5]\" data-descriptions=\"name\">
-\t            <a href=\"#\" class=\"ui-icon-close\">
+\t            <a href=\"javascript:void(0);\" onclick=\"delValue(this)\" class=\"ui-icon-close\">
 \t            </a>
         \t</div>
 
@@ -395,7 +384,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t                学号
 \t            </label>
 \t            <input type=\"text\" name=\"studentid\" placeholder=\"9位学号\" data-required=\"true\" data-pattern=\"\\d{9}\" data-descriptions=\"studentid\" maxlength=\"9\">
-\t            <a href=\"#\" class=\"ui-icon-close\">
+\t            <a href=\"javascript:void(0);\" onclick=\"delValue(this)\" class=\"ui-icon-close\">
 \t            </a>
         \t</div>
 \t\t\t
@@ -430,6 +419,8 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t                专业班级
 \t            </label>
 \t            <input type=\"text\" name=\"class\" placeholder=\"例：计算机1701\" data-required=\"true\" data-descriptions=\"klass\">
+\t            <a href=\"javascript:void(0);\" onclick=\"delValue(this)\" class=\"ui-icon-close\">
+\t            </a>
         \t</div>
 
 \t\t    <div class=\"ui-form-item ui-form-item-l ui-border-b\">
@@ -437,8 +428,8 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t            中国 +86
 \t\t        </label>
 \t\t        <input type=\"text\" name=\"phonenum\" placeholder=\"请输入手机号码\" data-required=\"true\" data-pattern=\"^0?1[3|4|5|8][0-9]\\d{8}\$\"  data-descriptions=\"phonenum\" maxlength=\"11\">
-\t\t        <a href=\"#\" class=\"ui-icon-close\">
-\t\t        </a>
+\t\t        <a href=\"javascript:void(0);\" onclick=\"delValue(this)\" class=\"ui-icon-close\">
+\t            </a>
 \t\t    </div>
 
         \t<div class=\"ui-form-item ui-border-b\">
@@ -446,6 +437,8 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t                QQ
 \t            </label>
 \t            <input type=\"text\" name=\"qqnum\" placeholder=\"QQ号码\" data-required=\"true\" data-pattern=\"[1-9]([0-9]{5,11})\" data-descriptions=\"qqnum\">
+\t            <a href=\"javascript:void(0);\" onclick=\"delValue(this)\" class=\"ui-icon-close\">
+\t            </a>
         \t</div>
 
 \t        <div class=\"ui-form-item ui-border-b\">
@@ -505,7 +498,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t            <label>
 \t                自我介绍
 \t            </label>
-\t            <textarea placeholder=\"爱好特长等\" name=\"introduction\"></textarea>
+\t            <textarea placeholder=\"爱好特长等\" name=\"introduction\" data-required=\"true\" data-descriptions=\"introduction\"></textarea>
 \t        </div>
 \t\t\t
 \t\t\t<div class=\"ui-form-item ui-form-item-l ui-border-b\">
@@ -513,36 +506,23 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t        \t<img src=\"{{ base_url }}ShowVerify\" alt=\"验证码\" onclick=\"this.src='{{ base_url }}ShowVerify'\"/>
 \t\t        </label>
 \t\t        <input type=\"text\" name=\"verify\" placeholder=\"请输入验证码\" maxlength=\"4\">
-\t\t        <a href=\"#\" class=\"ui-icon-close\">
-\t\t        </a>
+\t\t        <a href=\"javascript:void(0);\" onclick=\"delValue(this)\" class=\"ui-icon-close\">
+\t            </a>
 \t\t    </div>
 
         \t<!--  -->
         \t<!--  -->
 \t\t\t<div class=\"ui-btn-wrap\">
-\t\t\t    <input type=\"submit\" class=\"ui-btn-lg ui-btn-primary\" id=\"btn1\" value=\"提  交\">
-\t\t\t        
-\t\t\t</div>
-\t\t\t<div class=\"ui-dialog\">
-\t\t\t    <div class=\"ui-dialog-cnt\">
-\t\t\t        <div class=\"ui-dialog-bd\">
-\t\t\t            <div>
-\t\t\t\t            <!-- <h4>标题</h4> -->
-\t\t\t\t            <div>提交成功</div>
-\t\t\t            </div>
-\t\t\t        </div>
-\t\t\t        <div class=\"ui-dialog-ft ui-btn-group\">
-\t\t\t            <button type=\"button\" data-role=\"button\"  class=\"select\" id=\"dialogButton<%=i%>\">关闭</button> 
-\t\t\t        </div>
-\t\t\t    </div>        
+\t\t\t    <button type=\"submit\" class=\"ui-btn-lg ui-btn-primary\" id=\"btn1\">
+\t\t\t        提  交
+\t\t\t    </button>
 \t\t\t</div>
 
-\t\t\t<!-- <input type=\"submit\" value=\"提  交\" class=\"submit\"> -->
 \t\t\t<br><br>
 \t\t</form>
 \t</div>
 \t<div class=\"ui-flex ui-flex-pack-center\">
-\t    <div>&copy; 2017 JS&ZQD </div>
+\t    <div>&copy; 2017 JS </div>
 \t</div>
 \t
 \t<script type=\"text/javascript\" src=\"{{ source_url }}dist/lib/zepto.min.js\"></script>
@@ -550,14 +530,12 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t<script type=\"text/javascript\" src=\"{{ source_url }}dist/zepto-mvalidate.js\"></script>
 \t
 \t<script type=\"text/javascript\">
-\t\t// \$(\"#btn1\").tap(function(){
-\t\t//     var dia2=\$(\".ui-dialog\").dialog(\"show\");
-\t\t//     dia2.on(\"dialog:action\",function(e){
-\t\t//         console.log(e.index)
-\t\t//     });
-\t\t// })
+\t\tfunction delValue(obj){
+\t\t\t// console.log(obj);
+\t\t\t\$(obj).parent().children('input').val('');
+\t\t}
 \t</script>
-
+\t
 \t<script>
 \t\t
 \t\t// \$.validator.setDefaults({

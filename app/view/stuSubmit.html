@@ -25,7 +25,7 @@
 	                姓名
 	            </label>
 	            <input type="text" name="name" placeholder="姓名" data-required="true" data-pattern="[\u4e00-\u9fa5]" data-descriptions="name">
-	            <a href="#" class="ui-icon-close">
+	            <a href="javascript:void(0);" onclick="delValue(this)" class="ui-icon-close">
 	            </a>
         	</div>
 
@@ -34,7 +34,7 @@
 	                学号
 	            </label>
 	            <input type="text" name="studentid" placeholder="9位学号" data-required="true" data-pattern="\d{9}" data-descriptions="studentid" maxlength="9">
-	            <a href="#" class="ui-icon-close">
+	            <a href="javascript:void(0);" onclick="delValue(this)" class="ui-icon-close">
 	            </a>
         	</div>
 			
@@ -69,6 +69,8 @@
 	                专业班级
 	            </label>
 	            <input type="text" name="class" placeholder="例：计算机1701" data-required="true" data-descriptions="klass">
+	            <a href="javascript:void(0);" onclick="delValue(this)" class="ui-icon-close">
+	            </a>
         	</div>
 
 		    <div class="ui-form-item ui-form-item-l ui-border-b">
@@ -76,8 +78,8 @@
 		            中国 +86
 		        </label>
 		        <input type="text" name="phonenum" placeholder="请输入手机号码" data-required="true" data-pattern="^0?1[3|4|5|8][0-9]\d{8}$"  data-descriptions="phonenum" maxlength="11">
-		        <a href="#" class="ui-icon-close">
-		        </a>
+		        <a href="javascript:void(0);" onclick="delValue(this)" class="ui-icon-close">
+	            </a>
 		    </div>
 
         	<div class="ui-form-item ui-border-b">
@@ -85,6 +87,8 @@
 	                QQ
 	            </label>
 	            <input type="text" name="qqnum" placeholder="QQ号码" data-required="true" data-pattern="[1-9]([0-9]{5,11})" data-descriptions="qqnum">
+	            <a href="javascript:void(0);" onclick="delValue(this)" class="ui-icon-close">
+	            </a>
         	</div>
 
 	        <div class="ui-form-item ui-border-b">
@@ -144,7 +148,7 @@
 	            <label>
 	                自我介绍
 	            </label>
-	            <textarea placeholder="爱好特长等" name="introduction"></textarea>
+	            <textarea placeholder="爱好特长等" name="introduction" data-required="true" data-descriptions="introduction"></textarea>
 	        </div>
 			
 			<div class="ui-form-item ui-form-item-l ui-border-b">
@@ -152,36 +156,23 @@
 		        	<img src="{{ base_url }}ShowVerify" alt="验证码" onclick="this.src='{{ base_url }}ShowVerify'"/>
 		        </label>
 		        <input type="text" name="verify" placeholder="请输入验证码" maxlength="4">
-		        <a href="#" class="ui-icon-close">
-		        </a>
+		        <a href="javascript:void(0);" onclick="delValue(this)" class="ui-icon-close">
+	            </a>
 		    </div>
 
         	<!--  -->
         	<!--  -->
 			<div class="ui-btn-wrap">
-			    <input type="submit" class="ui-btn-lg ui-btn-primary" id="btn1" value="提  交">
-			        
-			</div>
-			<div class="ui-dialog">
-			    <div class="ui-dialog-cnt">
-			        <div class="ui-dialog-bd">
-			            <div>
-				            <!-- <h4>标题</h4> -->
-				            <div>提交成功</div>
-			            </div>
-			        </div>
-			        <div class="ui-dialog-ft ui-btn-group">
-			            <button type="button" data-role="button"  class="select" id="dialogButton<%=i%>">关闭</button> 
-			        </div>
-			    </div>        
+			    <button type="submit" class="ui-btn-lg ui-btn-primary" id="btn1">
+			        提  交
+			    </button>
 			</div>
 
-			<!-- <input type="submit" value="提  交" class="submit"> -->
 			<br><br>
 		</form>
 	</div>
 	<div class="ui-flex ui-flex-pack-center">
-	    <div>&copy; 2017 JS&ZQD </div>
+	    <div>&copy; 2017 JS </div>
 	</div>
 	
 	<script type="text/javascript" src="{{ source_url }}dist/lib/zepto.min.js"></script>
@@ -189,14 +180,12 @@
 	<script type="text/javascript" src="{{ source_url }}dist/zepto-mvalidate.js"></script>
 	
 	<script type="text/javascript">
-		// $("#btn1").tap(function(){
-		//     var dia2=$(".ui-dialog").dialog("show");
-		//     dia2.on("dialog:action",function(e){
-		//         console.log(e.index)
-		//     });
-		// })
+		function delValue(obj){
+			// console.log(obj);
+			$(obj).parent().children('input').val('');
+		}
 	</script>
-
+	
 	<script>
 		
 		// $.validator.setDefaults({

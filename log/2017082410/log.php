@@ -1,0 +1,6 @@
+2017-08-24 10:45:30 ::1 "Access => controller: Index action: index"
+2017-08-24 10:45:32 ::1 "Access => controller: Student action: index"
+2017-08-24 10:45:32 ::1 "Access => controller: ShowVerify action: index"
+2017-08-24 10:46:41 ::1 "Access => controller: Student action: index"
+2017-08-24 10:46:41 ::1 "Access => controller: ShowVerify action: index"
+2017-08-24 10:47:28 ::1 "Access => controller: Student action: doSubmit"
