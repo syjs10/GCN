@@ -9,7 +9,7 @@
 	define('LOG', TRUE);
 	
 	// 网站根URL
-	define('BASE_URL', 'http://119.28.46.169/GCN/');
+	define('BASE_URL', 'http://localhost/GCN/');
 
 	require ROOT_PATH . "vendor/autoload.php";
 

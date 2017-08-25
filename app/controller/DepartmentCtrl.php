@@ -302,4 +302,62 @@
 			$this->view->display('unhiredStu.html');
 			
 		}
+		public function getExcel(){
+			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
+				$this->jump(BASE_URL . 'Department/login');
+				exit();
+			}
+			$name = $this->Session->getSession('name');
+			$data = $this->StudentModel->chooseStu($name);
+			$datas = array();
+			foreach ($data as $value) {
+				$i = 0;
+				if ($value['employ_department']==null) {
+					$i++;
+				}
+				if ($value['employ_department1']==null) {
+					$i++;
+				}
+				if ($value['employ_department2']==null) {
+					$i++;
+				}
+				if ($value['employ_department3']==null) {
+					$i++;
+				}
+				if ($i == 3) {
+					array_push($datas, $value);
+				}
+			}
+			$objPHPExcel = new PHPExcel();  
+			$fileName = "{$name}.xlsx";  
+			$objPHPExcel->setActiveSheetIndex(0)  
+            			->setCellValue('A1','学号')  
+			            ->setCellValue('B1','姓名')  
+			            ->setCellValue('C1','性别')  
+			            ->setCellValue('D1','班级')
+			            ->setCellValue('E1','电话')
+			            ->setCellValue('F1','QQ');  	
+
+			//适合把表中数据导入Excel文件中，多数据循环设置值   
+			foreach($datas as $key=> $value) {  
+				$key+=2;  
+				$objPHPExcel->setActiveSheetIndex(0)  
+				           ->setCellValue('A'.$key,$value['studentid'])  
+				           ->setCellValue('B'.$key,$value['name'])  
+				           ->setCellValue('C'.$key,$value['gender'])  
+				           ->setCellValue('D'.$key,$value['class'])  
+				           ->setCellValue('E'.$key,$value['phonenum'])  
+				           ->setCellValue('F'.$key,$value['qqnum']);  
+			}  	
+			// 设置活动单指数到第一个表,所以Excel打开这是第一个表  
+			$objPHPExcel->setActiveSheetIndex(0);  
+			// 将输出重定向到一个客户端web浏览器(Excel2007)  
+			header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');  
+			header('Content-Disposition: attachment;filename='.$fileName);  
+			header('Cache-Control: max-age=0'); 
+			//要是输出为Excel2007,使用 Excel2007对应的类，生成的文件名为.xlsx.如果是Excel2005,使用Excel5,对应生成.xls文件  
+			$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');  
+			// $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5'); 
+			$objWriter->save('php://output');  
+		}
 	}

@@ -1,0 +1,5 @@
+2017-08-25 18:00:31 ::1 "Access => controller: Department action: getHiredStu"
+2017-08-25 18:00:43 ::1 "Access => controller: Department action: getHiredStu"
+2017-08-25 18:03:16 ::1 "Access => controller: Index action: index"
+2017-08-25 18:03:17 ::1 "Access => controller: Department action: index"
+2017-08-25 18:03:19 ::1 "Access => controller: Department action: getHiredStu"
