@@ -23,7 +23,7 @@ class __TwigTemplate_00e725f8cd777066d79978fa8745a202f91809b3f99ff2d187dfc54d926
     public function block_footer($context, array $blocks = array())
     {
         // line 2
-        echo "\t<div class=\"navbar-fixed-bottom\" style=\"text-align: center;position: absolute !important;\">&copy;2017 &nbsp;By JS </div>
+        echo "\t<div class=\"navbar-fixed-bottom\" style=\"text-align: center;position: absolute !important;\">&copy;2017 &nbsp;By JS&ZQD </div>
 ";
     }
 
@@ -40,7 +40,7 @@ class __TwigTemplate_00e725f8cd777066d79978fa8745a202f91809b3f99ff2d187dfc54d926
     public function getSourceContext()
     {
         return new Twig_Source("{% block footer %}
-\t<div class=\"navbar-fixed-bottom\" style=\"text-align: center;position: absolute !important;\">&copy;2017 &nbsp;By JS </div>
+\t<div class=\"navbar-fixed-bottom\" style=\"text-align: center;position: absolute !important;\">&copy;2017 &nbsp;By JS&ZQD </div>
 {% endblock %}
 ", "template/footer.html", "/var/www/html/GCN/app/view/template/footer.html");
     }

@@ -58,7 +58,10 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t\t</div>
 \t\t\t<h5 align=\"center\">工大网管，欢迎“家”入</h5>
 \t\t</div>
-\t\t<form action=\"doSubmit\" enctype=\"multipart/form-data\" method=\"post\" id=\"stuForm\">
+\t\t<form action=\"";
+        // line 21
+        echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+        echo "Student/doSubmit\" enctype=\"multipart/form-data\" method=\"post\" id=\"stuForm\">
 
 \t\t\t<div class=\"ui-form-item ui-border-b\">
 \t            <label>
@@ -223,7 +226,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t<script type=\"text/javascript\" src=\"";
         // line 178
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
-        echo "dist/lib/zepto.min.js\"></script>
+        echo "dist/js/zepto.min.js\"></script>
 \t<script type=\"text/javascript\" src=\"";
         // line 179
         echo twig_escape_filter($this->env, ($context["source_url"] ?? null), "html", null, true);
@@ -240,71 +243,12 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t}
 \t</script>
 \t
-\t<script>
-\t\t
-\t\t// \$.validator.setDefaults({
-\t\t//     submitHandler: function() {
-\t\t//       alert(\"提交事件!\");
-\t\t//     }
-\t\t// });
-\t\t// \$().ready(function() {
-\t\t//     \$(\"#stuForm\").validate({
-\t\t//     \trules: {
-\t\t//     \t\tname: \"required\",
-\t\t//     \t\tstudentid: {
-\t\t// \t\t    \trequired: true,
-\t\t// \t\t    \tnumber: true,
-\t\t// \t\t    \tmixlength: 9
-\t\t// \t\t    },
-\t\t// \t\t    class:\"required\",
-\t\t// \t\t    phonenum:{
-\t\t// \t\t    \trequired: true,
-\t\t// \t\t    \tnumber: true,
-\t\t// \t\t    \tmixlength: 11
-\t\t// \t\t    },
-\t\t// \t\t    qqnum:{
-\t\t// \t\t    \trequired: true,
-\t\t// \t\t    \tnumber: true
-\t\t// \t\t    },
-\t\t// \t\t    introduction: \"required\",
-\t\t// \t\t    verify: \"required\"
 
-\t\t//     \t},
-\t\t//     \tmessages: {
-\t\t//     \t\tname: \"请输入姓名\",
-\t\t//     \t\tstudentid: {
-\t\t// \t\t    \trequired: \"请输入学号\",
-\t\t// \t\t    \tnumber: \"请输入正确学号\",
-\t\t// \t\t    \tmixlength: \"请输入正确学号\"
-\t\t// \t\t    },
-\t\t// \t\t    class:\"请输入专业班级\",
-\t\t// \t\t    phonenum:{
-\t\t// \t\t    \trequired: \"请输入电话\",
-\t\t// \t\t    \tnumber: \"请输入正确电话\",
-\t\t// \t\t    \tmixlength: \"请输入正确电话\"
-\t\t// \t\t    },
-\t\t// \t\t    qqnum:{
-\t\t// \t\t    \trequired: \"请输入QQ号\",
-\t\t// \t\t    \tnumber: \"请输入正确QQ号\"
-\t\t// \t\t    },
-\t\t// \t\t    introduction:\"请填写自我介绍\",
-\t\t// \t\t    verify: \"请输入验证码\"
-\t\t//     \t}
-\t\t//     });
-\t\t// });
-\t\t
-\t\t</script>
 \t\t<script type=\"text/javascript\">
 \t\t\$(\"#stuForm\").mvalidate({
 \t\t    type:1,
-\t\t    // validateInSubmit:true,
-\t\t    valid: function (event, options){
-\t\t    \tvar dia2=\$(\".ui-dialog\").dialog(\"show\");
-\t\t    \tdia2.on(\"dialog:action\",function(e){
-\t\t        \tconsole.log(e.index)
-\t\t    \t});
-\t\t        \$(\"#stuForm\").submit();
-\t\t    },
+\t\t    validateInSubmit:true,
+\t\t    
 \t\t    descriptions: {
 \t\t    \tname: {
 \t\t    \t\trequired: '请输入姓名',
@@ -343,7 +287,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 
     public function getDebugInfo()
     {
-        return array (  233 => 180,  229 => 179,  225 => 178,  198 => 156,  55 => 16,  49 => 12,  46 => 11,  39 => 7,  35 => 6,  32 => 5,  29 => 4,  11 => 1,);
+        return array (  236 => 180,  232 => 179,  228 => 178,  201 => 156,  63 => 21,  55 => 16,  49 => 12,  46 => 11,  39 => 7,  35 => 6,  32 => 5,  29 => 4,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -368,7 +312,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t\t</div>
 \t\t\t<h5 align=\"center\">工大网管，欢迎“家”入</h5>
 \t\t</div>
-\t\t<form action=\"doSubmit\" enctype=\"multipart/form-data\" method=\"post\" id=\"stuForm\">
+\t\t<form action=\"{{ base_url }}Student/doSubmit\" enctype=\"multipart/form-data\" method=\"post\" id=\"stuForm\">
 
 \t\t\t<div class=\"ui-form-item ui-border-b\">
 \t            <label>
@@ -525,7 +469,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t    <div>&copy; 2017 JS </div>
 \t</div>
 \t
-\t<script type=\"text/javascript\" src=\"{{ source_url }}dist/lib/zepto.min.js\"></script>
+\t<script type=\"text/javascript\" src=\"{{ source_url }}dist/js/zepto.min.js\"></script>
 \t<script type=\"text/javascript\" src=\"{{ source_url }}dist/js/frozen.js\"></script>
 \t<script type=\"text/javascript\" src=\"{{ source_url }}dist/zepto-mvalidate.js\"></script>
 \t
@@ -536,71 +480,12 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t}
 \t</script>
 \t
-\t<script>
-\t\t
-\t\t// \$.validator.setDefaults({
-\t\t//     submitHandler: function() {
-\t\t//       alert(\"提交事件!\");
-\t\t//     }
-\t\t// });
-\t\t// \$().ready(function() {
-\t\t//     \$(\"#stuForm\").validate({
-\t\t//     \trules: {
-\t\t//     \t\tname: \"required\",
-\t\t//     \t\tstudentid: {
-\t\t// \t\t    \trequired: true,
-\t\t// \t\t    \tnumber: true,
-\t\t// \t\t    \tmixlength: 9
-\t\t// \t\t    },
-\t\t// \t\t    class:\"required\",
-\t\t// \t\t    phonenum:{
-\t\t// \t\t    \trequired: true,
-\t\t// \t\t    \tnumber: true,
-\t\t// \t\t    \tmixlength: 11
-\t\t// \t\t    },
-\t\t// \t\t    qqnum:{
-\t\t// \t\t    \trequired: true,
-\t\t// \t\t    \tnumber: true
-\t\t// \t\t    },
-\t\t// \t\t    introduction: \"required\",
-\t\t// \t\t    verify: \"required\"
 
-\t\t//     \t},
-\t\t//     \tmessages: {
-\t\t//     \t\tname: \"请输入姓名\",
-\t\t//     \t\tstudentid: {
-\t\t// \t\t    \trequired: \"请输入学号\",
-\t\t// \t\t    \tnumber: \"请输入正确学号\",
-\t\t// \t\t    \tmixlength: \"请输入正确学号\"
-\t\t// \t\t    },
-\t\t// \t\t    class:\"请输入专业班级\",
-\t\t// \t\t    phonenum:{
-\t\t// \t\t    \trequired: \"请输入电话\",
-\t\t// \t\t    \tnumber: \"请输入正确电话\",
-\t\t// \t\t    \tmixlength: \"请输入正确电话\"
-\t\t// \t\t    },
-\t\t// \t\t    qqnum:{
-\t\t// \t\t    \trequired: \"请输入QQ号\",
-\t\t// \t\t    \tnumber: \"请输入正确QQ号\"
-\t\t// \t\t    },
-\t\t// \t\t    introduction:\"请填写自我介绍\",
-\t\t// \t\t    verify: \"请输入验证码\"
-\t\t//     \t}
-\t\t//     });
-\t\t// });
-\t\t
-\t\t</script>
 \t\t<script type=\"text/javascript\">
 \t\t\$(\"#stuForm\").mvalidate({
 \t\t    type:1,
-\t\t    // validateInSubmit:true,
-\t\t    valid: function (event, options){
-\t\t    \tvar dia2=\$(\".ui-dialog\").dialog(\"show\");
-\t\t    \tdia2.on(\"dialog:action\",function(e){
-\t\t        \tconsole.log(e.index)
-\t\t    \t});
-\t\t        \$(\"#stuForm\").submit();
-\t\t    },
+\t\t    validateInSubmit:true,
+\t\t    
 \t\t    descriptions: {
 \t\t    \tname: {
 \t\t    \t\trequired: '请输入姓名',

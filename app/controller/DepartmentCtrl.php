@@ -144,26 +144,26 @@
 							//update jump
 							$this->StudentModel->updateEmp($id, 'employ_department3', $name);
 							$this->alert('录取成功！');
-							$this->back(2);
+							$this->jumps(BASE_URL."Department/choose");
 						}
 					} else {
 						//update jump
 						$this->StudentModel->updateEmp($id, 'employ_department2', $name);
 						$this->alert('录取成功！');
-						$this->back(2);
+						$this->jumps(BASE_URL."Department/choose");
 					}
 				} else {
 					//update jump
 					$this->StudentModel->updateEmp($id, 'employ_department1', $name);
 					$this->alert('录取成功！');
-					$this->back(2);
+					$this->jumps(BASE_URL."Department/choose");
 					
 				}
 			} else {
 				//update jump
 				$this->StudentModel->updateEmp($id, 'employ_department', $name);
 				$this->alert('录取成功！');
-				$this->back(2);
+				$this->jumps(BASE_URL."Department/choose");
 			}
 		}
 		public function unhiring($id) {
@@ -172,29 +172,29 @@
 			if ($data['employ_department'] == $name) {
 				$this->StudentModel->updateEmp($id, 'employ_department', null);
 				$this->alert('取消录取！');
-				$this->back(2);
+				$this->jumps(BASE_URL."Department/choose");
 				exit();
 			}
 			if ($data['employ_department1'] == $name) {
 				$this->StudentModel->updateEmp($id, 'employ_department1', null);
 				$this->alert('取消录取！');
-				$this->back(2);
+				$this->jumps(BASE_URL."Department/choose");
 				exit();
 			}
 			if ($data['employ_department2'] == $name) {
 				$this->StudentModel->updateEmp($id, 'employ_department2', null);
 				$this->alert('取消录取！');
-				$this->back(2);
+				$this->jumps(BASE_URL."Department/choose");
 				exit();
 			}
 			if ($data['employ_department3'] == $name) {
 				$this->StudentModel->updateEmp($id, 'employ_department3', null);
 				$this->alert('取消录取！');
-				$this->back(2);
+				$this->jumps(BASE_URL."Department/choose");
 				exit();
 			}
 			$this->alert('未录取');
-			$this->back(2);
+			$this->jumps(BASE_URL."Department/choose");
 
 		}
 		public function getConflictStu($page = 1){

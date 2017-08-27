@@ -97,6 +97,7 @@
 			$this->view->display('rootConflictStu.html');
 		}
 		public function setDep($id, $depName) {
-			$this->StudentModel->updateDep($id, $depName);
+			$res = $this->StudentModel->updateDep($id, $depName);
+			$res && $this->jumps(BASE_URL . "Root/conflictStu");
 		}
 	}

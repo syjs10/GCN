@@ -175,7 +175,7 @@
 	    <div>&copy; 2017 JS </div>
 	</div>
 	
-	<script type="text/javascript" src="{{ source_url }}dist/lib/zepto.min.js"></script>
+	<script type="text/javascript" src="{{ source_url }}dist/js/zepto.min.js"></script>
 	<script type="text/javascript" src="{{ source_url }}dist/js/frozen.js"></script>
 	<script type="text/javascript" src="{{ source_url }}dist/zepto-mvalidate.js"></script>
 	
@@ -186,71 +186,12 @@
 		}
 	</script>
 	
-	<script>
-		
-		// $.validator.setDefaults({
-		//     submitHandler: function() {
-		//       alert("提交事件!");
-		//     }
-		// });
-		// $().ready(function() {
-		//     $("#stuForm").validate({
-		//     	rules: {
-		//     		name: "required",
-		//     		studentid: {
-		// 		    	required: true,
-		// 		    	number: true,
-		// 		    	mixlength: 9
-		// 		    },
-		// 		    class:"required",
-		// 		    phonenum:{
-		// 		    	required: true,
-		// 		    	number: true,
-		// 		    	mixlength: 11
-		// 		    },
-		// 		    qqnum:{
-		// 		    	required: true,
-		// 		    	number: true
-		// 		    },
-		// 		    introduction: "required",
-		// 		    verify: "required"
 
-		//     	},
-		//     	messages: {
-		//     		name: "请输入姓名",
-		//     		studentid: {
-		// 		    	required: "请输入学号",
-		// 		    	number: "请输入正确学号",
-		// 		    	mixlength: "请输入正确学号"
-		// 		    },
-		// 		    class:"请输入专业班级",
-		// 		    phonenum:{
-		// 		    	required: "请输入电话",
-		// 		    	number: "请输入正确电话",
-		// 		    	mixlength: "请输入正确电话"
-		// 		    },
-		// 		    qqnum:{
-		// 		    	required: "请输入QQ号",
-		// 		    	number: "请输入正确QQ号"
-		// 		    },
-		// 		    introduction:"请填写自我介绍",
-		// 		    verify: "请输入验证码"
-		//     	}
-		//     });
-		// });
-		
-		</script>
 		<script type="text/javascript">
 		$("#stuForm").mvalidate({
 		    type:1,
-		    // validateInSubmit:true,
-		    valid: function (event, options){
-		    	var dia2=$(".ui-dialog").dialog("show");
-		    	dia2.on("dialog:action",function(e){
-		        	console.log(e.index)
-		    	});
-		        $("#stuForm").submit();
-		    },
+		    validateInSubmit:true,
+		    
 		    descriptions: {
 		    	name: {
 		    		required: '请输入姓名',

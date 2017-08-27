@@ -46,7 +46,7 @@ class __TwigTemplate_17843755926208c26c426412fabd39ac2c384ec7f2d4094dde8a64ec264
     {
         // line 11
         echo "\t
-\t<div class=\"container-fluid\" style=\"margin-top:30%\">
+\t<div class=\"container-fluid\" style=\"margin-top:10%\">
 \t  <div class=\"row\">
 \t    <div class=\"col-md-2 col-xs-1\"></div>
 \t    <div class=\"col-md-8 col-xs-10\">
@@ -100,7 +100,7 @@ class __TwigTemplate_17843755926208c26c426412fabd39ac2c384ec7f2d4094dde8a64ec264
 
 {% block content %}
 \t
-\t<div class=\"container-fluid\" style=\"margin-top:30%\">
+\t<div class=\"container-fluid\" style=\"margin-top:10%\">
 \t  <div class=\"row\">
 \t    <div class=\"col-md-2 col-xs-1\"></div>
 \t    <div class=\"col-md-8 col-xs-10\">
