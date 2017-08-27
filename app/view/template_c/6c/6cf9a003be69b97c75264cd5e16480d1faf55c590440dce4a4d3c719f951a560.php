@@ -136,7 +136,7 @@ class __TwigTemplate_708b4c65e006cd27e7232f92f293a8b1c2b24b891b10fd4bd56fd0e2987
         echo "\t\t\t
 \t\t</tbody>
 \t</table>
-\t<nav aria-label=\"Page navigation\" class=\"page navbar-fixed-bottom\">
+\t<nav aria-label=\"Page navigation\" class=\"page \">
 \t\t<ul class=\"pagination\">
 \t    \t<li>
 \t\t    \t<a href=\"";
@@ -250,7 +250,7 @@ class __TwigTemplate_708b4c65e006cd27e7232f92f293a8b1c2b24b891b10fd4bd56fd0e2987
 \t\t\t
 \t\t</tbody>
 \t</table>
-\t<nav aria-label=\"Page navigation\" class=\"page navbar-fixed-bottom\">
+\t<nav aria-label=\"Page navigation\" class=\"page \">
 \t\t<ul class=\"pagination\">
 \t    \t<li>
 \t\t    \t<a href=\"{{ base_url }}Department/choose/page/{{ prePage }}\" aria-label=\"Previous\">

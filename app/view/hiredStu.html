@@ -13,20 +13,27 @@
 	<table class="table table-hover table-bordered">
 		<tbody style="text-align:center;">
 				<tr>
-					<th>姓名</th>
-					<th>性别</th>
+					<th width="10%">姓名</th>
+					<th width="5%">性别</th>
+					<th width="35%">专业班级</th>
+					<th width="25%">电话</th>
+					<th width="25%">QQ</th>
 					
 				</tr>
 			{% for value in data %}
 				<tr>
 					<td><a href="{{ base_url }}Student/getStuInfoWithReview/id/{{ value['id'] }}">{{ value['name'] }}</a></td>
 					<td>{{ value['gender'] }}</td>
+					<td>{{ value['class'] }}</td>
+					<td>{{ value['phonenum'] }}</td>
+					<td>{{ value['qqnum'] }}</td>
+				
 				</tr>
 			{% endfor %}
 			
 		</tbody>
 	</table>
-	<nav aria-label="Page navigation" class="page navbar-fixed-bottom">
+	<nav aria-label="Page navigation" class="page ">
 		<ul class="pagination">
 	    	<li>
 		    	<a href="{{ base_url }}Department/getHiredStu/page/{{ prePage }}" aria-label="Previous">

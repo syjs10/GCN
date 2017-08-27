@@ -7,17 +7,44 @@
 {% endblock %}
 
 {% block content %}
-	<form action="{{ base_url }}Root/doLogin" method="POST">
-		<label for="username">用户名</label>
-		<input type="text" name="username" />
+	<div class="container container-fluid">
+		<br><br><br>
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<div class=" panel panel-info">
+				  <div class="panel-heading"><h4>管理员登录</h4></div>
+				  <div class="panel-body" style="padding:30px;">
+					 <form action="{{ base_url }}Root/doLogin" method="POST">
+						<div class="input-group input-group-lg">
+							<span class="input-group-addon">用&nbsp;户&nbsp;名</span>
+							<input class="form-control" type="text" name="username" aria-describedby="sizing-addon1" />
+							
+						</div>
+						<br>
+						<div class="input-group input-group-lg">
+							<span class="input-group-addon">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</span>
+							<input class="form-control" type="password" name="password" />
+						</div>
+						<br>
+						<div class="input-group input-group-lg">
+							<span class="input-group-addon">验&nbsp;证&nbsp;码</span>
+							<input class="form-control" type="text" name="verify" />
+							<span class="input-group-addon" style="padding:0;" id="basic-addon2">
+								<img style="height:100%;" src="{{ base_url }}ShowVerify" alt="验证码" onclick="this.src='{{ base_url }}ShowVerify'">
+							</span>
+						</div>
+						<br>
+						<input type="submit" class="btn btn-info btn-lg pull-right" value=" 登  录 " />
+						
+					</form>
+				  </div>
+				</div>		
+			</div>
+			<div class="col-md-3"></div>
+		</div>
 		
-		<label for="password">密 &nbsp;码</label>
-		<input type="password" name="password" />
-
-		<label for="verify">验证码</label>
-		<input type="text" name="verify" />
-		<img src="{{ base_url }}ShowVerify" alt="验证码" onclick="this.src='{{ base_url }}ShowVerify'">
-		<input type="submit" value="登录" />
 		
-	</form>
+			
+	</div>
 {% endblock %}

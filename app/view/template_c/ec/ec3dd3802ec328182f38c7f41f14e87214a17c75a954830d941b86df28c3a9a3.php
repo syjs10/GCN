@@ -39,46 +39,47 @@ class __TwigTemplate_c30f24088f5ba28d1811575541ccc0f0a419105dc1f5717a85964902e38
     {
         // line 9
         echo "    <table class=\"table table-hover table-bordered\">
+        
     \t<tbody>
     \t\t<tr>
-    \t\t\t<td>姓名</td>
-    \t\t\t<td>";
-        // line 13
+    \t\t\t<td width=\"20%\">姓名</td>
+    \t\t\t<td width=\"80%\">";
+        // line 14
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "name", array(), "array"), "html", null, true);
         echo "</td>
     \t\t</tr>
     \t\t<tr>
     \t\t\t<td>学号</td>
     \t\t\t<td>";
-        // line 17
+        // line 18
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "gender", array(), "array"), "html", null, true);
         echo "</td>
     \t\t</tr>
     \t\t<tr>
     \t\t\t<td>性别</td>
     \t\t\t<td>";
-        // line 21
+        // line 22
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "studentid", array(), "array"), "html", null, true);
         echo "</td>
     \t\t</tr>
     \t\t<tr>
     \t\t\t<td>专业班级</td>
     \t\t\t<td>";
-        // line 25
+        // line 26
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "class", array(), "array"), "html", null, true);
         echo "</td>
     \t\t</tr>
     \t\t<tr>
     \t\t\t<td>手机</td>
     \t\t\t<td>";
-        // line 29
+        // line 30
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "phonenum", array(), "array"), "html", null, true);
         echo "</td>
     \t\t</tr>
     \t\t<tr>
     \t\t\t<td>QQ</td>
     \t\t\t<td>";
-        // line 33
+        // line 34
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "qqnum", array(), "array"), "html", null, true);
         echo "</td>
     \t\t</tr>
@@ -86,75 +87,75 @@ class __TwigTemplate_c30f24088f5ba28d1811575541ccc0f0a419105dc1f5717a85964902e38
     \t\t\t<td>其他部门</td>
     \t\t\t<td>
 \t\t\t\t\t";
-        // line 38
+        // line 39
         if ((twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department0", array(), "array") != ($context["name"] ?? null))) {
-            // line 39
+            // line 40
             echo "\t\t\t\t\t\t";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department0", array(), "array"), "html", null, true);
             echo "
 \t\t\t\t\t";
         }
-        // line 41
+        // line 42
         echo "\t\t\t\t\t";
         if (((twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department1", array(), "array") != ($context["name"] ?? null)) && (twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department0", array(), "array") != twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department1", array(), "array")))) {
-            // line 42
+            // line 43
             echo "\t\t\t\t\t\t";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department1", array(), "array"), "html", null, true);
             echo "
 \t\t\t\t\t";
         }
-        // line 44
+        // line 45
         echo "\t\t\t\t\t";
         if ((((twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department2", array(), "array") != ($context["name"] ?? null)) && (twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department0", array(), "array") != twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department2", array(), "array"))) && (twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department1", array(), "array") != twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department2", array(), "array")))) {
-            // line 45
+            // line 46
             echo "\t\t\t\t\t\t";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department2", array(), "array"), "html", null, true);
             echo "
 \t\t\t\t\t";
         }
-        // line 47
+        // line 48
         echo "\t\t\t\t\t";
         if (((((twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department3", array(), "array") != ($context["name"] ?? null)) && (twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department0", array(), "array") != twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department3", array(), "array"))) && (twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department1", array(), "array") != twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department3", array(), "array"))) && (twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department2", array(), "array") != twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department3", array(), "array")))) {
-            // line 48
+            // line 49
             echo "\t\t\t\t\t\t";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "department3", array(), "array"), "html", null, true);
             echo "
 \t\t\t\t\t";
         }
-        // line 50
+        // line 51
         echo "    \t\t\t</td>
     \t\t</tr>
     \t\t<tr>
     \t\t\t<td>自我介绍</td>
     \t\t\t<td>";
-        // line 54
+        // line 55
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "introduction", array(), "array"), "html", null, true);
         echo "</td>
     \t\t</tr>
 \t\t\t<tr>
 \t\t\t\t<td>面试官评价</td>
 \t\t\t\t<td>";
-        // line 58
+        // line 59
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "review", array(), "array"), "html", null, true);
         echo "</td>
 \t\t\t</tr>
 \t\t\t<tr>
 \t\t\t\t<td>评分</td>
 \t\t\t\t<td>";
-        // line 62
+        // line 63
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "score", array(), "array"), "html", null, true);
         echo "</td>
 \t\t\t</tr>
     \t</tbody>
     </table>
     <button onclick=\"location.href='";
-        // line 66
+        // line 67
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "Department/hiring/id/";
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "id", array(), "array"), "html", null, true);
         echo "'\">录取</button>
     <button onclick=\"location.href='";
-        // line 67
+        // line 68
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "Department/unhiring/id/";
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), ($context["data"] ?? null), "id", array(), "array"), "html", null, true);
@@ -174,7 +175,7 @@ class __TwigTemplate_c30f24088f5ba28d1811575541ccc0f0a419105dc1f5717a85964902e38
 
     public function getDebugInfo()
     {
-        return array (  158 => 67,  152 => 66,  145 => 62,  138 => 58,  131 => 54,  125 => 50,  119 => 48,  116 => 47,  110 => 45,  107 => 44,  101 => 42,  98 => 41,  92 => 39,  90 => 38,  82 => 33,  75 => 29,  68 => 25,  61 => 21,  54 => 17,  47 => 13,  41 => 9,  38 => 8,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  159 => 68,  153 => 67,  146 => 63,  139 => 59,  132 => 55,  126 => 51,  120 => 49,  117 => 48,  111 => 46,  108 => 45,  102 => 43,  99 => 42,  93 => 40,  91 => 39,  83 => 34,  76 => 30,  69 => 26,  62 => 22,  55 => 18,  48 => 14,  41 => 9,  38 => 8,  32 => 4,  29 => 3,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -188,10 +189,11 @@ class __TwigTemplate_c30f24088f5ba28d1811575541ccc0f0a419105dc1f5717a85964902e38
 
 {% block content %}
     <table class=\"table table-hover table-bordered\">
+        
     \t<tbody>
     \t\t<tr>
-    \t\t\t<td>姓名</td>
-    \t\t\t<td>{{ data['name'] }}</td>
+    \t\t\t<td width=\"20%\">姓名</td>
+    \t\t\t<td width=\"80%\">{{ data['name'] }}</td>
     \t\t</tr>
     \t\t<tr>
     \t\t\t<td>学号</td>

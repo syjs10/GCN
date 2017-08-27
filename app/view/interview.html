@@ -15,9 +15,10 @@
 		<thead>
 			<tr>
 				<th width="10%">编号</th>
-				<th width="30%">姓名</th>
-				<th width="30%">性别</th>
-				<th width="30%">其他部门</th>
+				<th width="10%">姓名</th>
+				<th width="5%">性别</th>
+				<th width="35%">电话</th>
+				<th width="35%">其他部门</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -27,6 +28,7 @@
 					<td>{{ value['id'] }}</td>
 					<td><a href="{{ base_url }}Student/getStuInfo/id/{{ value['id'] }}">{{ value['name'] }}</a></td>
 					<td>{{ value['gender'] }}</td>
+					<td>{{ value['phonenum'] }}</td>
 					<td>
 						{% if value['department0'] != name %}
 							{{ value['department0'] }}
@@ -47,7 +49,7 @@
 			
 		</tbody>
 	</table>
-	<nav aria-label="Page navigation" class="page navbar-fixed-bottom">
+	<nav aria-label="Page navigation" class="page ">
 		<ul class="pagination">
 	    	<li>
 		    	<a href="{{ base_url }}Department/interview/page/{{ prePage }}" aria-label="Previous">

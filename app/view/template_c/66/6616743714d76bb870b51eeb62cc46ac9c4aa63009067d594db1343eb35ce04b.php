@@ -75,10 +75,7 @@ class __TwigTemplate_08d0a08057678d3ac449654d9ce02ae99325bb4bdc048286632636933c3
 \t\t    </ul>
 \t\t    <ul class=\"nav navbar-nav navbar-right\">
 \t\t    \t<li class=\"dropdown \">
-\t\t\t    \t<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">";
-        // line 26
-        echo twig_escape_filter($this->env, ($context["name"] ?? null), "html", null, true);
-        echo " <span class=\"caret\"></span></a>
+\t\t\t    \t<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Root<span class=\"caret\"></span></a>
 \t\t    \t\t<ul class=\"dropdown-menu\">
 \t\t\t\t\t\t<li><a href=\"";
         // line 28
@@ -105,7 +102,7 @@ class __TwigTemplate_08d0a08057678d3ac449654d9ce02ae99325bb4bdc048286632636933c3
 
     public function getDebugInfo()
     {
-        return array (  85 => 28,  80 => 26,  73 => 22,  69 => 21,  62 => 16,  59 => 15,  53 => 12,  49 => 11,  46 => 10,  43 => 9,  37 => 4,  33 => 2,  30 => 1,  11 => 6,);
+        return array (  82 => 28,  73 => 22,  69 => 21,  62 => 16,  59 => 15,  53 => 12,  49 => 11,  46 => 10,  43 => 9,  37 => 4,  33 => 2,  30 => 1,  11 => 6,);
     }
 
     public function getSourceContext()
@@ -135,7 +132,7 @@ class __TwigTemplate_08d0a08057678d3ac449654d9ce02ae99325bb4bdc048286632636933c3
 \t\t    </ul>
 \t\t    <ul class=\"nav navbar-nav navbar-right\">
 \t\t    \t<li class=\"dropdown \">
-\t\t\t    \t<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{ name }} <span class=\"caret\"></span></a>
+\t\t\t    \t<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Root<span class=\"caret\"></span></a>
 \t\t    \t\t<ul class=\"dropdown-menu\">
 \t\t\t\t\t\t<li><a href=\"{{ base_url }}Root/logout\">退出登录</a></li>
 \t\t    \t\t</ul>

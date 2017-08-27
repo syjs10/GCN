@@ -86,56 +86,61 @@ class __TwigTemplate_d1fcee0a22d216160de3f268c874df4c77cf8f4c3cadc53b8910c88e85d
 \t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<th>姓名</th>
 \t\t\t\t\t\t\t<th>性别</th>
+\t\t\t\t\t\t\t<th>电话</th>
 \t\t\t\t\t\t\t<th>其他部门</th>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t";
-        // line 44
+        // line 45
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["data"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["value"]) {
-            // line 45
+            // line 46
             echo "\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<td>";
-            // line 46
+            // line 47
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "name", array(), "array"), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t<td>";
-            // line 47
+            // line 48
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "gender", array(), "array"), "html", null, true);
             echo "</td>
-\t\t\t\t\t\t\t<td>
-\t\t\t\t\t\t\t\t\t<a href=\"";
+\t\t\t\t\t\t\t<td>";
             // line 49
-            echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-            echo "Root/setDep/id/";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "id", array(), "array"), "html", null, true);
-            echo "/depName/";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "employ_department", array(), "array"), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "employ_department", array(), "array"), "html", null, true);
-            echo "</a>
-\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 50
-            echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-            echo "Root/setDep/id/";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "id", array(), "array"), "html", null, true);
-            echo "/depName/";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "employ_department1", array(), "array"), "html", null, true);
-            echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "employ_department1", array(), "array"), "html", null, true);
-            echo "</a>
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "phonenum", array(), "array"), "html", null, true);
+            echo "</td>
+\t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t<a href=\"";
             // line 51
             echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
             echo "Root/setDep/id/";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "id", array(), "array"), "html", null, true);
             echo "/depName/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "employ_department", array(), "array"), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "employ_department", array(), "array"), "html", null, true);
+            echo "</a>
+\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 52
+            echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+            echo "Root/setDep/id/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "id", array(), "array"), "html", null, true);
+            echo "/depName/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "employ_department1", array(), "array"), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "employ_department1", array(), "array"), "html", null, true);
+            echo "</a>
+\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 53
+            echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
+            echo "Root/setDep/id/";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "id", array(), "array"), "html", null, true);
+            echo "/depName/";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "employ_department2", array(), "array"), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "employ_department2", array(), "array"), "html", null, true);
             echo "</a>
 \t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 52
+            // line 54
             echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
             echo "Root/setDep/id/";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["value"], "id", array(), "array"), "html", null, true);
@@ -152,7 +157,7 @@ class __TwigTemplate_d1fcee0a22d216160de3f268c874df4c77cf8f4c3cadc53b8910c88e85d
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 57
+        // line 59
         echo "\t\t\t\t\t
 \t\t\t\t</tbody>
 \t\t\t</table>
@@ -160,7 +165,7 @@ class __TwigTemplate_d1fcee0a22d216160de3f268c874df4c77cf8f4c3cadc53b8910c88e85d
 \t\t\t\t<ul class=\"pagination\">
 \t\t\t    \t<li>
 \t\t\t\t    \t<a href=\"";
-        // line 63
+        // line 65
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "Root/conflictStu/page/";
         echo twig_escape_filter($this->env, ($context["prePage"] ?? null), "html", null, true);
@@ -169,11 +174,11 @@ class __TwigTemplate_d1fcee0a22d216160de3f268c874df4c77cf8f4c3cadc53b8910c88e85d
 \t\t\t\t    \t</a>
 \t\t\t    \t</li>
 \t\t\t    \t";
-        // line 67
+        // line 69
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(range(1, ($context["num"] ?? null)));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 68
+            // line 70
             echo "\t\t\t\t    \t<li><a href=\"";
             echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
             echo "Root/conflictStu/page/";
@@ -186,10 +191,10 @@ class __TwigTemplate_d1fcee0a22d216160de3f268c874df4c77cf8f4c3cadc53b8910c88e85d
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 70
+        // line 72
         echo "\t\t\t\t\t<li>
 \t\t\t\t    \t<a href=\"";
-        // line 71
+        // line 73
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "Root/conflictStu/page/";
         echo twig_escape_filter($this->env, ($context["nextPage"] ?? null), "html", null, true);
@@ -218,7 +223,7 @@ class __TwigTemplate_d1fcee0a22d216160de3f268c874df4c77cf8f4c3cadc53b8910c88e85d
 
     public function getDebugInfo()
     {
-        return array (  193 => 71,  190 => 70,  177 => 68,  173 => 67,  164 => 63,  156 => 57,  139 => 52,  129 => 51,  119 => 50,  109 => 49,  104 => 47,  100 => 46,  97 => 45,  93 => 44,  71 => 25,  66 => 23,  59 => 19,  55 => 18,  48 => 13,  45 => 12,  39 => 7,  35 => 6,  32 => 5,  29 => 4,  11 => 1,);
+        return array (  198 => 73,  195 => 72,  182 => 70,  178 => 69,  169 => 65,  161 => 59,  144 => 54,  134 => 53,  124 => 52,  114 => 51,  109 => 49,  105 => 48,  101 => 47,  98 => 46,  94 => 45,  71 => 25,  66 => 23,  59 => 19,  55 => 18,  48 => 13,  45 => 12,  39 => 7,  35 => 6,  32 => 5,  29 => 4,  11 => 1,);
     }
 
     public function getSourceContext()
@@ -264,12 +269,14 @@ class __TwigTemplate_d1fcee0a22d216160de3f268c874df4c77cf8f4c3cadc53b8910c88e85d
 \t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<th>姓名</th>
 \t\t\t\t\t\t\t<th>性别</th>
+\t\t\t\t\t\t\t<th>电话</th>
 \t\t\t\t\t\t\t<th>其他部门</th>
 \t\t\t\t\t\t</tr>
 \t\t\t\t\t{% for value in data %}
 \t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t<td>{{ value['name'] }}</td>
 \t\t\t\t\t\t\t<td>{{ value['gender'] }}</td>
+\t\t\t\t\t\t\t<td>{{ value['phonenum'] }}</td>
 \t\t\t\t\t\t\t<td>
 \t\t\t\t\t\t\t\t\t<a href=\"{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department'] }}\">{{ value['employ_department'] }}</a>
 \t\t\t\t\t\t\t\t\t<a href=\"{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department1'] }}\">{{ value['employ_department1'] }}</a>
