@@ -15,12 +15,18 @@
 			$this->Cookie = $this->library('Cookie');
 
 		}
-		public function index() {
-			
+		public function isLogin() {
 			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
 				$this->jump(BASE_URL . 'Department/login');
 				exit();
 			}
+			if (NULL == $this->Session->getSession('name') && NULL != $this->Cookie->getCookie('Login')) {
+				$this->Session->setSession('name', $this->Cookie->getCookie('Login'));
+				
+			}
+		}
+		public function index() {
+			$this->isLogin();
 			$name = $this->Session->getSession('name');
 			$this->view->assign('name', $name);
 			$this->view->display('departmentIndex.html');
@@ -37,7 +43,7 @@
 				if (NULL != $res) {
 					$this->Session->setSession('name', $res[0]['name']);
 					$this->Session->setSession('username', $data['username']);
-					$this->Cookie->setCookie('Login', $data['username'], 3600*24);
+					$this->Cookie->setCookie('Login', $res[0]['name'], 3600*24);
 					$Log = $this->library('Log');
 					$Log->putLog($res[0]['username'] . " => login ", 'login');
 					$this->jump(BASE_URL . 'Department');
@@ -60,10 +66,7 @@
 			}
 		}
 		public function rePassword() {
-			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
-				$this->jump(BASE_URL . 'Department/login');
-				exit();
-			}
+			$this->isLogin();
 			$this->view->display('rePwd.html');
 		}
 		public function doRePassword() {
@@ -76,10 +79,7 @@
 			}
 		}
 		public function interview ($page=1) {
-			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
-				$this->jump(BASE_URL . 'Department/index');
-				exit();
-			}
+			$this->isLogin();
 			$num = PAGE_NUM;
 			$name = $this->Session->getSession('name');
 			$pageNum = $this->StudentModel->getPageByDep($num, $name);
@@ -93,10 +93,7 @@
 			$this->view->display('interview.html');
 		}
 		public function findStuI(){
-			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
-				$this->jump(BASE_URL . 'Department/login');
-				exit();
-			}
+			$this->isLogin();
 			$name = $this->Session->getSession('name');
 			$phoneNum = $this->Input->post('phoneNum');
 			$data = $this->StudentModel->getStuByNum($name,$phoneNum);
@@ -105,10 +102,7 @@
 			$this->view->display('interview.html');
 		}
 		public function choose($page=1) {
-			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
-				$this->jump(BASE_URL . 'Department/login');
-				exit();
-			}
+			$this->isLogin();
 			$num = PAGE_NUM;
 			$name = $this->Session->getSession('name');
 			$data = $this->StudentModel->getStuByReview($page, $num, $name);
@@ -122,6 +116,7 @@
 			$this->view->display('choose.html');
 		}
 		public function putStuReview() {
+			$this->isLogin();
 			$data = $this->Input->post();
 			$data['department'] = $this->Session->getSession('name');
 			$res = $this->ReviewModel->putReview($data);
@@ -134,6 +129,7 @@
 			}
 		}
 		public function hiring($id) {
+			$this->isLogin();
 			$name = $this->Session->getSession('name');
 			$data = $this->StudentModel->getStuById($id)[0];
 			// dump($data);
@@ -167,6 +163,7 @@
 			}
 		}
 		public function unhiring($id) {
+			$this->isLogin();
 			$name = $this->Session->getSession('name');
 			$data = $this->StudentModel->getStuById($id)[0];
 			if ($data['employ_department'] == $name) {
@@ -198,11 +195,7 @@
 
 		}
 		public function getConflictStu($page = 1){
-			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
-				$this->jump(BASE_URL . 'Department/login');
-				exit();
-			}
-	
+			$this->isLogin();
 			
 			$name = $this->Session->getSession('name');
 			$data = $this->StudentModel->chooseStu($name);
@@ -237,10 +230,7 @@
 			$this->view->display('conflictStu.html');
 		}
 		public function getHiredStu($page = 1){
-			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
-				$this->jump(BASE_URL . 'Department/login');
-				exit();
-			}
+			$this->isLogin();
 			$name = $this->Session->getSession('name');
 			$data = $this->StudentModel->chooseStu($name);
 			$datas = array();
@@ -274,10 +264,7 @@
 			$this->view->display('hiredStu.html');
 		}
 		public function getUnhiredStu($page = 1){
-			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
-				$this->jump(BASE_URL . 'Department/login');
-				exit();
-			}
+			$this->isLogin();
 			$num = PAGE_NUM;
 			$name = $this->Session->getSession('name');
 			$datas = $this->StudentModel->getAllStuByReview($name);
@@ -303,10 +290,7 @@
 			
 		}
 		public function getExcel(){
-			if (NULL == $this->Session->getSession('name') && NULL == $this->Cookie->getCookie('Login')) {
-				$this->jump(BASE_URL . 'Department/login');
-				exit();
-			}
+			$this->isLogin();
 			$name = $this->Session->getSession('name');
 			$data = $this->StudentModel->chooseStu($name);
 			$datas = array();
