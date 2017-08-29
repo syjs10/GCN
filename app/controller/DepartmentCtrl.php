@@ -144,26 +144,26 @@
 							//update jump
 							$this->StudentModel->updateEmp($id, 'employ_department3', $name);
 							$this->alert('录取成功！');
-							$this->jumps(BASE_URL."Department/choose");
+							$this->back();
 						}
 					} else {
 						//update jump
 						$this->StudentModel->updateEmp($id, 'employ_department2', $name);
 						$this->alert('录取成功！');
-						$this->jumps(BASE_URL."Department/choose");
+						$this->back();
 					}
 				} else {
 					//update jump
 					$this->StudentModel->updateEmp($id, 'employ_department1', $name);
 					$this->alert('录取成功！');
-					$this->jumps(BASE_URL."Department/choose");
+					$this->back();
 					
 				}
 			} else {
 				//update jump
 				$this->StudentModel->updateEmp($id, 'employ_department', $name);
 				$this->alert('录取成功！');
-				$this->jumps(BASE_URL."Department/choose");
+				$this->back();
 			}
 		}
 		public function unhiring($id) {
@@ -172,29 +172,29 @@
 			if ($data['employ_department'] == $name) {
 				$this->StudentModel->updateEmp($id, 'employ_department', null);
 				$this->alert('取消录取！');
-				$this->jumps(BASE_URL."Department/choose");
+				$this->back();
 				exit();
 			}
 			if ($data['employ_department1'] == $name) {
 				$this->StudentModel->updateEmp($id, 'employ_department1', null);
 				$this->alert('取消录取！');
-				$this->jumps(BASE_URL."Department/choose");
+				$this->back();
 				exit();
 			}
 			if ($data['employ_department2'] == $name) {
 				$this->StudentModel->updateEmp($id, 'employ_department2', null);
 				$this->alert('取消录取！');
-				$this->jumps(BASE_URL."Department/choose");
+				$this->back();
 				exit();
 			}
 			if ($data['employ_department3'] == $name) {
 				$this->StudentModel->updateEmp($id, 'employ_department3', null);
 				$this->alert('取消录取！');
-				$this->jumps(BASE_URL."Department/choose");
+				$this->back();
 				exit();
 			}
 			$this->alert('未录取');
-			$this->jumps(BASE_URL."Department/choose");
+			$this->back();
 
 		}
 		public function getConflictStu($page = 1){
@@ -329,7 +329,7 @@
 				}
 			}
 			$objPHPExcel = new PHPExcel();  
-			$fileName = "{$name}.xlsx";  
+			$fileName = "{$name}.xls";  
 			$objPHPExcel->setActiveSheetIndex(0)  
             			->setCellValue('A1','学号')  
 			            ->setCellValue('B1','姓名')  
@@ -355,9 +355,10 @@
 			header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');  
 			header('Content-Disposition: attachment;filename='.$fileName);  
 			header('Cache-Control: max-age=0'); 
+			header("Content-Type:application/download");
 			//要是输出为Excel2007,使用 Excel2007对应的类，生成的文件名为.xlsx.如果是Excel2005,使用Excel5,对应生成.xls文件  
-			$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');  
-			// $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5'); 
+			// $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');  
+			$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5'); 
 			$objWriter->save('php://output');  
 		}
 	}

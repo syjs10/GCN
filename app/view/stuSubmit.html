@@ -151,9 +151,9 @@
 	            <textarea placeholder="爱好特长等" name="introduction" data-required="true" data-descriptions="introduction"></textarea>
 	        </div>
 			
-			<div class="ui-form-item ui-form-item-l ui-border-b">
-		        <label class="ui-border-r">
-		        	<img src="{{ base_url }}ShowVerify" alt="验证码" onclick="this.src='{{ base_url }}ShowVerify'"/>
+			<div class="ui-form-item ui-form-item-l ui-border-b" style="padding:0;">
+		        <label class="ui-border-r" style="padding:0;">
+		        	<img src="{{ base_url }}ShowVerify" alt="验证码" onclick="this.src='{{ base_url }}ShowVerify'" style="width:100%; height:100%;" />
 		        </label>
 		        <input type="text" name="verify" placeholder="请输入验证码" maxlength="4">
 		        <a href="javascript:void(0);" onclick="delValue(this)" class="ui-icon-close">

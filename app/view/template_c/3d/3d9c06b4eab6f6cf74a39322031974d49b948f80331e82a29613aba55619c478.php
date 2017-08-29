@@ -194,14 +194,14 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t            <textarea placeholder=\"爱好特长等\" name=\"introduction\" data-required=\"true\" data-descriptions=\"introduction\"></textarea>
 \t        </div>
 \t\t\t
-\t\t\t<div class=\"ui-form-item ui-form-item-l ui-border-b\">
-\t\t        <label class=\"ui-border-r\">
+\t\t\t<div class=\"ui-form-item ui-form-item-l ui-border-b\" style=\"padding:0;\">
+\t\t        <label class=\"ui-border-r\" style=\"padding:0;\">
 \t\t        \t<img src=\"";
         // line 156
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
         echo "ShowVerify\" alt=\"验证码\" onclick=\"this.src='";
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "ShowVerify'\"/>
+        echo "ShowVerify'\" style=\"width:100%; height:100%;\" />
 \t\t        </label>
 \t\t        <input type=\"text\" name=\"verify\" placeholder=\"请输入验证码\" maxlength=\"4\">
 \t\t        <a href=\"javascript:void(0);\" onclick=\"delValue(this)\" class=\"ui-icon-close\">
@@ -445,9 +445,9 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t            <textarea placeholder=\"爱好特长等\" name=\"introduction\" data-required=\"true\" data-descriptions=\"introduction\"></textarea>
 \t        </div>
 \t\t\t
-\t\t\t<div class=\"ui-form-item ui-form-item-l ui-border-b\">
-\t\t        <label class=\"ui-border-r\">
-\t\t        \t<img src=\"{{ base_url }}ShowVerify\" alt=\"验证码\" onclick=\"this.src='{{ base_url }}ShowVerify'\"/>
+\t\t\t<div class=\"ui-form-item ui-form-item-l ui-border-b\" style=\"padding:0;\">
+\t\t        <label class=\"ui-border-r\" style=\"padding:0;\">
+\t\t        \t<img src=\"{{ base_url }}ShowVerify\" alt=\"验证码\" onclick=\"this.src='{{ base_url }}ShowVerify'\" style=\"width:100%; height:100%;\" />
 \t\t        </label>
 \t\t        <input type=\"text\" name=\"verify\" placeholder=\"请输入验证码\" maxlength=\"4\">
 \t\t        <a href=\"javascript:void(0);\" onclick=\"delValue(this)\" class=\"ui-icon-close\">
