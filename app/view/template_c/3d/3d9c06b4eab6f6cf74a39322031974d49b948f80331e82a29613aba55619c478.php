@@ -139,7 +139,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t            <div class=\"ui-select-group\">
 \t                <div class=\"ui-select\">
 \t                    <select name=\"department0\">
-\t                        <option selected>意向部门1</option>
+\t                        <option value=\"\">意向部门1</option>
 \t                        <option value=\"技术部\">技术部</option>
 \t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
 \t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
@@ -150,7 +150,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t                </div>
 \t                <div class=\"ui-select\">
 \t                    <select name=\"department1\">
-\t                        <option selected>意向部门2</option>
+\t                        <option value=\"\">意向部门2</option>
 \t                        <option value=\"技术部\">技术部</option>
 \t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
 \t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
@@ -165,7 +165,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t            <div class=\"ui-select-group\">
 \t                <div class=\"ui-select\">
 \t                    <select name=\"department2\">
-\t                        <option selected>意向部门3</option>
+\t                        <option value=\"\">意向部门3</option>
 \t                        <option value=\"技术部\">技术部</option>
 \t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
 \t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
@@ -176,7 +176,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t                </div>
 \t                <div class=\"ui-select\">
 \t                    <select name=\"department3\">
-\t                        <option selected>意向部门4</option>
+\t                        <option value=\"\">意向部门4</option>
 \t                        <option value=\"技术部\">技术部</option>
 \t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
 \t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
@@ -220,7 +220,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t</form>
 \t</div>
 \t<div class=\"ui-flex ui-flex-pack-center\">
-\t    <div>&copy; 2017 JS </div>
+\t    <div>&copy; 2017 JS&ZQD </div>
 \t</div>
 \t
 \t<script type=\"text/javascript\" src=\"";
@@ -390,7 +390,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t            <div class=\"ui-select-group\">
 \t                <div class=\"ui-select\">
 \t                    <select name=\"department0\">
-\t                        <option selected>意向部门1</option>
+\t                        <option value=\"\">意向部门1</option>
 \t                        <option value=\"技术部\">技术部</option>
 \t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
 \t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
@@ -401,7 +401,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t                </div>
 \t                <div class=\"ui-select\">
 \t                    <select name=\"department1\">
-\t                        <option selected>意向部门2</option>
+\t                        <option value=\"\">意向部门2</option>
 \t                        <option value=\"技术部\">技术部</option>
 \t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
 \t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
@@ -416,7 +416,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t            <div class=\"ui-select-group\">
 \t                <div class=\"ui-select\">
 \t                    <select name=\"department2\">
-\t                        <option selected>意向部门3</option>
+\t                        <option value=\"\">意向部门3</option>
 \t                        <option value=\"技术部\">技术部</option>
 \t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
 \t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
@@ -427,7 +427,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t                </div>
 \t                <div class=\"ui-select\">
 \t                    <select name=\"department3\">
-\t                        <option selected>意向部门4</option>
+\t                        <option value=\"\">意向部门4</option>
 \t                        <option value=\"技术部\">技术部</option>
 \t\t\t\t\t\t\t<option value=\"影音部\">影音部</option>
 \t\t\t\t\t\t\t<option value=\"宣传部\">宣传部</option>
@@ -466,7 +466,7 @@ class __TwigTemplate_204b64e4a2540cd8c4138bdf648aae09f5fdbea7dc2ded1a78ecb301b97
 \t\t</form>
 \t</div>
 \t<div class=\"ui-flex ui-flex-pack-center\">
-\t    <div>&copy; 2017 JS </div>
+\t    <div>&copy; 2017 JS&ZQD </div>
 \t</div>
 \t
 \t<script type=\"text/javascript\" src=\"{{ source_url }}dist/js/zepto.min.js\"></script>

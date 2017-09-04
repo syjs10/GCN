@@ -3,13 +3,13 @@
 
 {% block head %}
 	<title>面试</title>
-	
+
 {% endblock %}
 
 {% block content %}
-	<form action="{{ base_url }}/Department/findStuI/" method="post" class="form-inline navbar-right">
+	<form action="{{ base_url }}Department/findStuI/" method="post" class="form-inline navbar-right">
 		<input type="text" placeholder="输入手机号" name="phoneNum" class="form-control ">
-		<input type="submit" class="btn btn-default">	
+		<input type="submit" class="btn btn-default">
 	</form>
 	<table class="table table-hover table-bordered">
 		<thead>
@@ -22,7 +22,7 @@
 			</tr>
 		</thead>
 		<tbody>
-				
+
 			{% for value in data %}
 				<tr>
 					<td>{{ value['id'] }}</td>
@@ -42,11 +42,11 @@
 						{% if value['department3'] != name and value['department0'] != value['department3'] and value['department1'] != value['department3'] and value['department2'] != value['department3'] %}
 							{{ value['department3'] }}
 						{% endif %}
-						
+
 					</td>
 				</tr>
 			{% endfor %}
-			
+
 		</tbody>
 	</table>
 	<nav aria-label="Page navigation" class="page ">

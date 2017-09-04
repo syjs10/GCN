@@ -1,10 +1,10 @@
-<?php 
-	
+<?php
+
 	/**
 	* 部门管理类
 	*/
 	class DepartmentCtrl extends Ctrl {
-		
+
 		function __construct() {
 			parent::__construct();
 			$this->Input = $this->library('Input');
@@ -22,7 +22,7 @@
 			}
 			if (NULL == $this->Session->getSession('name') && NULL != $this->Cookie->getCookie('Login')) {
 				$this->Session->setSession('name', $this->Cookie->getCookie('Login'));
-				
+
 			}
 		}
 		public function index() {
@@ -97,6 +97,7 @@
 			$name = $this->Session->getSession('name');
 			$phoneNum = $this->Input->post('phoneNum');
 			$data = $this->StudentModel->getStuByNum($name,$phoneNum);
+			$this->view->assign('num', 1);
 			$this->view->assign('data', $data);
 			$this->view->assign('name', $name);
 			$this->view->display('interview.html');
@@ -153,7 +154,7 @@
 					$this->StudentModel->updateEmp($id, 'employ_department1', $name);
 					$this->alert('录取成功！');
 					$this->back();
-					
+
 				}
 			} else {
 				//update jump
@@ -196,7 +197,7 @@
 		}
 		public function getConflictStu($page = 1){
 			$this->isLogin();
-			
+
 			$name = $this->Session->getSession('name');
 			$data = $this->StudentModel->chooseStu($name);
 			$datas = array();
@@ -270,9 +271,9 @@
 			$datas = $this->StudentModel->getAllStuByReview($name);
 			$data = array();
 			foreach ($datas as $value) {
-				if ($value['employ_department'] != $name && 
-					$value['employ_department1'] != $name && 
-					$value['employ_department2'] != $name && 
+				if ($value['employ_department'] != $name &&
+					$value['employ_department1'] != $name &&
+					$value['employ_department2'] != $name &&
 					$value['employ_department3'] != $name) {
 					array_push($data, $value);
 				}
@@ -287,7 +288,7 @@
 			$this->view->assign('name', $name);
 			$this->view->assign('data', $data);
 			$this->view->display('unhiredStu.html');
-			
+
 		}
 		public function getExcel(){
 			$this->isLogin();
@@ -312,37 +313,37 @@
 					array_push($datas, $value);
 				}
 			}
-			$objPHPExcel = new PHPExcel();  
-			$fileName = "{$name}.xls";  
-			$objPHPExcel->setActiveSheetIndex(0)  
-            			->setCellValue('A1','学号')  
-			            ->setCellValue('B1','姓名')  
-			            ->setCellValue('C1','性别')  
+			$objPHPExcel = new PHPExcel();
+			$fileName = "{$name}.xls";
+			$objPHPExcel->setActiveSheetIndex(0)
+            			->setCellValue('A1','学号')
+			            ->setCellValue('B1','姓名')
+			            ->setCellValue('C1','性别')
 			            ->setCellValue('D1','班级')
 			            ->setCellValue('E1','电话')
-			            ->setCellValue('F1','QQ');  	
+			            ->setCellValue('F1','QQ');
 
-			//适合把表中数据导入Excel文件中，多数据循环设置值   
-			foreach($datas as $key=> $value) {  
-				$key+=2;  
-				$objPHPExcel->setActiveSheetIndex(0)  
-				           ->setCellValue('A'.$key,$value['studentid'])  
-				           ->setCellValue('B'.$key,$value['name'])  
-				           ->setCellValue('C'.$key,$value['gender'])  
-				           ->setCellValue('D'.$key,$value['class'])  
-				           ->setCellValue('E'.$key,$value['phonenum'])  
-				           ->setCellValue('F'.$key,$value['qqnum']);  
-			}  	
-			// 设置活动单指数到第一个表,所以Excel打开这是第一个表  
-			$objPHPExcel->setActiveSheetIndex(0);  
-			// 将输出重定向到一个客户端web浏览器(Excel2007)  
-			header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');  
-			header('Content-Disposition: attachment;filename='.$fileName);  
-			header('Cache-Control: max-age=0'); 
+			//适合把表中数据导入Excel文件中，多数据循环设置值
+			foreach($datas as $key=> $value) {
+				$key+=2;
+				$objPHPExcel->setActiveSheetIndex(0)
+				           ->setCellValue('A'.$key,$value['studentid'])
+				           ->setCellValue('B'.$key,$value['name'])
+				           ->setCellValue('C'.$key,$value['gender'])
+				           ->setCellValue('D'.$key,$value['class'])
+				           ->setCellValue('E'.$key,$value['phonenum'])
+				           ->setCellValue('F'.$key,$value['qqnum']);
+			}
+			// 设置活动单指数到第一个表,所以Excel打开这是第一个表
+			$objPHPExcel->setActiveSheetIndex(0);
+			// 将输出重定向到一个客户端web浏览器(Excel2007)
+			header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+			header('Content-Disposition: attachment;filename='.$fileName);
+			header('Cache-Control: max-age=0');
 			header("Content-Type:application/download");
-			//要是输出为Excel2007,使用 Excel2007对应的类，生成的文件名为.xlsx.如果是Excel2005,使用Excel5,对应生成.xls文件  
-			// $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');  
-			$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5'); 
-			$objWriter->save('php://output');  
+			//要是输出为Excel2007,使用 Excel2007对应的类，生成的文件名为.xlsx.如果是Excel2005,使用Excel5,对应生成.xls文件
+			// $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+			$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
+			$objWriter->save('php://output');
 		}
 	}
