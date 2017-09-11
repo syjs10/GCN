@@ -87,7 +87,7 @@ class __TwigTemplate_ec3880433968c56fe7768d3f1181bcaa0793f47e71136c0bd82a089c240
 \t\t\t<span class=\"icon-bar\"></span>
 \t\t\t<span class=\"icon-bar\"></span>
 \t\t</button>
-\t\t<a class=\"navbar-brand\" href=\"#\">菜鸟教程</a>
+\t\t<a class=\"navbar-brand\" href=\"#\">校团委网络管理中心</a>
 \t</div>
 \t<div class=\"collapse navbar-collapse\" id=\"example-navbar-collapse\">
 \t\t<ul class=\"nav navbar-nav\">
@@ -193,7 +193,7 @@ class __TwigTemplate_ec3880433968c56fe7768d3f1181bcaa0793f47e71136c0bd82a089c240
 \t\t\t<span class=\"icon-bar\"></span>
 \t\t\t<span class=\"icon-bar\"></span>
 \t\t</button>
-\t\t<a class=\"navbar-brand\" href=\"#\">菜鸟教程</a>
+\t\t<a class=\"navbar-brand\" href=\"#\">校团委网络管理中心</a>
 \t</div>
 \t<div class=\"collapse navbar-collapse\" id=\"example-navbar-collapse\">
 \t\t<ul class=\"nav navbar-nav\">

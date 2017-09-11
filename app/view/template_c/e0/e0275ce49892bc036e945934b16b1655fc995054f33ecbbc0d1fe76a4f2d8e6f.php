@@ -30,7 +30,7 @@ class __TwigTemplate_03d7b297406899dbc86f863c0bc9633f855959db19b7aa38cb2a1f89e1a
     {
         // line 5
         echo "\t<title>面试</title>
-\t
+
 ";
     }
 
@@ -40,9 +40,9 @@ class __TwigTemplate_03d7b297406899dbc86f863c0bc9633f855959db19b7aa38cb2a1f89e1a
         // line 10
         echo "\t<form action=\"";
         echo twig_escape_filter($this->env, ($context["base_url"] ?? null), "html", null, true);
-        echo "/Department/findStuI/\" method=\"post\" class=\"form-inline navbar-right\">
+        echo "Department/findStuI/\" method=\"post\" class=\"form-inline navbar-right\">
 \t\t<input type=\"text\" placeholder=\"输入手机号\" name=\"phoneNum\" class=\"form-control \">
-\t\t<input type=\"submit\" class=\"btn btn-default\">\t
+\t\t<input type=\"submit\" class=\"btn btn-default\">
 \t</form>
 \t<table class=\"table table-hover table-bordered\">
 \t\t<thead>
@@ -55,7 +55,7 @@ class __TwigTemplate_03d7b297406899dbc86f863c0bc9633f855959db19b7aa38cb2a1f89e1a
 \t\t\t</tr>
 \t\t</thead>
 \t\t<tbody>
-\t\t\t\t
+
 \t\t\t";
         // line 26
         $context['_parent'] = $context;
@@ -121,7 +121,7 @@ class __TwigTemplate_03d7b297406899dbc86f863c0bc9633f855959db19b7aa38cb2a1f89e1a
 \t\t\t\t\t\t";
             }
             // line 45
-            echo "\t\t\t\t\t\t
+            echo "
 \t\t\t\t\t</td>
 \t\t\t\t</tr>
 \t\t\t";
@@ -130,7 +130,7 @@ class __TwigTemplate_03d7b297406899dbc86f863c0bc9633f855959db19b7aa38cb2a1f89e1a
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['value'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 49
-        echo "\t\t\t
+        echo "
 \t\t</tbody>
 \t</table>
 \t<nav aria-label=\"Page navigation\" class=\"page \">
@@ -201,13 +201,13 @@ class __TwigTemplate_03d7b297406899dbc86f863c0bc9633f855959db19b7aa38cb2a1f89e1a
 
 {% block head %}
 \t<title>面试</title>
-\t
+
 {% endblock %}
 
 {% block content %}
-\t<form action=\"{{ base_url }}/Department/findStuI/\" method=\"post\" class=\"form-inline navbar-right\">
+\t<form action=\"{{ base_url }}Department/findStuI/\" method=\"post\" class=\"form-inline navbar-right\">
 \t\t<input type=\"text\" placeholder=\"输入手机号\" name=\"phoneNum\" class=\"form-control \">
-\t\t<input type=\"submit\" class=\"btn btn-default\">\t
+\t\t<input type=\"submit\" class=\"btn btn-default\">
 \t</form>
 \t<table class=\"table table-hover table-bordered\">
 \t\t<thead>
@@ -220,7 +220,7 @@ class __TwigTemplate_03d7b297406899dbc86f863c0bc9633f855959db19b7aa38cb2a1f89e1a
 \t\t\t</tr>
 \t\t</thead>
 \t\t<tbody>
-\t\t\t\t
+
 \t\t\t{% for value in data %}
 \t\t\t\t<tr>
 \t\t\t\t\t<td>{{ value['id'] }}</td>
@@ -240,11 +240,11 @@ class __TwigTemplate_03d7b297406899dbc86f863c0bc9633f855959db19b7aa38cb2a1f89e1a
 \t\t\t\t\t\t{% if value['department3'] != name and value['department0'] != value['department3'] and value['department1'] != value['department3'] and value['department2'] != value['department3'] %}
 \t\t\t\t\t\t\t{{ value['department3'] }}
 \t\t\t\t\t\t{% endif %}
-\t\t\t\t\t\t
+
 \t\t\t\t\t</td>
 \t\t\t\t</tr>
 \t\t\t{% endfor %}
-\t\t\t
+
 \t\t</tbody>
 \t</table>
 \t<nav aria-label=\"Page navigation\" class=\"page \">

@@ -5,16 +5,16 @@
 	<title>招新页面</title>
 	<link rel="stylesheet" type="text/css" href="{{ source_url }}dist/validate.css">
     <link rel="stylesheet" href="{{ source_url }}dist/css/frozen.css">
-	
+
 {% endblock %}
 
 {% block content %}
-	
+
 	<div class="ui-form ui-border-t">
 		<div class="title">
 			<div class="ui-flex ui-flex-pack-center">
 				<div class="ui-avatar-one"><span class="ui-flex ui-flex-pack-center" style="background-image:url({{ source_url }}img/band.JPG)"></span></div>
-				
+
 			</div>
 			<h5 align="center">工大网管，欢迎“家”入</h5>
 		</div>
@@ -37,7 +37,7 @@
 	            <a href="javascript:void(0);" onclick="delValue(this)" class="ui-icon-close">
 	            </a>
         	</div>
-			
+
 			<ul class="ui-form-item ui-border-b ui-grid-trisect">
 				<li>
 					<label>
@@ -46,7 +46,7 @@
 				</li>
 				<li>
 					<div class="ui-form-item ui-form-item-radio ui-border-b">
-			            
+
 			            <label class="ui-radio" for="radio">
 			                <input type="radio" name="gender" value="男">
 			            </label>
@@ -55,7 +55,7 @@
 				</li>
 				<li>
 					<div class="ui-form-item ui-form-item-radio ui-border-b">
-			            
+
 			            <label class="ui-radio" for="radio">
 			                <input type="radio" name="gender" value="女">
 			            </label>
@@ -63,7 +63,7 @@
 			        </div>
 				</li>
 			</ul>
-			
+
 			<div class="ui-form-item ui-border-b">
 	            <label>
 	                专业班级
@@ -150,7 +150,7 @@
 	            </label>
 	            <textarea placeholder="爱好特长等" name="introduction" data-required="true" data-descriptions="introduction"></textarea>
 	        </div>
-			
+
 			<div class="ui-form-item ui-form-item-l ui-border-b" style="padding:0;">
 		        <label class="ui-border-r" style="padding:0;">
 		        	<img src="{{ base_url }}ShowVerify" alt="验证码" onclick="this.src='{{ base_url }}ShowVerify'" style="width:100%; height:100%;" />
@@ -172,26 +172,26 @@
 		</form>
 	</div>
 	<div class="ui-flex ui-flex-pack-center">
-	    <div>&copy; 2017 JS&ZQD </div>
+	    <div>&copy; 2017 JS&ZQD 详细情况请加QQ群:533129127</div>
 	</div>
-	
+
 	<script type="text/javascript" src="{{ source_url }}dist/js/zepto.min.js"></script>
 	<script type="text/javascript" src="{{ source_url }}dist/js/frozen.js"></script>
 	<script type="text/javascript" src="{{ source_url }}dist/zepto-mvalidate.js"></script>
-	
+
 	<script type="text/javascript">
 		function delValue(obj){
 			// console.log(obj);
 			$(obj).parent().children('input').val('');
 		}
 	</script>
-	
+
 
 		<script type="text/javascript">
 		$("#stuForm").mvalidate({
 		    type:1,
 		    validateInSubmit:true,
-		    
+
 		    descriptions: {
 		    	name: {
 		    		required: '请输入姓名',
