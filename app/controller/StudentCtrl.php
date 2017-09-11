@@ -1,9 +1,9 @@
-<?php 
+<?php
 	/**
 	* 学生类
 	*/
 	class StudentCtrl extends Ctrl {
-		
+
 		function __construct() {
 			parent::__construct();
 			$this->Input = $this->library('Input');
@@ -13,7 +13,7 @@
 		}
 		public function index() {
 			$this->view->display('stuSubmit.html');
-			
+
 		}
 		public function doSubmit() {
 			if($this->Session->getSession('verify') == ($this->Input->post('verify'))){
@@ -22,7 +22,7 @@
 				if ($res == true) {
 					$data = $this->StudentModel->StuNum($this->Input->post('phonenum'));
 					$datas = $data[0]['id'];
-					$this->view->assign('message', "提交成功, 编号$datas");
+					$this->view->assign('message', "提交成功, 编号$datas, 请加QQ群:533129127");
 					$this->view->display('message.html');
 				} else {
 					$this->view->assign('message', "提交失败");
@@ -31,7 +31,7 @@
 			} else {
 				$this->alert('验证码错误');
 				$this->back();
-				
+
 			}
 		}
 		public function getStuInfo($id){
