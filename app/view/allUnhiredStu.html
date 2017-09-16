@@ -1,0 +1,83 @@
+{% extends "template/layout.html" %}
+
+
+{% block head %}
+    <title>未录取人员</title>
+
+{% endblock %}
+
+
+
+{% block content %}
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ base_url }}Root/index">首页</a></li>
+                <li><a href="{{ base_url }}Root/conflictStu">冲突人员</a></li>
+                <li><a href="{{ base_url }}Root/unhired">未选人员</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown ">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ name }} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ base_url }}Root/logout">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+           </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 col-xs-1"></div>
+        <div class="col-md-8 col-xs-10">
+            <table class="table table-hover table-bordered">
+                <tbody style="text-align:center;">
+                        <tr>
+                            <th width="10%">姓名</th>
+                            <th width="5%">性别</th>
+                            <th width="25%">电话</th>
+                            <th width="50%">部门</th>
+
+                        </tr>
+                    {% for value in data %}
+                        <tr>
+                            <td>{{ value['name'] }}</td>
+                            <td>{{ value['gender'] }}</td>
+                            <td>{{ value['phonenum'] }}</td>
+                            <td>
+                                <a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['department0'] }}">{{ value['department0'] }}</a>
+                                <a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['department1'] }}">{{ value['department1'] }}</a>
+                                <a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['department2'] }}">{{ value['department2'] }}</a>
+                                <a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['department3'] }}">{{ value['department3'] }}</a>
+
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+            <nav aria-label="Page navigation" class="page ">
+                <ul class="pagination">
+                    <li>
+                        <a href="{{ base_url }}Root/unhired/page/{{ prePage }}" aria-label="Previous">
+                            <span aria-hidden="true">上一页</span>
+                        </a>
+                    </li>
+                    {% for item in 1..num %}
+                        <li><a href="{{ base_url }}Root/unhired/page/{{ item }}">{{ item }}</a></li>
+                    {% endfor %}
+                    <li>
+                        <a href="{{ base_url }}Root/unhired/page/{{ nextPage }}" aria-label="Next">
+                            <span aria-hidden="true">下一页</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="col-md-2 col-xs-1"></div>
+      </div>
+    </div>
+
+{% endblock %}

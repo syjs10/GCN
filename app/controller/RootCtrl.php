@@ -1,10 +1,10 @@
-<?php 
+<?php
 
 	/**
 	* 管理员类
 	*/
 	class RootCtrl extends Ctrl {
-		
+
 		function __construct() {
 			parent::__construct();
 			$this->Input = $this->library('Input');
@@ -23,7 +23,7 @@
 			$this->view->assign('name', $name);
 			$this->view->display('root.html');
 		}
-		
+
 		public function login() {
 			$this->view->display('rootlogin.html');
 		}
@@ -96,8 +96,18 @@
 			$this->view->assign('data', $data);
 			$this->view->display('rootConflictStu.html');
 		}
+		public function unhired($page = 1) {
+			$data = $this->StudentModel->getAllUnhired($page,10);
+			$pageNum = $this->StudentModel->getPageUnhired(10)-1;
+			$this->view->assign('num', $pageNum);
+			$this->view->assign('nextPage', ($page+1) >= $pageNum ? $pageNum : $page + 1);
+			$this->view->assign('prePage', ($page-1) <= 0 ? 1 : $page - 1);
+			// $this->view->assign('name', $name);
+			$this->view->assign('data', $data);
+			$this->view->display('allUnhiredStu.html');
+		}
 		public function setDep($id, $depName) {
 			$res = $this->StudentModel->updateDep($id, $depName);
-			$res && $this->jumps(BASE_URL . "Root/conflictStu");
+			$res && $this->back();
 		}
 	}

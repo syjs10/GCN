@@ -1,4 +1,4 @@
-<?php 
+<?php
 	/**
 	* 学生模型
 	*/
@@ -37,7 +37,7 @@
 				],
 				"ORDER" => ["id" => "DESC"],
 				"LIMIT" => [($page - 1) * $num, $num]
-			]);			
+			]);
 		}
 		public function getStuByNum($depName, $phoneNum){
 			return $this->select($this->table, '*', [
@@ -50,12 +50,12 @@
 					],
 					"phonenum" => $phoneNum
 				]
-			]);			
+			]);
 		}
 		public function StuNum($phoneNum){
 			return $this->select($this->table, '*', [
 					"phonenum" => $phoneNum
-			]);			
+			]);
 		}
 		public function getConutByDep($depName){
 			return $this->count($this->table, [
@@ -65,7 +65,7 @@
 					"department2" => $depName,
 					"department3" => $depName
 				]
-			]);			
+			]);
 		}
 		public function getPageByDep($num, $depName) {
 			return ceil(self::getConutByDep($depName) / $num);
@@ -73,8 +73,8 @@
 		public function getStuByReview($page, $num, $depName) {
 			return $this->select($this->table, [
 					"[>]review"=>["id"=>"id"]
-				], 
-				'*', 
+				],
+				'*',
 				[
 					"review.department" => $depName,
 					"ORDER" => ["review.score" => "DESC"],
@@ -84,8 +84,8 @@
 		public function getAllStuByReview($depName) {
 			return $this->select($this->table, [
 					"[>]review"=>["id"=>"id"]
-				], 
-				'*', 
+				],
+				'*',
 				[
 					"review.department" => $depName
 				]);
@@ -93,11 +93,11 @@
 		public function getCountByReview($depName){
 			return $this->count($this->table, [
 					"[>]review"=>["id"=>"id"]
-				], 
+				],
 				'*',
 				[
 					"review.department" => $depName
-				]);			
+				]);
 		}
 		public function getPageByReview($num, $depName) {
 			return ceil(self::getCountByReview($depName) / $num);
@@ -105,8 +105,8 @@
 		public function getStuWithReview($id, $depName) {
 			return $this->select($this->table, [
 					"[>]review"=>["id"=>"id"]
-				], 
-				'*', 
+				],
+				'*',
 				[
 					"review.department" => $depName,
 					"student.id" => $id
@@ -117,9 +117,9 @@
 		}
 		public function updateDep($id, $depName){
 			return $this->update($this->table, [
-				"employ_department" => $depName, 
-				"employ_department1" => null, 
-				"employ_department2" => null, 
+				"employ_department" => $depName,
+				"employ_department1" => null,
+				"employ_department2" => null,
 				"employ_department3" => null
 				], ['id' => $id]);
 		}
@@ -142,5 +142,30 @@
 					"employ_department3[!]" => NULL
 				]
 			]);
+		}
+		public function getAllUnhired($page, $num){
+			return $this->select($this->table, '*', [
+				"AND" => [
+					"employ_department"  => NULL,
+					"employ_department1" => NULL,
+					"employ_department2" => NULL,
+					"employ_department3" => NULL
+				],
+				"ORDER" => ["id" => "DESC"],
+				"LIMIT" => [($page - 1) * $num, $num]
+			]);
+		}
+		public function getConutUnhired(){
+			return $this->count($this->table, [
+				"AND" => [
+					"employ_department"  => NULL,
+					"employ_department1" => NULL,
+					"employ_department2" => NULL,
+					"employ_department3" => NULL
+				]
+			]);
+		}
+		public function getPageUnhired($num) {
+			return ceil(self::getConutUnhired() / $num);
 		}
 	}

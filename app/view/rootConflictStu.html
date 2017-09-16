@@ -17,6 +17,8 @@
 		    <ul class="nav navbar-nav">
 		    	<li><a href="{{ base_url }}Root/index">首页</a></li>
 		    	<li><a href="{{ base_url }}Root/conflictStu">冲突人员</a></li>
+		    	<li><a href="{{ base_url }}Root/unhired">未选人员</a></li>
+
 		    </ul>
 		    <ul class="nav navbar-nav navbar-right">
 		    	<li class="dropdown ">
@@ -33,7 +35,7 @@
 	  <div class="row">
 	    <div class="col-md-2 col-xs-1"></div>
 	    <div class="col-md-8 col-xs-10">
-	    	
+
 			<table class="table table-hover table-bordered">
 				<tbody >
 						<tr>
@@ -52,11 +54,11 @@
 									<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department1'] }}">{{ value['employ_department1'] }}</a>
 									<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department2'] }}">{{ value['employ_department2'] }}</a>
 									<a href="{{ base_url }}Root/setDep/id/{{ value['id'] }}/depName/{{ value['employ_department3'] }}">{{ value['employ_department3'] }}</a>
-								
+
 							</td>
 						</tr>
 					{% endfor %}
-					
+
 				</tbody>
 			</table>
 			<nav aria-label="Page navigation" class="page navbar-fixed-bottom">
